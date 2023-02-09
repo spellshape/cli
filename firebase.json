@@ -2,6 +2,7 @@
   "emulators": {
     "hosting": {
       "host": "localhost",
+      "site": "spellshapedev",
       "port": "3000"
     }
   },
