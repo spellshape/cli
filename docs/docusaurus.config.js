@@ -91,7 +91,7 @@ const config = {
           },
           {
             href: "https://spellshape.com",
-            className: "ignt-backlink",
+            className: "spellshape-backlink",
             label: `Back to Spellshape`,
             position: "right",
           },
@@ -185,7 +185,7 @@ const config = {
               },
               {
                 label: "Linkedin",
-                href: "https://www.linkedin.com/company/ignt/",
+                href: "https://www.linkedin.com/company/spellshape/",
               },
               {
                 label: "YouTube",

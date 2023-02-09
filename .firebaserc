@@ -1,12 +1,12 @@
 {
   "projects": {
-    "default": "igntservices"
+    "default": "spellshapedev"
   },
   "targets": {
-    "igntservices": {
+    "spellshapedev": {
       "hosting": {
         "docs.spellshape.com": [
-          "igntservices-docs"
+          "spellshapedev-docs"
         ]
       }
     }

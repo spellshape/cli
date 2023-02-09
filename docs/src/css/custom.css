@@ -83,8 +83,8 @@ html {
     }
   }
 
-  /* IGNT */
-  .ignt-backlink {
+  /* SPELLSHAPE */
+  .spellshape-backlink {
     @apply text-2 text-muted pl-6 order-last;
     & > svg {
       @apply hidden;

@@ -9,8 +9,8 @@ import (
 )
 
 const (
-	debug     = "IGNT_DEBUG"
-	configDir = "IGNT_CONFIG_DIR"
+	debug     = "SPELLSHAPE_DEBUG"
+	configDir = "SPELLSHAPE_CONFIG_DIR"
 )
 
 func DebugEnabled() bool {

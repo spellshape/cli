@@ -39,8 +39,8 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_IGNTSERVICES }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SPELLSHAPEDEV }}'
           expires: 7d
           target: docs.spellshape.com
-          projectId: igntservices
+          projectId: spellshapedev
           firebaseToolsVersion: v11.12.0
