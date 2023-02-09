@@ -3,12 +3,13 @@
     "default": "spellshapedev"
   },
   "targets": {
-    "spellshape": {
+    "spellshapedev": {
       "hosting": {
         "spellshape": [
           "spellshape"
         ]
       }
-    }
-  }
+    },
+  },
+  "etags": {}
 }
