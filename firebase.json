@@ -2,7 +2,7 @@
   "emulators": {
     "hosting": {
       "host": "localhost",
-      "site": "spellshapedev",
+      "site": "spellshape",
       "port": "3000"
     }
   },
@@ -39,7 +39,7 @@
         "type": 301
       }
     ],
-    "target": "spellshapedev.web.app",
+    "target": "spellshape",
     "public": "docs/build",
     "cleanUrls": true
   }

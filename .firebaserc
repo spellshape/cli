@@ -3,10 +3,10 @@
     "default": "spellshapedev"
   },
   "targets": {
-    "spellshapedev": {
+    "spellshape": {
       "hosting": {
-        "spellshapedev.web.app": [
-          "spellshapedev-docs"
+        "spellshape": [
+          "spellshape"
         ]
       }
     }
