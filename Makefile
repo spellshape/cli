@@ -1,7 +1,7 @@
 #! /usr/bin/make -f
 
 # Project variables.
-PROJECT_NAME = ignite
+PROJECT_NAME = spellshape
 DATE := $(shell date '+%Y-%m-%dT%H:%M:%S')
 HEAD = $(shell git rev-parse HEAD)
 LD_FLAGS = 
@@ -10,13 +10,13 @@ BUILD_FOLDER = ./dist
 
 ## install: Install de binary.
 install:
-	@echo Installing Ignite CLI...
+	@echo Installing Spellshape CLI...
 	@go install $(BUILD_FLAGS) ./...
-	@ignite version
+	@spellshape version
 
 ## build: Build the binary.
 build:
-	@echo Building Ignite CLI...
+	@echo Building Spellshape CLI...
 	@-mkdir -p $(BUILD_FOLDER) 2> /dev/null
 	@go build $(BUILD_FLAGS) -o $(BUILD_FOLDER) ./...
 
@@ -49,7 +49,7 @@ govulncheck:
 format:
 	@echo Formatting...
 	@go run mvdan.cc/gofumpt -w .
-	@go run golang.org/x/tools/cmd/goimports -w -local github.com/ignite/cli .
+	@go run golang.org/x/tools/cmd/goimports -w -local github.com/spellshape/cli .
 	@go run github.com/tbruyelle/mdgofmt/cmd/mdgofmt -w docs
 
 ## lint: Run Golang CI Lint.
@@ -62,7 +62,7 @@ lint:
 ## test-unit: Run the unit tests.
 test-unit:
 	@echo Running unit tests...
-	@go test -race -failfast -v ./ignite/...
+	@go test -race -failfast -v ./spellshape/...
 
 ## test-integration: Run the integration tests.
 test-integration: install

@@ -1,9 +1,9 @@
-# Set up your Ignite CLI development environment
+# Set up your Spellshape CLI development environment
 
-To ensure you have a successful experience developing with Ignite CLI, make sure that your local system meets these
+To ensure you have a successful experience developing with Spellshape CLI, make sure that your local system meets these
 technical requirements.
 
-Ignite CLI is supported for the following operating systems:
+Spellshape CLI is supported for the following operating systems:
 
 * GNU/Linux
 * macOS
@@ -29,25 +29,25 @@ of the initial problems are related to incorrect environment variables.
 1. Edit your `~/.bashrc` file and add `export PATH=$PATH:$(go env GOPATH)/bin`.
 2. To apply the changes, run `source ~/.bashrc`.
 
-## Remove existing Ignite CLI installations
+## Remove existing Spellshape CLI installations
 
-Before you install a new version of Ignite CLI, remove all existing installations.
+Before you install a new version of Spellshape CLI, remove all existing installations.
 
-1. Remove the Ignite CLI binary with `rm $(which ignite)`
+1. Remove the Spellshape CLI binary with `rm $(which spellshape)`
 
     Depending on your user permissions, run the command with or without `sudo`.
 
-2. Repeat this step until all Ignite CLI installations are removed from your system.
+2. Repeat this step until all Spellshape CLI installations are removed from your system.
 
 ```bash
-curl https://get.ignite.com! | bash`
+curl https://get.spellshape.com! | bash`
 ```
 
-See [Install Ignite CLI](./docs/docs/01-welcome/02-install.md).
+See [Install Spellshape CLI](./docs/docs/01-welcome/02-install.md).
 
-## Clone the Ignite CLI repo
+## Clone the Spellshape CLI repo
 
-`git clone --depth=1 git@github.com:ignite/cli.git`
+`git clone --depth=1 git@github.com:spellshape/cli.git`
 
 ## Run make install
 
@@ -55,6 +55,6 @@ See [Install Ignite CLI](./docs/docs/01-welcome/02-install.md).
 
 2. Run `make install`.
 
-## Verify your Ignite CLI version
+## Verify your Spellshape CLI version
 
-To verify the version of Ignite CLI that is installed, run `ignite version`.
+To verify the version of Spellshape CLI that is installed, run `spellshape version`.

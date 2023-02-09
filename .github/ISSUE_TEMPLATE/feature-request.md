@@ -1,5 +1,5 @@
 ---
-name: Ignite CLI feature request
+name: Spellshape CLI feature request
 about: Suggest an idea for this project
 title: ''
 labels: request

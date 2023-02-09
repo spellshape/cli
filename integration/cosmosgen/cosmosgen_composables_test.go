@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
 )
 
 func TestCosmosGenScaffoldComposables(t *testing.T) {
@@ -26,7 +26,7 @@ func TestCosmosGenScaffoldComposables(t *testing.T) {
 	env.Must(env.Exec("add custom module with message",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"s",
 				"module",
 				"--yes",
@@ -39,7 +39,7 @@ func TestCosmosGenScaffoldComposables(t *testing.T) {
 	env.Must(env.Exec("create a message",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"s",
 				"message",
 				"--yes",
@@ -56,7 +56,7 @@ func TestCosmosGenScaffoldComposables(t *testing.T) {
 	env.Must(env.Exec("add custom module without message",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"s",
 				"module",
 				"--yes",
@@ -69,7 +69,7 @@ func TestCosmosGenScaffoldComposables(t *testing.T) {
 	env.Must(env.Exec("create a type",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"s",
 				"type",
 				"--yes",
@@ -85,7 +85,7 @@ func TestCosmosGenScaffoldComposables(t *testing.T) {
 	env.Must(env.Exec("create a query",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"s",
 				"query",
 				"--yes",
@@ -104,7 +104,7 @@ func TestCosmosGenScaffoldComposables(t *testing.T) {
 	env.Must(env.Exec("generate composables",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"g",
 				"composables",
 				"--yes",

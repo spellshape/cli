@@ -174,10 +174,10 @@ message SellOrderBook {
 }
 ```
 
-Now, use Ignite CLI to build the proto files for the `send-create-pair` command:
+Now, use Spellshape CLI to build the proto files for the `send-create-pair` command:
 
 ```bash
-ignite generate proto-go --yes
+spellshape generate proto-go --yes
 ```
 
 Start enhancing the functions for the IBC packets.

@@ -1,3 +1,3 @@
-FROM ignitehq/cli:develop
+FROM spellshapehq/cli:develop
 
 USER root

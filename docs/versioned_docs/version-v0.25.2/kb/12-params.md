@@ -9,17 +9,17 @@ Sometimes you need to set default parameters for a module. The Cosmos SDK [param
 
 Params are managed and centralized by the Cosmos SDK `params` module and are updated with a governance proposal.
 
-You can use Ignite CLI to scaffold parameters to be accessible for the module. Parameters have default values that can be changed when the chain is live. Since the parameters are managed and centralized by the Cosmos SDK params module, they can be easily updated using a governance proposal.
+You can use Spellshape CLI to scaffold parameters to be accessible for the module. Parameters have default values that can be changed when the chain is live. Since the parameters are managed and centralized by the Cosmos SDK params module, they can be easily updated using a governance proposal.
 
 To scaffold a module with params using the `--params` flag:
 
 ```bash
-ignite scaffold module launch --params minLaunch:uint,maxLaunch:int
+spellshape scaffold module launch --params minLaunch:uint,maxLaunch:int
 ```
 
 After the parameters are scaffolded, change the `x/<module>/types/params.go` file to set the default values and validate the fields. 
 
-The params module supports all [built-in Ignite CLI types](./05-types.md).
+The params module supports all [built-in Spellshape CLI types](./05-types.md).
 
 ## Params types
 

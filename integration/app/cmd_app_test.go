@@ -9,8 +9,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
 )
 
 func TestGenerateAnApp(t *testing.T) {
@@ -60,7 +60,7 @@ func TestGenerateAnAppWithNoDefaultModuleAndCreateAModule(t *testing.T) {
 
 	env.Must(env.Exec("should scaffold a new module into a chain that never had modules before",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "module", "--yes", "first_module"),
+			step.Exec(envtest.SpellshapeApp, "s", "module", "--yes", "first_module"),
 			step.Workdir(app.SourcePath()),
 		)),
 	))
@@ -76,14 +76,14 @@ func TestGenerateAnAppWithWasm(t *testing.T) {
 
 	env.Must(env.Exec("add Wasm module",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "wasm", "--yes"),
+			step.Exec(envtest.SpellshapeApp, "s", "wasm", "--yes"),
 			step.Workdir(app.SourcePath()),
 		)),
 	))
 
 	env.Must(env.Exec("should not add Wasm module second time",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "wasm", "--yes"),
+			step.Exec(envtest.SpellshapeApp, "s", "wasm", "--yes"),
 			step.Workdir(app.SourcePath()),
 		)),
 		envtest.ExecShouldError(),
@@ -100,14 +100,14 @@ func TestGenerateAppWithEmptyModule(t *testing.T) {
 
 	env.Must(env.Exec("create a module",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "module", "--yes", "example", "--require-registration"),
+			step.Exec(envtest.SpellshapeApp, "s", "module", "--yes", "example", "--require-registration"),
 			step.Workdir(app.SourcePath()),
 		)),
 	))
 
 	env.Must(env.Exec("should prevent creating an existing module",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "module", "--yes", "example", "--require-registration"),
+			step.Exec(envtest.SpellshapeApp, "s", "module", "--yes", "example", "--require-registration"),
 			step.Workdir(app.SourcePath()),
 		)),
 		envtest.ExecShouldError(),
@@ -115,7 +115,7 @@ func TestGenerateAppWithEmptyModule(t *testing.T) {
 
 	env.Must(env.Exec("should prevent creating a module with an invalid name",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "module", "--yes", "example1", "--require-registration"),
+			step.Exec(envtest.SpellshapeApp, "s", "module", "--yes", "example1", "--require-registration"),
 			step.Workdir(app.SourcePath()),
 		)),
 		envtest.ExecShouldError(),
@@ -123,7 +123,7 @@ func TestGenerateAppWithEmptyModule(t *testing.T) {
 
 	env.Must(env.Exec("should prevent creating a module with a reserved name",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "module", "--yes", "tx", "--require-registration"),
+			step.Exec(envtest.SpellshapeApp, "s", "module", "--yes", "tx", "--require-registration"),
 			step.Workdir(app.SourcePath()),
 		)),
 		envtest.ExecShouldError(),
@@ -131,7 +131,7 @@ func TestGenerateAppWithEmptyModule(t *testing.T) {
 
 	env.Must(env.Exec("should prevent creating a module with a forbidden prefix",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "module", "--yes", "ibcfoo", "--require-registration"),
+			step.Exec(envtest.SpellshapeApp, "s", "module", "--yes", "ibcfoo", "--require-registration"),
 			step.Workdir(app.SourcePath()),
 		)),
 		envtest.ExecShouldError(),
@@ -139,7 +139,7 @@ func TestGenerateAppWithEmptyModule(t *testing.T) {
 
 	env.Must(env.Exec("should prevent creating a module prefixed with an existing module",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "module", "--yes", "examplefoo", "--require-registration"),
+			step.Exec(envtest.SpellshapeApp, "s", "module", "--yes", "examplefoo", "--require-registration"),
 			step.Workdir(app.SourcePath()),
 		)),
 		envtest.ExecShouldError(),
@@ -148,7 +148,7 @@ func TestGenerateAppWithEmptyModule(t *testing.T) {
 	env.Must(env.Exec("create a module with dependencies",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"s",
 				"module",
 				"--yes",
@@ -164,7 +164,7 @@ func TestGenerateAppWithEmptyModule(t *testing.T) {
 	env.Must(env.Exec("should prevent creating a module with invalid dependencies",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"s",
 				"module",
 				"--yes",
@@ -181,7 +181,7 @@ func TestGenerateAppWithEmptyModule(t *testing.T) {
 	env.Must(env.Exec("should prevent creating a module with a non registered dependency",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"s",
 				"module",
 				"--yes",

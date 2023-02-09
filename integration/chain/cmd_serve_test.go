@@ -9,9 +9,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	"github.com/ignite/cli/ignite/pkg/xos"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
+	"github.com/spellshape/cli/spellshape/pkg/xos"
 )
 
 func TestServeWithWasm(t *testing.T) {
@@ -25,7 +25,7 @@ func TestServeWithWasm(t *testing.T) {
 
 	env.Must(env.Exec("add Wasm module",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "wasm", "--yes"),
+			step.Exec(envtest.SpellshapeApp, "s", "wasm", "--yes"),
 			step.Workdir(app.SourcePath()),
 		)),
 	))

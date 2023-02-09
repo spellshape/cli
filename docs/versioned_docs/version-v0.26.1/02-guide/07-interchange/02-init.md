@@ -16,7 +16,7 @@ transaction handlers.
 Scaffold a new blockchain called `interchange`:
 
 ```bash
-ignite scaffold chain interchange --no-module
+spellshape scaffold chain interchange --no-module
 ```
 
 A new directory named `interchange` is created.
@@ -41,18 +41,18 @@ The dex module contains the logic to create and maintain order books and route t
 blockchain.
 
 ```bash
-ignite scaffold module dex --ibc --ordering unordered --dep bank
+spellshape scaffold module dex --ibc --ordering unordered --dep bank
 ```
 
 ## Create CRUD logic for Buy and Sell Order Books
 
 Scaffold two types with create, read, update, and delete (CRUD) actions.
 
-Run the following Ignite CLI `type` commands to create `sellOrderBook` and `buyOrderBook` types:
+Run the following Spellshape CLI `type` commands to create `sellOrderBook` and `buyOrderBook` types:
 
 ```bash
-ignite scaffold map sell-order-book amountDenom priceDenom --no-message --module dex
-ignite scaffold map buy-order-book amountDenom priceDenom --no-message --module dex
+spellshape scaffold map sell-order-book amountDenom priceDenom --no-message --module dex
+spellshape scaffold map buy-order-book amountDenom priceDenom --no-message --module dex
 ```
 
 The values are:
@@ -73,9 +73,9 @@ Create three packets for IBC:
 - A buy order `buyOrder`
 
 ```bash
-ignite scaffold packet create-pair sourceDenom targetDenom --module dex
-ignite scaffold packet sell-order amountDenom amount:int priceDenom price:int --ack remainingAmount:int,gain:int --module dex
-ignite scaffold packet buy-order amountDenom amount:int priceDenom price:int --ack remainingAmount:int,purchase:int --module dex
+spellshape scaffold packet create-pair sourceDenom targetDenom --module dex
+spellshape scaffold packet sell-order amountDenom amount:int priceDenom price:int --ack remainingAmount:int,gain:int --module dex
+spellshape scaffold packet buy-order amountDenom amount:int priceDenom price:int --ack remainingAmount:int,purchase:int --module dex
 ```
 
 The optional `--ack` flag defines field names and types of the acknowledgment returned after the packet has been
@@ -89,8 +89,8 @@ Cancelling orders is done locally in the network, there is no packet to send.
 Use the `message` command to create a message to cancel a sell or buy order:
 
 ```bash
-ignite scaffold message cancel-sell-order port channel amountDenom priceDenom orderID:int --desc "Cancel a sell order" --module dex
-ignite scaffold message cancel-buy-order port channel amountDenom priceDenom orderID:int --desc "Cancel a buy order" --module dex
+spellshape scaffold message cancel-sell-order port channel amountDenom priceDenom orderID:int --desc "Cancel a sell order" --module dex
+spellshape scaffold message cancel-buy-order port channel amountDenom priceDenom orderID:int --desc "Cancel a buy order" --module dex
 ```
 
 Use the optional `--desc` flag to define a description of the CLI command that is used to broadcast a transaction with
@@ -111,7 +111,7 @@ You can do this with an indexed type.
 For a `voucher` you store, define the source port ID, source channel ID, and the original denom:
 
 ```bash
-ignite scaffold map denom-trace port channel origin --no-message --module dex
+spellshape scaffold map denom-trace port channel origin --no-message --module dex
 ```
 
 ## Create the Configuration for Two Blockchains

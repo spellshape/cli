@@ -31,19 +31,19 @@ exchange will operate.
 ## Start blockchain nodes
 
 To start using the interchain exchange, you will need to start two separate
-blockchains. This can be done by running the `ignite chain serve` command,
+blockchains. This can be done by running the `spellshape chain serve` command,
 followed by the `-c` flag and the path to the configuration file for each
 blockchain. For example, to start the `mars` blockchain, you would run:
 
 ```
-ignite chain serve -c mars.yml
+spellshape chain serve -c mars.yml
 ```
 
 To start the `venus` blockchain, you would run a similar command, but with the
 path to the `venus.yml` configuration file:
 
 ```
-ignite chain serve -c venus.yml
+spellshape chain serve -c venus.yml
 ```
 
 Once both blockchains are running, you can proceed with configuring the relayer
@@ -55,23 +55,23 @@ Next, let's set up an IBC relayer between two chains. If you have used a relayer
 in the past, reset the relayer configuration directory:
 
 ```
-rm -rf ~/.ignite/relayer
+rm -rf ~/.spellshape/relayer
 ```
 
-Now you can use the `ignite relayer configure` command. This command allows you
+Now you can use the `spellshape relayer configure` command. This command allows you
 to specify the source and target chains, along with their respective RPC
 endpoints, faucet URLs, port numbers, versions, gas prices, and gas limits.
 
 ```
-ignite relayer configure -a --source-rpc "http://0.0.0.0:26657" --source-faucet "http://0.0.0.0:4500" --source-port "dex" --source-version "dex-1" --source-gasprice "0.0000025stake" --source-prefix "cosmos" --source-gaslimit 300000 --target-rpc "http://0.0.0.0:26659" --target-faucet "http://0.0.0.0:4501" --target-port "dex" --target-version "dex-1" --target-gasprice "0.0000025stake" --target-prefix "cosmos" --target-gaslimit 300000
+spellshape relayer configure -a --source-rpc "http://0.0.0.0:26657" --source-faucet "http://0.0.0.0:4500" --source-port "dex" --source-version "dex-1" --source-gasprice "0.0000025stake" --source-prefix "cosmos" --source-gaslimit 300000 --target-rpc "http://0.0.0.0:26659" --target-faucet "http://0.0.0.0:4501" --target-port "dex" --target-version "dex-1" --target-gasprice "0.0000025stake" --target-prefix "cosmos" --target-gaslimit 300000
 ```
 
-To create a connection between the two chains, you can use the ignite relayer
+To create a connection between the two chains, you can use the spellshape relayer
 connect command. This command will establish a connection between the source and
 target chains, allowing you to transfer data and assets between them.
 
 ```
-ignite relayer connect
+spellshape relayer connect
 ```
 
 Now that we have two separate blockchain networks up and running, and a relayer

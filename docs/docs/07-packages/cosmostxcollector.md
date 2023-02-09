@@ -40,10 +40,10 @@ import (
 	"context"
 	"log"
 
-	"github.com/ignite/cli/ignite/pkg/clictx"
-	"github.com/ignite/cli/ignite/pkg/cosmosclient"
-	"github.com/ignite/cli/ignite/pkg/cosmostxcollector"
-	"github.com/ignite/cli/ignite/pkg/cosmostxcollector/adapter/postgres"
+	"github.com/spellshape/cli/spellshape/pkg/clictx"
+	"github.com/spellshape/cli/spellshape/pkg/cosmosclient"
+	"github.com/spellshape/cli/spellshape/pkg/cosmostxcollector"
+	"github.com/spellshape/cli/spellshape/pkg/cosmostxcollector/adapter/postgres"
 )
 
 const (
@@ -122,8 +122,8 @@ import (
 	"context"
 
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/ignite/cli/ignite/pkg/cosmostxcollector/adapter/postgres"
-	"github.com/ignite/cli/ignite/pkg/cosmostxcollector/query"
+	"github.com/spellshape/cli/spellshape/pkg/cosmostxcollector/adapter/postgres"
+	"github.com/spellshape/cli/spellshape/pkg/cosmostxcollector/query"
 )
 
 func queryBankTransferEvents(ctx context.Context, db postgres.Adapter) ([]query.Event, error) {
@@ -160,8 +160,8 @@ import (
 	"context"
 
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/ignite/cli/ignite/pkg/cosmostxcollector/adapter/postgres"
-	"github.com/ignite/cli/ignite/pkg/cosmostxcollector/query"
+	"github.com/spellshape/cli/spellshape/pkg/cosmostxcollector/adapter/postgres"
+	"github.com/spellshape/cli/spellshape/pkg/cosmostxcollector/query"
 )
 
 func queryBankTransferEventIDs(ctx context.Context, db postgres.Adapter) (ids []int64, err error) {

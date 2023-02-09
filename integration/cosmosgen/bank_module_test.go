@@ -8,10 +8,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	chainconfig "github.com/ignite/cli/ignite/config/chain"
-	"github.com/ignite/cli/ignite/config/chain/base"
-	"github.com/ignite/cli/ignite/pkg/xurl"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	chainconfig "github.com/spellshape/cli/spellshape/config/chain"
+	"github.com/spellshape/cli/spellshape/config/chain/base"
+	"github.com/spellshape/cli/spellshape/pkg/xurl"
 )
 
 func TestBankModule(t *testing.T) {

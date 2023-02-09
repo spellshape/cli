@@ -1,4 +1,4 @@
-module github.com/ignite/cli
+module github.com/spellshape/cli
 
 go 1.19
 
@@ -37,7 +37,6 @@ require (
 	github.com/hashicorp/go-hclog v1.2.0
 	github.com/hashicorp/go-plugin v1.4.6
 	github.com/iancoleman/strcase v0.2.0
-	github.com/ignite/web v0.4.3
 	github.com/imdario/mergo v0.3.13
 	github.com/jpillora/chisel v1.7.7
 	github.com/lib/pq v1.10.7
@@ -50,6 +49,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/radovskyb/watcher v1.0.7
 	github.com/rs/cors v1.8.2
+	github.com/spellshape/web v0.4.3
 	github.com/spf13/cast v1.5.0
 	github.com/spf13/cobra v1.6.1
 	github.com/spf13/pflag v1.0.5
@@ -387,3 +387,5 @@ require (
 )
 
 replace github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
+
+replace github.com/spellshape/web v0.4.3 => ../web

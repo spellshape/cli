@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
 )
 
 func TestNetworkRequestParam(t *testing.T) {
@@ -45,9 +45,9 @@ func TestNetworkRequestParam(t *testing.T) {
 		env.Exec("publish planet chain to spn",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"network", "chain", "publish",
-					"https://github.com/ignite/example",
+					"https://github.com/spellshape/example",
 					"--local",
 					// The hash is used to be sure the test uses the right config
 					// version. Hash value must be updated to the latest when the
@@ -58,7 +58,7 @@ func TestNetworkRequestParam(t *testing.T) {
 			),
 				step.New(
 					step.Exec(
-						envtest.IgniteApp,
+						envtest.SpellshapeApp,
 						"network", "request", "change-param",
 						"1", "mint", "mint_denom", "\"bar\"",
 						"--local",
@@ -67,7 +67,7 @@ func TestNetworkRequestParam(t *testing.T) {
 				),
 				step.New(
 					step.Exec(
-						envtest.IgniteApp,
+						envtest.SpellshapeApp,
 						"network", "chain", "show", "genesis",
 						"1",
 						"--local",

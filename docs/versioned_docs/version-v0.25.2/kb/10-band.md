@@ -22,7 +22,7 @@ BandChain oracle queries can be scaffolded only in IBC modules.
 The basic syntax to scaffold a band oracle module is:
 
 ```bash
-ignite scaffold band [queryName] --module [moduleName]
+spellshape scaffold band [queryName] --module [moduleName]
 ```
 
 Customize your band oracle with flags:
@@ -50,20 +50,20 @@ When you scaffold a BandChain oracle module, the following files and directories
 First, scaffold a chain but don't scaffold a default module:
 
 ```bash
-ignite scaffold chain oracle --no-module 
+spellshape scaffold chain oracle --no-module 
 ```
 
 Next, change to the new `oracle` directory and scaffold an IBC-enabled module named `consuming`:
 
 ```bash
 cd oracle 
-ignite scaffold module consuming --ibc
+spellshape scaffold module consuming --ibc
 ```
 
 Finally, scaffold a BandChain query oracle that can request real-time data:
 
 ```bash
-ignite scaffold band coinRates --module consuming
+spellshape scaffold band coinRates --module consuming
 ```
 
 So far, you have scaffolded:
@@ -76,7 +76,7 @@ Now it's time to change the data.
 
 ## Update version
 
-The output of the `ignite scaffold band coinRates --module consuming` command prompts you to update the `keys.go` file.
+The output of the `spellshape scaffold band coinRates --module consuming` command prompts you to update the `keys.go` file.
 
 In the `x/consuming/types/keys.go` file, update the `Version` variable in the `const` block to the required version that the IBC module supports:
 
@@ -96,28 +96,28 @@ const (
 To run the chain from the `oracle` directory:
 
 ```bash
-ignite chain serve
+spellshape chain serve
 ```
 
 Keep this terminal window open.
 
-## Configure and connect the Ignite CLI relayer
+## Configure and connect the Spellshape CLI relayer
 
-If you previously used the Ignite CLI relayer, it is a good idea to remove existing relayer and Ignite CLI configurations:
+If you previously used the Spellshape CLI relayer, it is a good idea to remove existing relayer and Spellshape CLI configurations:
 
 1. Stop your blockchains.
 2. Delete previous configuration files:
 
     ```bash
-    rm -rf ~/.ignite/relayer
+    rm -rf ~/.spellshape/relayer
     ```
 
 3. Restart your blockchains.
 
-In another terminal tab, configure the [Ignite CLI relayer](./08-relayer.md):
+In another terminal tab, configure the [Spellshape CLI relayer](./08-relayer.md):
 
 ```bash
-ignite relayer configure -a \
+spellshape relayer configure -a \
 --source-rpc "http://rpc-laozi-testnet4.bandchain.org:80" \
 --source-faucet "https://laozi-testnet4.bandchain.org/faucet" \
 --source-port "oracle" \
@@ -158,7 +158,7 @@ The command output confirms the relayer is successfully configured:
 Connect the relayer:
 
 ```bash
-ignite relayer connect
+spellshape relayer connect
 ```
 
 You can see the paths of the `oracle` port on the testnet and the `consuming` port on your local oracle module in the relayer connection status that is output to the terminal:
@@ -208,7 +208,7 @@ You can scaffold multiples oracles by module. After scaffold, you must change th
 To create an example for the [gold price](https://laozi-testnet6.cosmoscan.io/oracle-script/33#bridge) bridge:
 
 ```bash
-ignite scaffold band goldPrice --module consuming
+spellshape scaffold band goldPrice --module consuming
 ```
 
 In the `proto/consuming/gold_price.proto` file:

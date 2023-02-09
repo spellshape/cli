@@ -77,5 +77,5 @@ message QueryShowPostResponse {
 Run the command to generate Go files from proto:
 
 ```
-ignite generate proto-go
+spellshape generate proto-go
 ```

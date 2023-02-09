@@ -1,6 +1,6 @@
 # Importing methods from the Bank keeper
 
-In the previous step you have created the `loan` module with `ignite scaffold
+In the previous step you have created the `loan` module with `spellshape scaffold
 module` using `--dep bank`. This command created a new module and added the
 `bank` keeper to the `loan` module, which allows you to add and use bank's
 keeper methods in loan's keeper methods.
@@ -8,7 +8,7 @@ keeper methods in loan's keeper methods.
 To see the changes made by `--dep bank`, review the following files:
 `x/loan/keeper/keeper.go` and `x/loan/module.go`.
 
-Ignite takes care of adding the `bank` keeper, but you still need to tell the
+Spellshape takes care of adding the `bank` keeper, but you still need to tell the
 `loan` module which `bank` methods you will be using. You will be using three
 methods: `SendCoins`, `SendCoinsFromAccountToModule`, and
 `SendCoinsFromModuleToAccount`. You can do that by adding method signatures to

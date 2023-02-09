@@ -4,20 +4,20 @@ description: Information about the generated TypeScript client code.
 
 # TypeScript frontend
 
-Ignite offers powerful functionality for generating client-side code for your
+Spellshape offers powerful functionality for generating client-side code for your
 blockchain. Think of this as a one-click client SDK generation tailored
 specifically for your blockchain.
 
-See [`ignite generate ts-client --help`](../references/cli#ignite-generate-ts-client) learn
+See [`spellshape generate ts-client --help`](../references/cli#spellshape-generate-ts-client) learn
 more on how to use TypeScript code generation.
 
 ## Starting a node
 
-Create a new blockchain with `ignite scaffold chain`. You can use an existing
+Create a new blockchain with `spellshape scaffold chain`. You can use an existing
 blockchain project if you have one, instead.
 
 ```
-ignite scaffold chain example
+spellshape scaffold chain example
 ```
 
 For testing purposes add a new account to `config.yml` with a mnemonic:
@@ -33,13 +33,13 @@ Run a command to generate TypeScript clients for both standard and custom Cosmos
 SDK modules:
 
 ```
-ignite generate ts-client --clear-cache
+spellshape generate ts-client --clear-cache
 ```
 
 Run a command to start your blockchain node:
 
 ```
-ignite chain serve -r
+spellshape chain serve -r
 ```
 
 ## Setting up a TypeScript frontend client
@@ -191,18 +191,18 @@ const tx_result = await client.CosmosBankV1Beta1.tx.sendMsgSend({
 ## Broadcasting a transaction with a custom message
 
 If your chain already has custom messages defined, you can use those. If not,
-we'll be using Ignite's scaffolded code as an example. Create a post with CRUD
+we'll be using Spellshape's scaffolded code as an example. Create a post with CRUD
 messages:
 
 ```
-ignite scaffold list post title body
+spellshape scaffold list post title body
 ```
 
 After adding messages to your chain you may need to re-generate the TypeScript
 client:
 
 ```
-ignite generate ts-client --clear-cache
+spellshape generate ts-client --clear-cache
 ```
 
 Broadcast a transaction containing the custom `MsgCreatePost`:
@@ -247,7 +247,7 @@ modules you need:
 
 ```typescript title="my-frontend-app/src/main.ts"
 // highlight-start
-import { IgniteClient } from '../../ts-client/client'
+import { SpellshapeClient } from '../../ts-client/client'
 import { Module as CosmosBankV1Beta1 } from '../../ts-client/cosmos.bank.v1beta1'
 import { Module as CosmosStakingV1Beta1 } from '../../ts-client/cosmos.staking.v1beta1'
 // highlight-end
@@ -257,7 +257,7 @@ const mnemonic =
   'play butter frown city voyage pupil rabbit wheat thrive mind skate turkey helmet thrive door either differ gate exhibit impose city swallow goat faint'
 const wallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic)
 // highlight-next-line
-const Client = IgniteClient.plugin([CosmosBankV1Beta1, CosmosStakingV1Beta1])
+const Client = SpellshapeClient.plugin([CosmosBankV1Beta1, CosmosStakingV1Beta1])
 
 const client = new Client(
   {

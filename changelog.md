@@ -1,100 +1,100 @@
-## [`v0.26.0`](https://github.com/ignite/cli/releases/tag/v0.26.0)
+## [`v0.26.0`](https://github.com/spellshape/cli/releases/tag/v0.26.0)
 
 ### Features
 
-- [#3238](https://github.com/ignite/cli/pull/3238) Add `Sharedhost` plugin option
-- [#3214](https://github.com/ignite/cli/pull/3214) Global plugins config.
-- [#3142](https://github.com/ignite/cli/pull/3142) Add `ignite network request param-change` command.
-- [#3181](https://github.com/ignite/cli/pull/3181) Addition of `add` and `remove` commands for `plugins`
-- [#3184](https://github.com/ignite/cli/pull/3184) Separate `plugins.yml` config file.
-- [#3038](https://github.com/ignite/cli/pull/3038) Addition of Plugin Hooks in Plugin System
-- [#3056](https://github.com/ignite/cli/pull/3056) Add `--genesis-config` flag option to `ignite network chain publish`
-- [#2892](https://github.com/ignite/cli/pull/2982/) Add `ignite scaffold react` command.
-- [#2892](https://github.com/ignite/cli/pull/2982/) Add `ignite generate composables` command.
-- [#2892](https://github.com/ignite/cli/pull/2982/) Add `ignite generate hooks` command.
-- [#2955](https://github.com/ignite/cli/pull/2955/) Add `ignite network request add-account` command.
-- [#2877](https://github.com/ignite/cli/pull/2877) Plugin system
-- [#3060](https://github.com/ignite/cli/pull/3060) Plugin system flag support
-- [#3105](https://github.com/ignite/cli/pull/3105) Addition of `ignite plugin describe <path>` command
-- [#2995](https://github.com/ignite/cli/pull/2995/) Add `ignite network request remove-validator` command.
-- [#2999](https://github.com/ignite/cli/pull/2999/) Add `ignite network request remove-account` command.
-- [#2458](https://github.com/ignite/cli/issues/2458) New `chain serve` command UI.
-- [#2992](https://github.com/ignite/cli/issues/2992) Add `ignite chain debug` command.
-- [#2736](https://github.com/ignite/cli/issues/2736) Add `--skip-git` flag to skip git repository initialization.
+- [#3238](https://github.com/spellshape/cli/pull/3238) Add `Sharedhost` plugin option
+- [#3214](https://github.com/spellshape/cli/pull/3214) Global plugins config.
+- [#3142](https://github.com/spellshape/cli/pull/3142) Add `spellshape network request param-change` command.
+- [#3181](https://github.com/spellshape/cli/pull/3181) Addition of `add` and `remove` commands for `plugins`
+- [#3184](https://github.com/spellshape/cli/pull/3184) Separate `plugins.yml` config file.
+- [#3038](https://github.com/spellshape/cli/pull/3038) Addition of Plugin Hooks in Plugin System
+- [#3056](https://github.com/spellshape/cli/pull/3056) Add `--genesis-config` flag option to `spellshape network chain publish`
+- [#2892](https://github.com/spellshape/cli/pull/2982/) Add `spellshape scaffold react` command.
+- [#2892](https://github.com/spellshape/cli/pull/2982/) Add `spellshape generate composables` command.
+- [#2892](https://github.com/spellshape/cli/pull/2982/) Add `spellshape generate hooks` command.
+- [#2955](https://github.com/spellshape/cli/pull/2955/) Add `spellshape network request add-account` command.
+- [#2877](https://github.com/spellshape/cli/pull/2877) Plugin system
+- [#3060](https://github.com/spellshape/cli/pull/3060) Plugin system flag support
+- [#3105](https://github.com/spellshape/cli/pull/3105) Addition of `spellshape plugin describe <path>` command
+- [#2995](https://github.com/spellshape/cli/pull/2995/) Add `spellshape network request remove-validator` command.
+- [#2999](https://github.com/spellshape/cli/pull/2999/) Add `spellshape network request remove-account` command.
+- [#2458](https://github.com/spellshape/cli/issues/2458) New `chain serve` command UI.
+- [#2992](https://github.com/spellshape/cli/issues/2992) Add `spellshape chain debug` command.
+- [#2736](https://github.com/spellshape/cli/issues/2736) Add `--skip-git` flag to skip git repository initialization.
 
 ### Changes
 
-- [#3369](https://github.com/ignite/cli/pull/3369) Update `ibc-go` to `v6.1.0`.
-- [#3306](https://github.com/ignite/cli/pull/3306) Move network command into a plugin
-- [#3305](https://github.com/ignite/cli/pull/3305) Bump Cosmos SDK version to `v0.46.7`.
-- [#3068](https://github.com/ignite/cli/pull/3068) Add configs to generated TS code for working with JS projects
-- [#3071](https://github.com/ignite/cli/pull/3071) Refactor `ignite/templates` package.
-- [#2892](https://github.com/ignite/cli/pull/2982/) `ignite scaffold vue` and `ignite scaffold react` use v0.4.2 templates
-- [#2892](https://github.com/ignite/cli/pull/2982/) `removeSigner()` method added to generated `ts-client`
-- [#3035](https://github.com/ignite/cli/pull/3035) Bump Cosmos SDK to `v0.46.4`.
-- [#3037](https://github.com/ignite/cli/pull/3037) Bump `ibc-go` to `v5.0.1`.
-- [#2957](https://github.com/ignite/cli/pull/2957) Change generate commands to print the path to the generated code.
-- [#2981](https://github.com/ignite/cli/issues/2981) Change CLI to also search chain binary in Go binary path.
-- [#2958](https://github.com/ignite/cli/pull/2958) Support absolute paths for client code generation config paths.
-- [#2993](https://github.com/ignite/cli/pull/2993) Hide `ignite scaffold band` command and deprecate functionality.
-- [#2986](https://github.com/ignite/cli/issues/2986) Remove `--proto-all-modules` flag because it is now the default behaviour.
-- [#2986](https://github.com/ignite/cli/issues/2986) Remove automatic Vue code scaffolding from `scaffold chain` command.
-- [#2986](https://github.com/ignite/cli/issues/2986) Add `--generate-clients` to `chain serve` command for optional client code (re)generation.
-- [#2998](https://github.com/ignite/cli/pull/2998) Hide `ignite generate dart` command and remove functionality.
-- [#2991](https://github.com/ignite/cli/pull/2991) Hide `ignite scaffold flutter` command and remove functionality.
-- [#2944](https://github.com/ignite/cli/pull/2944) Add a new event "update" status option to `pkg/cliui`.
-- [#3030](https://github.com/ignite/cli/issues/3030) Remove colon syntax from module scaffolding `--dep` flag.
-- [#3025](https://github.com/ignite/cli/issues/3025) Improve config version error handling.
-- [#3084](https://github.com/ignite/cli/pull/3084) Add Ignite Chain documentation.
-- [#3109](https://github.com/ignite/cli/pull/3109) Refactor scaffolding for proto files to not rely on placeholders.
-- [#3106](https://github.com/ignite/cli/pull/3106) Add zoom image plugin.
-- [#3194](https://github.com/ignite/cli/issues/3194) Move config validators check to validate only when required.
-- [#3183](https://github.com/ignite/cli/pull/3183/) Make config optional for init phase.
-- [#3224](https://github.com/ignite/cli/pull/3224) Remove `grpc_*` prefix from query files in scaffolded chains
-- [#3229](https://github.com/ignite/cli/pull/3229) Rename `campaign` to `project` in ignite network set of commands
-- [#3122](https://github.com/ignite/cli/issues/3122) Change `generate ts-client` to ignore the cache by default.
-- [#3244](https://github.com/ignite/cli/pull/3244) Update `actions.yml` for resolving deprecation message
-- [#3337](https://github.com/ignite/cli/pull/3337) Remove `pkg/openapiconsole` import from scaffold template.
-- [#3337](https://github.com/ignite/cli/pull/3337) Register`nodeservice` gRPC in `app.go` template.
+- [#3369](https://github.com/spellshape/cli/pull/3369) Update `ibc-go` to `v6.1.0`.
+- [#3306](https://github.com/spellshape/cli/pull/3306) Move network command into a plugin
+- [#3305](https://github.com/spellshape/cli/pull/3305) Bump Cosmos SDK version to `v0.46.7`.
+- [#3068](https://github.com/spellshape/cli/pull/3068) Add configs to generated TS code for working with JS projects
+- [#3071](https://github.com/spellshape/cli/pull/3071) Refactor `spellshape/templates` package.
+- [#2892](https://github.com/spellshape/cli/pull/2982/) `spellshape scaffold vue` and `spellshape scaffold react` use v0.4.2 templates
+- [#2892](https://github.com/spellshape/cli/pull/2982/) `removeSigner()` method added to generated `ts-client`
+- [#3035](https://github.com/spellshape/cli/pull/3035) Bump Cosmos SDK to `v0.46.4`.
+- [#3037](https://github.com/spellshape/cli/pull/3037) Bump `ibc-go` to `v5.0.1`.
+- [#2957](https://github.com/spellshape/cli/pull/2957) Change generate commands to print the path to the generated code.
+- [#2981](https://github.com/spellshape/cli/issues/2981) Change CLI to also search chain binary in Go binary path.
+- [#2958](https://github.com/spellshape/cli/pull/2958) Support absolute paths for client code generation config paths.
+- [#2993](https://github.com/spellshape/cli/pull/2993) Hide `spellshape scaffold band` command and deprecate functionality.
+- [#2986](https://github.com/spellshape/cli/issues/2986) Remove `--proto-all-modules` flag because it is now the default behaviour.
+- [#2986](https://github.com/spellshape/cli/issues/2986) Remove automatic Vue code scaffolding from `scaffold chain` command.
+- [#2986](https://github.com/spellshape/cli/issues/2986) Add `--generate-clients` to `chain serve` command for optional client code (re)generation.
+- [#2998](https://github.com/spellshape/cli/pull/2998) Hide `spellshape generate dart` command and remove functionality.
+- [#2991](https://github.com/spellshape/cli/pull/2991) Hide `spellshape scaffold flutter` command and remove functionality.
+- [#2944](https://github.com/spellshape/cli/pull/2944) Add a new event "update" status option to `pkg/cliui`.
+- [#3030](https://github.com/spellshape/cli/issues/3030) Remove colon syntax from module scaffolding `--dep` flag.
+- [#3025](https://github.com/spellshape/cli/issues/3025) Improve config version error handling.
+- [#3084](https://github.com/spellshape/cli/pull/3084) Add Spellshape Chain documentation.
+- [#3109](https://github.com/spellshape/cli/pull/3109) Refactor scaffolding for proto files to not rely on placeholders.
+- [#3106](https://github.com/spellshape/cli/pull/3106) Add zoom image plugin.
+- [#3194](https://github.com/spellshape/cli/issues/3194) Move config validators check to validate only when required.
+- [#3183](https://github.com/spellshape/cli/pull/3183/) Make config optional for init phase.
+- [#3224](https://github.com/spellshape/cli/pull/3224) Remove `grpc_*` prefix from query files in scaffolded chains
+- [#3229](https://github.com/spellshape/cli/pull/3229) Rename `campaign` to `project` in spellshape network set of commands
+- [#3122](https://github.com/spellshape/cli/issues/3122) Change `generate ts-client` to ignore the cache by default.
+- [#3244](https://github.com/spellshape/cli/pull/3244) Update `actions.yml` for resolving deprecation message
+- [#3337](https://github.com/spellshape/cli/pull/3337) Remove `pkg/openapiconsole` import from scaffold template.
+- [#3337](https://github.com/spellshape/cli/pull/3337) Register`nodeservice` gRPC in `app.go` template.
 
 ### Breaking Changes
 
-- [#3033](https://github.com/ignite/cli/pull/3033) Remove Cosmos SDK Launchpad version support.
+- [#3033](https://github.com/spellshape/cli/pull/3033) Remove Cosmos SDK Launchpad version support.
 
 ### Fixes
 
-- [#3114](https://github.com/ignite/cli/pull/3114) Fix out of gas issue when approving many requests
-- [#3068](https://github.com/ignite/cli/pull/3068) Fix REST codegen method casing bug
-- [#3031](https://github.com/ignite/cli/pull/3031) Move keeper hooks to after all keepers initialized in `app.go` template.
-- [#3098](https://github.com/ignite/cli/issues/3098) Fix config upgrade issue that left config empty on error. 
-- [#3129](https://github.com/ignite/cli/issues/3129) Remove redundant `keyring-backend` config option.
-- [#3187](https://github.com/ignite/cli/issues/3187) Change prompt text to fit within 80 characters width.
-- [#3203](https://github.com/ignite/cli/issues/3203) Fix relayer to work with multiple paths.
-- [#3320](https://github.com/ignite/cli/pull/3320) Allow `id` and `creator` as names when scaffolding a type.
-- [#3327](https://github.com/ignite/cli/issues/3327) Scaffolding messages with same name leads to aliasing.
-- [#3383](https://github.com/ignite/cli/pull/3383) State error and info are now displayed when using serve UI.
-- [#3379](https://github.com/ignite/cli/issues/3379) Fix `ignite docs` issue by disabling mouse support.
+- [#3114](https://github.com/spellshape/cli/pull/3114) Fix out of gas issue when approving many requests
+- [#3068](https://github.com/spellshape/cli/pull/3068) Fix REST codegen method casing bug
+- [#3031](https://github.com/spellshape/cli/pull/3031) Move keeper hooks to after all keepers initialized in `app.go` template.
+- [#3098](https://github.com/spellshape/cli/issues/3098) Fix config upgrade issue that left config empty on error. 
+- [#3129](https://github.com/spellshape/cli/issues/3129) Remove redundant `keyring-backend` config option.
+- [#3187](https://github.com/spellshape/cli/issues/3187) Change prompt text to fit within 80 characters width.
+- [#3203](https://github.com/spellshape/cli/issues/3203) Fix relayer to work with multiple paths.
+- [#3320](https://github.com/spellshape/cli/pull/3320) Allow `id` and `creator` as names when scaffolding a type.
+- [#3327](https://github.com/spellshape/cli/issues/3327) Scaffolding messages with same name leads to aliasing.
+- [#3383](https://github.com/spellshape/cli/pull/3383) State error and info are now displayed when using serve UI.
+- [#3379](https://github.com/spellshape/cli/issues/3379) Fix `spellshape docs` issue by disabling mouse support.
 
-## [`v0.25.2`](https://github.com/ignite/cli/releases/tag/v0.25.1)
+## [`v0.25.2`](https://github.com/spellshape/cli/releases/tag/v0.25.1)
 
 ### Changes
 
-- [#3145](https://github.com/ignite/cli/pull/3145) Security fix upgrading Cosmos SDK to `v0.46.6`
+- [#3145](https://github.com/spellshape/cli/pull/3145) Security fix upgrading Cosmos SDK to `v0.46.6`
 # Changelog
 
-## [`v0.25.1`](https://github.com/ignite/cli/releases/tag/v0.25.1)
+## [`v0.25.1`](https://github.com/spellshape/cli/releases/tag/v0.25.1)
 
 ### Changes
 
-- [#2968](https://github.com/ignite/cli/pull/2968) Dragonberry security fix upgrading Cosmos SDK to `v0.46.3`
+- [#2968](https://github.com/spellshape/cli/pull/2968) Dragonberry security fix upgrading Cosmos SDK to `v0.46.3`
 
-## [`v0.25.0`](https://github.com/ignite/cli/releases/tag/v0.25.0)
+## [`v0.25.0`](https://github.com/spellshape/cli/releases/tag/v0.25.0)
 
 ### Features
 
 - Add `pkg/cosmostxcollector` package with support to query and save TXs and events.
-- Add `ignite network coordinator` command set.
-- Add `ignite network validator` command set.
+- Add `spellshape network coordinator` command set.
+- Add `spellshape network validator` command set.
 - Deprecate `cosmoscmd` pkg and add cmd templates for scaffolding.
 - Add generated TS client test support to integration tests.
 
@@ -102,7 +102,7 @@
 
 - Updated `pkg/cosmosanalysis` to discover the list of app modules when defined in variables or functions.
 - Improve genesis parser for `network` commands
-- Integration tests build their own ignite binary.
+- Integration tests build their own spellshape binary.
 - Updated `pkg/cosmosanalysis` to discover the list of app modules when defined in variables.
 - Switch to broadcast mode sync in `cosmosclient`
 - Updated `nodetime`: `ts-proto` to `v1.123.0`, `protobufjs` to `v7.1.1`, `swagger-typescript-api` to `v9.2.0`
@@ -115,7 +115,7 @@
 - Add `--peer-address` flag to `network chain join` command.
 - Change nightly tag format
 - Add cosmos-sdk version in `version` command
-- [#2935](https://github.com/ignite/cli/pull/2935) Update `gobuffalo/plush` templating tool to `v4`
+- [#2935](https://github.com/spellshape/cli/pull/2935) Update `gobuffalo/plush` templating tool to `v4`
 
 ### Fixes
 
@@ -127,16 +127,16 @@
 - Fix config file migration to void leaving end of file content chunks.
 - Change session print loop to block until all events are handled.
 - Handle "No records were found in keyring" message when checking keys.
-- [#2941](https://github.com/ignite/cli/issues/2941) Fix session to use the same spinner referece.
-- [#2922](https://github.com/ignite/cli/pull/2922) Network commands check for latest config version before building the chain binary.
+- [#2941](https://github.com/spellshape/cli/issues/2941) Fix session to use the same spinner referece.
+- [#2922](https://github.com/spellshape/cli/pull/2922) Network commands check for latest config version before building the chain binary.
 
-## [`v0.24.1`](https://github.com/ignite/cli/releases/tag/v0.24.1)
+## [`v0.24.1`](https://github.com/spellshape/cli/releases/tag/v0.24.1)
 
 ### Features
 
 - Upgraded Cosmos SDK to `v0.46.2`.
 
-## [`v0.24.0`](https://github.com/ignite/cli/releases/tag/v0.24.0)
+## [`v0.24.0`](https://github.com/spellshape/cli/releases/tag/v0.24.0)
 
 ### Features
 
@@ -159,9 +159,9 @@
 - Refactor `templates/app` to remove `monitoringp` module from the default template
 - Updated keyring dependency to match Cosmos SDK
 - Speed up the integration tests
-- Refactor ignite network and fix genesis generation bug
+- Refactor spellshape network and fix genesis generation bug
 - Make Go dependency verification optional during build by adding the `--check-dependencies` flag
-  so Ignite CLI can work in a Go workspace context.
+  so Spellshape CLI can work in a Go workspace context.
 - Temporary SPN address change for nightly
 - Rename `simapp.go.plush` simulation file template to `helpers.go.plush`
 - Remove campaign creation from the `network chain publish` command
@@ -169,7 +169,7 @@
 - Improve documentation and add support for protocol buffers and Go modules syntax
 - Add inline documentation for CLI commands
 - Change `cmd/account` to skip passphrase prompt when importing from mnemonic
-- Add nodejs version in the output of ignite version
+- Add nodejs version in the output of spellshape version
 - Removed `handler.go` from scaffolded module template
 - Migrated to `cosmossdk.io` packages for and `math`
 - Vuex stores from the `generate vuex` command use the new TypeScript client
@@ -187,10 +187,10 @@
 - Fix flaky integration tests issue that failed with "text file busy"
 - Fix default chain ID for publish
 - Replace `os.Rename` with `xos.Rename`
-- Fix CLI reference generation to add `ignite completion` documentation
+- Fix CLI reference generation to add `spellshape completion` documentation
 - Remove usage of deprecated `io/ioutil` package
 
-## [`v0.23.0`](https://github.com/ignite/cli/releases/tag/v0.23.0)
+## [`v0.23.0`](https://github.com/spellshape/cli/releases/tag/v0.23.0)
 
 ### Features
 
@@ -199,7 +199,7 @@
 ### Fixes
 
 - Fix `pkg/cosmosanalysis` to support apps with generics
-- Remove `ignite-hq/cli` from dependency list in scaffolded chains
+- Remove `spellshape-hq/cli` from dependency list in scaffolded chains
 
 ### Changes
 
@@ -209,7 +209,7 @@
 - Add migration docs for v0.22.2
 - Improve `go mod download` error report in `pkg/cosmosgen`
 
-## [`v0.22.2`](https://github.com/ignite/cli/releases/tag/v0.22.2)
+## [`v0.22.2`](https://github.com/spellshape/cli/releases/tag/v0.22.2)
 
 ### Features
 
@@ -217,15 +217,15 @@
 
 ### Changes
 
-- Rename `ignite-hq` to `ignite`
+- Rename `spellshape-hq` to `spellshape`
 
-## [`v0.22.1`](https://github.com/ignite/cli/releases/tag/v0.22.1)
+## [`v0.22.1`](https://github.com/spellshape/cli/releases/tag/v0.22.1)
 
 ### Fixes
 
 - Fix IBC module scaffolding interface in templates
 
-## [`v0.22.0`](https://github.com/ignite/cli/releases/tag/v0.22.0)
+## [`v0.22.0`](https://github.com/spellshape/cli/releases/tag/v0.22.0)
 
 ### Features
 
@@ -237,13 +237,13 @@
 
 - Add a fix in code generation to avoid user's NodeJS configs to break TS client generation routine
 
-## [`v0.21.2`](https://github.com/ignite/cli/releases/tag/v0.21.2)
+## [`v0.21.2`](https://github.com/spellshape/cli/releases/tag/v0.21.2)
 
 ### Fixes
 
 - Set min. gas to zero when running `chain` command set
 
-## [`v0.21.1`](https://github.com/ignite/cli/releases/tag/v0.21.1)
+## [`v0.21.1`](https://github.com/spellshape/cli/releases/tag/v0.21.1)
 
 ### Features
 
@@ -255,20 +255,20 @@
 - Fixed shell completion generation
 - Make sure proto package names are valid when using simple app names
 
-## [`v0.21.0`](https://github.com/ignite/cli/releases/tag/v0.21.0)
+## [`v0.21.0`](https://github.com/spellshape/cli/releases/tag/v0.21.0)
 
 ### Features
 
-- Support simple app names when scaffolding chains. e.g.: `ignite scaffold chain mars`
+- Support simple app names when scaffolding chains. e.g.: `spellshape scaffold chain mars`
 - Ask confirmation when scaffolding over changes that are not committed yet
 
-## [`v0.20.4`](https://github.com/ignite/cli/releases/tag/v0.20.4)
+## [`v0.20.4`](https://github.com/spellshape/cli/releases/tag/v0.20.4)
 
 ### Fixes
 
 - Use `protoc` binary compiled in an older version of macOS AMD64 for backwards compatibility in code generation
 
-## [`v0.20.3`](https://github.com/ignite/cli/releases/tag/v0.20.3)
+## [`v0.20.3`](https://github.com/spellshape/cli/releases/tag/v0.20.3)
 
 ### Fixes
 
@@ -276,23 +276,23 @@
   machines and since the chain depends on the CLI in its `go.mod`, it needs to use the latest version that support ARM
   targets)_
 
-## [`v0.20.2`](https://github.com/ignite/cli/releases/tag/v0.20.2)
+## [`v0.20.2`](https://github.com/spellshape/cli/releases/tag/v0.20.2)
 
 ### Fixes
 
 - Use `unsafe-reset-all` cmd under `tendermint` cmd for chains that use `=> v0.45.3` version of Cosmos SDK
 
-## [`v0.20.1`](https://github.com/ignite/cli/releases/tag/v0.20.1)
+## [`v0.20.1`](https://github.com/spellshape/cli/releases/tag/v0.20.1)
 
 ### Features
 
 - Release the CLI with Linux ARM and native M1 binaries
 
-## [`v0.20.0`](https://github.com/ignite/cli/releases/tag/v0.20.0)
+## [`v0.20.0`](https://github.com/spellshape/cli/releases/tag/v0.20.0)
 
-Our new name is **Ignite CLI**!
+Our new name is **Spellshape CLI**!
 
-**IMPORTANT!** This upgrade renames `starport` command to `ignite`. From now on, use `ignite` command to access the CLI.
+**IMPORTANT!** This upgrade renames `starport` command to `spellshape`. From now on, use `spellshape` command to access the CLI.
 
 ### Features
 
@@ -300,7 +300,7 @@ Our new name is **Ignite CLI**!
 - Added support for in memory backend in `pkg/cosmosclient` package
 - Improved our tutorials and documentation
 
-## [`v0.19.5`](https://github.com/ignite/cli/pull/2158/commits)
+## [`v0.19.5`](https://github.com/spellshape/cli/pull/2158/commits)
 
 ### Features
 
@@ -328,7 +328,7 @@ Our new name is **Ignite CLI**!
 
 - Upgraded Flutter template to `v2.0.3`
 
-## [`v0.19.2`](https://github.com/ignite/cli/milestone/14)
+## [`v0.19.2`](https://github.com/spellshape/cli/milestone/14)
 
 ### Fixes
 
@@ -343,8 +343,8 @@ Our new name is **Ignite CLI**!
 ### Breaking Changes
 
 - Deprecated the Starport Modules [tendermint/spm](https://github.com/tendermint/spm) repo and moved the contents to the
-  Ignite CLI repo [`ignite/pkg/`](https://github.com/ignite/cli/tree/main/ignite/pkg/)
-  in [PR 1971](https://github.com/ignite/cli/pull/1971/files)
+  Spellshape CLI repo [`spellshape/pkg/`](https://github.com/spellshape/cli/tree/main/spellshape/pkg/)
+  in [PR 1971](https://github.com/spellshape/cli/pull/1971/files)
 
   Updates are required if your chain uses these packages:
 
@@ -354,7 +354,7 @@ Our new name is **Ignite CLI**!
   - `testutil/sample` is now `cosmostestutil/sample`
 
 - Updated the faucet HTTP API schema. See API changes
-  in [fix: improve faucet reliability #1974](https://github.com/ignite/cli/pull/1974/files#diff-0e157f4f60d6fbd95e695764df176c8978d85f1df61475fbfa30edef62fe35cd)
+  in [fix: improve faucet reliability #1974](https://github.com/spellshape/cli/pull/1974/files#diff-0e157f4f60d6fbd95e695764df176c8978d85f1df61475fbfa30edef62fe35cd)
 
 ## `v0.19.1`
 
@@ -388,7 +388,7 @@ Our new name is **Ignite CLI**!
 - Starport v0.18 comes with Cosmos SDK v0.44 that introduced changes that are not compatible with chains that were
   scaffolded with Starport versions lower than v0.18. After upgrading from Starport v0.17.3 to Starport v0.18, you must
   update the default blockchain template to use blockchains that were scaffolded with earlier versions.
-  See [Migration](https://docs.ignite.com/migration).
+  See [Migration](https://docs.spellshape.com/migration).
 
 ### Features
 
@@ -492,7 +492,7 @@ Our new name is **Ignite CLI**!
 - The new `join` flag adds the ability to pass a `--genesis` file and `--peers` address list
   with `starport network chain join`
 - The new `show` flag adds the ability to show `--genesis` and `--peers` list with `starport network chain show`
-- `protoc` is now bundled with Ignite CLI. You don't need to install it anymore.
+- `protoc` is now bundled with Spellshape CLI. You don't need to install it anymore.
 - Starport is now published automatically on the Docker Hub
 - `starport relayer` `configure` and `connect` commands now use
   the [confio/ts-relayer](https://github.com/confio/ts-relayer) under the hood. Also, checkout the
@@ -552,7 +552,7 @@ Our new name is **Ignite CLI**!
 - Chain state persistence between `starport serve` launches
 - Integrated Stargate app's `scripts/protocgen` into Starport as a native feature. Running `starport build/serve` will
   automatically take care of building proto files without a need of script in the app's source code.
-- Integrated third-party proto-files used by Cosmos SDK modules into Ignite CLI
+- Integrated third-party proto-files used by Cosmos SDK modules into Spellshape CLI
 - Added ability to customize binary name with `build.binary` in `config.yml`
 - Added ability to change path to home directory with ` .home` in `config.yml`
 - Added ability to add accounts by `address` with in `config.yml`

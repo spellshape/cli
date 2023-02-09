@@ -2,7 +2,7 @@
 
 function build {
     echo "building container..."
-    docker build -t ignite-cli -f - > /dev/null . << EOF
+    docker build -t spellshape-cli -f - > /dev/null . << EOF
 FROM golang:1.16.2-buster
 
 WORKDIR /apps
@@ -28,23 +28,23 @@ EOF
 }
 
 function run {
-    docker kill ignite-cli > /dev/null 2>&1
-    docker rm ignite-cli > /dev/null 2>&1
+    docker kill spellshape-cli > /dev/null 2>&1
+    docker rm spellshape-cli > /dev/null 2>&1
     docker run \
-        --name ignite-cli \
+        --name spellshape-cli \
         -d \
         -p 26657:26657 \
         -p 1317:1317 \
         -v $PWD:/src \
         -v $PWD/apps:/apps \
-        ignite-cli /bin/bash -c "trap : TERM INT; sleep infinity & wait" \
+        spellshape-cli /bin/bash -c "trap : TERM INT; sleep infinity & wait" \
             > /dev/null
 }
 
 function attach {
-    is_running=$(docker ps -q -f status=running -f name=^/ignite-cli$)
+    is_running=$(docker ps -q -f status=running -f name=^/spellshape-cli$)
     if [[ -z $is_running ]]; then run; fi    
-    docker exec -ti ignite-cli /bin/bash
+    docker exec -ti spellshape-cli /bin/bash
 }
 
 case "$1" in
@@ -69,7 +69,7 @@ case "$1" in
 esac
 
 # in container commands:
-#  i install Ignite CLI 
-#  s cd into Ignite CLI's source code
+#  i install Spellshape CLI 
+#  s cd into Spellshape CLI's source code
 #  a cd into apps dir
 #  c cleanup previous app installations

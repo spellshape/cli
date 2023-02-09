@@ -22,10 +22,10 @@ By completing this tutorial, you will learn about:
 
 ## Prerequisites 
 
-This series of blog tutorials is based on a specific version of Ignite CLI, so to install Ignite CLI v0.22.2 use the following command:
+This series of blog tutorials is based on a specific version of Spellshape CLI, so to install Spellshape CLI v0.22.2 use the following command:
 
 ```bash
-curl https://get.ignite.com/cli@v0.22.2! | bash
+curl https://get.spellshape.com/cli@v0.22.2! | bash
 ```
 
 ## Create your blog chain
@@ -35,7 +35,7 @@ First, create a new blockchain.
 Open a terminal and navigate to a directory where you have permissions to create files. To create your Cosmos SDK blockchain, run this command:
 
 ```bash
-ignite scaffold chain blog --address-prefix blog
+spellshape scaffold chain blog --address-prefix blog
 ```
 
 The `blog` directory is created with the default directory structure.
@@ -61,7 +61,7 @@ cd blog
 To create a message type and its handler, use the `message` command:
 
 ```bash
-ignite scaffold message createPost title body
+spellshape scaffold message createPost title body
 ```
 
 The `message` command accepts message name (`createPost`) and a list of fields (`title` and `body`) as arguments.
@@ -139,7 +139,7 @@ func (k msgServer) CreatePost(goCtx context.Context, msg *types.MsgCreatePost) (
 
 Define the `Post` type and the `AppendPost` keeper method.
 
-When you define the `Post` type in a proto file, Ignite CLI (with the help of `protoc`) takes care of generating the required Go files.
+When you define the `Post` type in a proto file, Spellshape CLI (with the help of `protoc`) takes care of generating the required Go files.
 
 Create the `proto/blog/post.proto` file and define the `Post` message:
 
@@ -302,7 +302,7 @@ Now that you have added the functionality to create posts and broadcast them to 
 To display posts, scaffold a query:
 
 ```bash
-ignite scaffold query posts --response title,body
+spellshape scaffold query posts --response title,body
 ```
 
 Two components are responsible for querying data:
@@ -430,13 +430,13 @@ Now that you have implemented logic for creating and querying posts, you can int
 First, start the chain on your development machine by running the following command in the `blog` directory:
 
 ```bash
-ignite chain serve
+spellshape chain serve
 ```
 
-The binary is built by the `ignite chain serve` command bit it can also be built by running:
+The binary is built by the `spellshape chain serve` command bit it can also be built by running:
 
 ```bash
-ignite chain build
+spellshape chain build
 ```
 
 To create a post at the command line:

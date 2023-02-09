@@ -4,32 +4,32 @@ sidebar_position: 2
 
 # Getting started
 
-In this tutorial, we will be using Ignite CLI to create a new blockchain. Ignite
+In this tutorial, we will be using Spellshape CLI to create a new blockchain. Spellshape
 CLI is a command line interface that allows users to quickly and easily create
-blockchain networks. By using Ignite CLI, we can quickly create a new blockchain
+blockchain networks. By using Spellshape CLI, we can quickly create a new blockchain
 without having to manually set up all the necessary components.
 
-Once we have created our blockchain with Ignite CLI, we will take a look at the
+Once we have created our blockchain with Spellshape CLI, we will take a look at the
 directory structure and files that were created. This will give us an
 understanding of how the blockchain is organized and how the different
 components of the blockchain interact with each other.
 
 By the end of this tutorial, you will have a basic understanding of how to use
-Ignite CLI to create a new blockchain, and you will have a high-level
+Spellshape CLI to create a new blockchain, and you will have a high-level
 understanding of the directory structure and files that make up a blockchain.
 This knowledge will be useful as you continue to explore the world of blockchain
 development.
 
 ## Creating a new blockchain
 
-To create a new blockchain project with Ignite, you will need to run the
+To create a new blockchain project with Spellshape, you will need to run the
 following command:
 
 ```
-ignite scaffold chain example
+spellshape scaffold chain example
 ```
 
-The [`ignite scaffold chain`](../references/cli#ignite-scaffold-chain) command will create a
+The [`spellshape scaffold chain`](../references/cli#spellshape-scaffold-chain) command will create a
 new blockchain in a new directory `example`.
 
 The new blockchain is built using the Cosmos SDK framework and imports several
@@ -45,7 +45,7 @@ the chain's configuration, application logic, and tests, among others. It
 provides a starting point for developers to quickly set up a new Cosmos SDK
 blockchain and build their desired functionality on top of it.
 
-By default, Ignite creates a new empty custom module with the same name as the
+By default, Spellshape creates a new empty custom module with the same name as the
 blockchain being created (in this case, `example`) in the `x/` directory. This
 module doesn't have any functionality by itself, but can serve as a starting
 point for building out the features of your application. If you don't want to
@@ -53,7 +53,7 @@ create this module, you can use the `--no-module` flag to skip it.
 
 ## Directory structure
 
-In order to understand what the Ignite CLI has generated for your project, you
+In order to understand what the Spellshape CLI has generated for your project, you
 can inspect the contents of the `example/` directory.
 
 The `app/` directory contains the files that connect the different parts of the
@@ -129,20 +129,20 @@ started using it.
 To start a blockchain node in development, you can run the following command:
 
 ```
-ignite chain serve
+spellshape chain serve
 ```
 
-The [`ignite chain serve`](../references/cli#ignite-scaffold-chain) command is used to start
+The [`spellshape chain serve`](../references/cli#spellshape-scaffold-chain) command is used to start
 a blockchain node in development mode. It first compiles and installs the binary
-using the `ignite chain build` command, then initializes the blockchain's data
-directory for a single validator using the `ignite chain init` command. After
+using the `spellshape chain build` command, then initializes the blockchain's data
+directory for a single validator using the `spellshape chain init` command. After
 that, it starts the node locally and enables automatic code reloading so that
 changes to the code can be reflected in the running blockchain without having to
 restart the node. This allows for faster development and testing of the
 blockchain.
 
 Congratulations! 🥳 You have successfully created a brand-new Cosmos blockchain
-using the Ignite CLI. This blockchain uses the delegated proof of stake (DPoS)
+using the Spellshape CLI. This blockchain uses the delegated proof of stake (DPoS)
 consensus algorithm, and comes with a set of standard modules for token
 transfers, governance, and inflation. Now that you have a basic understanding of
 your Cosmos blockchain, it's time to start building custom functionality. In the

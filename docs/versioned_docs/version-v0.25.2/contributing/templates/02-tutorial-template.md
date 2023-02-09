@@ -1,7 +1,7 @@
-# How To [Build/Create/Do Something] in Ignite CLI
+# How To [Build/Create/Do Something] in Spellshape CLI
 
 <!--
-Use this tutorial template as a quick starting point when writing Ignite CLI how-to tutorials. 
+Use this tutorial template as a quick starting point when writing Spellshape CLI how-to tutorials. 
 
 After you review the template, delete the comments and begin writing your outline or article. Examples of Markdown formatting syntax are provided at the bottom of this template.
 
@@ -12,7 +12,7 @@ We admire, respect, and rely on these resources:
 - Google developer documentation [style guide](https://developers.google.com/style)
 - Digital Ocean style guide [do.co/style](https://do.co/style)
 
-[Create an issue](https://github.com/ignite/cli/issues/new/choose) to let us know if you have questions. 
+[Create an issue](https://github.com/spellshape/cli/issues/new/choose) to let us know if you have questions. 
 
 -->
 
@@ -62,7 +62,7 @@ To complete this tutorial, you will need:
 
 <!-- Example - uncomment to use
 
-- A supported version of [Ignite CLI](/). To install Ignite CLI, see [Install Ignite CLI](../../guide/01-install.md). 
+- A supported version of [Spellshape CLI](/). To install Spellshape CLI, see [Install Spellshape CLI](../../guide/01-install.md). 
 * A text editor like [Visual Studio Code](https://code.visualstudio.com/download).
 * A web browser like [Chrome](https://www.google.com/chrome) or [Firefox](https://www.mozilla.org/en-US/firefox/new).
 
@@ -80,18 +80,18 @@ Finally...
 
 <!-- When showing a command, explain the command first by talking about what it does. Then show the command. Then show its output in a separate output block: -->
 
-To verify the version of Ignite CLI that is installed, run the following command:
+To verify the version of Spellshape CLI that is installed, run the following command:
 
 ```bash
-ignite --version
+spellshape --version
 ```
 
 You'll see release details like the following output:
 
 ```
-Ignite version:	v0.19.6
-Ignite CLI build date:	2021-12-18T05:56:36Z
-Ignite CLI source hash:	-
+Spellshape version:	v0.19.6
+Spellshape CLI build date:	2021-12-18T05:56:36Z
+Spellshape CLI source hash:	-
 Your OS:		darwin
 Your arch:		amd64
 Your go version:	go version go1.16.4 darwin/amd64

@@ -10,27 +10,27 @@
     - [Ask for help](#ask-for-help)
   - [Prioritizing issues with milestones](#prioritizing-issues-with-milestones)
 
-Before you create a new PR on Ignite CLI, make sure that you read and comply with this document.
+Before you create a new PR on Spellshape CLI, make sure that you read and comply with this document.
 
-Start a new [Discussion](https://github.com/ignite/cli/discussions/new) if you want to propose changes to this document.
+Start a new [Discussion](https://github.com/spellshape/cli/discussions/new) if you want to propose changes to this document.
 
-To prepare for success, see [Set Up Your Ignite CLI Development Environment](dev-env-setup.md).
+To prepare for success, see [Set Up Your Spellshape CLI Development Environment](dev-env-setup.md).
 
-To contribute to docs and tutorials, see [Contributing to Ignite CLI Docs](https://docs.ignite.com/contributing).
+To contribute to docs and tutorials, see [Contributing to Spellshape CLI Docs](https://docs.spellshape.com/contributing).
 
 Thank you for your contribution!
 
 ## Providing Feedback
 
 * Before you open an issue, do a web search, and check
-  for [existing open and closed GitHub Issues](https://github.com/ignite/cli/issues) to see if your question has already
+  for [existing open and closed GitHub Issues](https://github.com/spellshape/cli/issues) to see if your question has already
   been asked and answered. If you find a relevant topic, you can comment on that issue.
 
-* To provide feedback or ask a question, create a [GitHub issue](https://github.com/ignite/cli/issues/new/choose). Be
+* To provide feedback or ask a question, create a [GitHub issue](https://github.com/spellshape/cli/issues/new/choose). Be
   sure to provide the relevant information, case study, or informative links as suggested by the Pull Request template.
 
 * We recommend using GitHub issues for issues and feedback. However, you can ask quick questions on the **#🛠️
-  build-chains** channel in the official [Ignite Discord](https://discord.gg/ignite).
+  build-chains** channel in the official [Spellshape Discord](https://discord.gg/spellshape).
 
 ## Opening pull requests (PRs)
 
@@ -66,11 +66,11 @@ used as the commit message.
 
 ## Contributing to documentation
 
-When you open a PR for the Ignite CLI codebase, you must also update the relevant documentation. For changes to:
+When you open a PR for the Spellshape CLI codebase, you must also update the relevant documentation. For changes to:
 
-* [Developer Guide](https://docs.ignite.com/guide) tutorials, update content in the `/docs/guide` folder.
-* [Knowledge Base](https://docs.ignite.com/kb), update content in the `/docs/kb` folder.
-* [Ignite CLI reference](https://docs.ignite.com/cli), navigate to the `./ignite/cmd` package and update the
+* [Developer Guide](https://docs.spellshape.com/guide) tutorials, update content in the `/docs/guide` folder.
+* [Knowledge Base](https://docs.spellshape.com/kb), update content in the `/docs/kb` folder.
+* [Spellshape CLI reference](https://docs.spellshape.com/cli), navigate to the `./spellshape/cmd` package and update the
   documentation of the related command from its `cobra.Command` struct. The CLI docs are automatically generated, so do
   not make changes to  `docs/cli/index.md`.
 
@@ -81,10 +81,10 @@ can take over and assume the ownership.
 
 ## Prioritizing issues with milestones
 
-Ignite CLI follows Git Flow for branch
+Spellshape CLI follows Git Flow for branch
 strategy <https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow>.
 
-* Each Ignite CLI release has a milestone, see <https://github.com/ignite/cli/milestones>.
+* Each Spellshape CLI release has a milestone, see <https://github.com/spellshape/cli/milestones>.
 
 * Issues in each milestone have a **priority/high**, **priority/medium**, or **priority/low** label.
 
@@ -99,7 +99,7 @@ strategy <https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-wo
     * Issues in the **Next** milestone usually have a lower priority than milestones that are associated with a release
       version, like **Milestone v0.1.0**.
 
-* A single project board <https://github.com/ignite/cli/projects/4> shows the issues we are currently working on and
+* A single project board <https://github.com/spellshape/cli/projects/4> shows the issues we are currently working on and
   what issues we plan to work on.
 
 We appreciate your contribution!

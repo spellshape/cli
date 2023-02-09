@@ -19,11 +19,11 @@
   "replacementPatterns": [
     {
       "pattern": "^/",
-      "replacement": "https://docs.ignite.com/"
+      "replacement": "https://docs.spellshape.com/"
     }
   ],
-  "baseUrl": "https://docs.ignite.com",
-  "projectBaseUrl": "https://docs.ignite.com",
+  "baseUrl": "https://docs.spellshape.com",
+  "projectBaseUrl": "https://docs.spellshape.com",
   "timeout": "20s",
   "retryOn429": true,
   "retryCount": 5,

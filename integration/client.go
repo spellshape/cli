@@ -9,9 +9,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	chainconfig "github.com/ignite/cli/ignite/config/chain"
-	"github.com/ignite/cli/ignite/pkg/cmdrunner"
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
+	chainconfig "github.com/spellshape/cli/spellshape/config/chain"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
 )
 
 type clientOptions struct {

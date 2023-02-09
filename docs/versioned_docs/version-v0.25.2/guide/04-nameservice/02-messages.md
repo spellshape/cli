@@ -68,9 +68,9 @@ Now, you are ready to implement these Cosmos SDK messages to achieve the desired
 - `MsgDeleteName`
 	Allow name owners to delete names that belong to them.
 
-Use the `ignite scaffold message` command to scaffold new messages for your module.
+Use the `spellshape scaffold message` command to scaffold new messages for your module.
 
-- The [`ignite scaffold message`](../../../references/cli#ignite-scaffold-message) command accepts the message name as the first argument and a list of fields for the message. 
+- The [`spellshape scaffold message`](../../../references/cli#spellshape-scaffold-message) command accepts the message name as the first argument and a list of fields for the message. 
 - By default, a message is scaffolded in a module with a name that matches the name of the project, in this case `nameservice`.
 
 ### Add the MsgBuyName Message
@@ -78,7 +78,7 @@ Use the `ignite scaffold message` command to scaffold new messages for your modu
 To create the `MsgBuyName` message for the nameservice module:
 
 ```bash
-ignite scaffold message buy-name name bid
+spellshape scaffold message buy-name name bid
 ```
 
 where:
@@ -87,7 +87,7 @@ where:
 - name defines the name that the user can buy, sell, and delete
 - bid is the price the user bids to buy a name
 
-The `ignite scaffold message buy-name name bid` command creates and modifies several files:
+The `spellshape scaffold message buy-name name bid` command creates and modifies several files:
 
 ```
 modify proto/nameservice/tx.proto
@@ -158,7 +158,7 @@ These are the changes for each one of these files:
 To create the `MsgSetName` for the nameservice module:
 
 ```bash
-ignite scaffold message set-name name value
+spellshape scaffold message set-name name value
 ```
 
 where:
@@ -167,7 +167,7 @@ where:
 - name is the name the user sets
 - value is the literal value that the name resolves to
 
-This `ignite scaffold message` command modifies and creates the same set of files as the `MsgBuyName` message.
+This `spellshape scaffold message` command modifies and creates the same set of files as the `MsgBuyName` message.
 
 ### Add The MsgDeleteName Message
 
@@ -176,7 +176,7 @@ You need a message so that an end user can delete a name that belongs to them.
 To create the `MsgDeleteName` for the nameservice module:
 
 ```bash
-ignite scaffold message delete-name name
+spellshape scaffold message delete-name name
 ```
 
 where:

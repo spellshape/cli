@@ -18,8 +18,8 @@ A list of user accounts created during genesis of the blockchain.
 | -------- | -------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | name     | Y        | String          | Local name of a key pair. An account name must be listed to gain access to the account tokens after the blockchain is launched. |
 | coins    | Y        | List of Strings | Initial coins with denominations. For example, "1000token"                                                                      |
-| address  | N        | String          | Account address in Bech32 address format.                                                                                        |
-| mnemonic | N        | String          | Mnemonic used to generate an account. This field is ignored if `address` is specified.                                           |
+| address  | N        | String          | Account address in Bech32 address format.                                                                                       |
+| mnemonic | N        | String          | Mnemonic used to generate an account. This field is ignored if `address` is specified.                                          |
 
 Note that you can only use `address` OR `mnemonic` for an account. You can't use both, because an address is derived from a mnemonic.
 
@@ -38,11 +38,11 @@ accounts:
 
 ## build
 
-| Key      | Required | Type             | Description                                                                                                  |
-|----------|----------|------------------|--------------------------------------------------------------------------------------------------------------|
-| main     | N        | String           | When an app contains more than one main Go package, required to define the path of the chain's main package. |
-| binary   | N        | String           | Name of the node binary that is built, typically ends with `d`.                                              |
-| ldflags  | N        | List of Strings  | ldflags to set version information for go applications.                                                      |
+| Key     | Required | Type            | Description                                                                                                  |
+| ------- | -------- | --------------- | ------------------------------------------------------------------------------------------------------------ |
+| main    | N        | String          | When an app contains more than one main Go package, required to define the path of the chain's main package. |
+| binary  | N        | String          | Name of the node binary that is built, typically ends with `d`.                                              |
+| ldflags | N        | List of Strings | ldflags to set version information for go applications.                                                      |
 
 **build example**
 
@@ -54,14 +54,14 @@ build:
 
 ### build.proto
 
-| Key               | Required | Type            | Description                                                                                |
-| ----------------- | -------- | --------------- | ------------------------------------------------------------------------------------------ |
-| path              | N        | String          | Path to protocol buffer files. Default: `"proto"`.                                         |
+| Key               | Required | Type            | Description                                                                                  |
+| ----------------- | -------- | --------------- | -------------------------------------------------------------------------------------------- |
+| path              | N        | String          | Path to protocol buffer files. Default: `"proto"`.                                           |
 | third_party_paths | N        | List of Strings | Path to third-party protocol buffer files. Default: `["third_party/proto", "proto_vendor"]`. |
 
 ## client
 
-Configures and enables client code generation. To prevent Ignite CLI from regenerating the client, remove the `client` property.
+Configures and enables client code generation. To prevent Spellshape CLI from regenerating the client, remove the `client` property.
 
 ### client.vuex
 
@@ -97,13 +97,13 @@ Generates OpenAPI YAML file in `path`. By default this file is embedded in the n
 
 The faucet service sends tokens to addresses. The default address for the web user interface is <http://localhost:4500>.
 
-| Key               | Required | Type            | Description                                                 |
-| ----------------- | -------- | --------------- | ----------------------------------------------------------- |
-| name              | Y        | String          | Name of a key pair. The `name` key pair must be in `accounts`.            |
-| coins             | Y        | List of Strings | One or more coins with denominations sent per request.       |
-| coins_max         | N        | List of Strings | One or more maximum amounts of tokens sent for each address. |
+| Key               | Required | Type            | Description                                                         |
+| ----------------- | -------- | --------------- | ------------------------------------------------------------------- |
+| name              | Y        | String          | Name of a key pair. The `name` key pair must be in `accounts`.      |
+| coins             | Y        | List of Strings | One or more coins with denominations sent per request.              |
+| coins_max         | N        | List of Strings | One or more maximum amounts of tokens sent for each address.        |
 | host              | N        | String          | Host and port number. Default: `:4500`. Cannot be higher than 65536 |
-| rate_limit_window | N        | String          | Time after which the token limit is reset (in seconds).      |
+| rate_limit_window | N        | String          | Time after which the token limit is reset (in seconds).             |
 
 **faucet example**
 
@@ -119,8 +119,8 @@ faucet:
 
 A blockchain requires one or more validators.
 
-| Key    | Required | Type   | Description                                                                                     |
-| ------ | -------- | ------ | ----------------------------------------------------------------------------------------------- |
+| Key    | Required | Type   | Description                                                                                      |
+| ------ | -------- | ------ | ------------------------------------------------------------------------------------------------ |
 | name   | Y        | String | The account that is used to initialize the validator. The `name` key pair must be in `accounts`. |
 | staked | Y        | String | Amount of coins to bond. Must be less than or equal to the amount of coins in the account.       |
 
@@ -168,7 +168,7 @@ init:
 
 ## host
 
-Configuration of host names and ports for processes started by Ignite CLI. Port numbers can't exceed 65536.
+Configuration of host names and ports for processes started by Spellshape CLI. Port numbers can't exceed 65536.
 
 **host example**
 

@@ -5,7 +5,7 @@ description: Test different scenarios for your chain.
 
 # Chain simulation
 
-The Ignite CLI chain simulator can help you to run your chain based in
+The Spellshape CLI chain simulator can help you to run your chain based in
 randomized inputs for you can make fuzz testing and also benchmark test for your
 chain, simulating the messages, blocks, and accounts. You can scaffold a
 template to perform simulation testing in each module along with a boilerplate
@@ -13,7 +13,7 @@ simulation methods for each scaffolded message.
 
 ## Module simulation
 
-Every new module that is scaffolded with Ignite CLI implements the Cosmos SDK
+Every new module that is scaffolded with Spellshape CLI implements the Cosmos SDK
 [Module
 Simulation](https://docs.cosmos.network/main/building-modules/simulator.html).
 
@@ -40,7 +40,7 @@ same random seed is deterministic with the same output.
 To create a new chain:
 
 ```
-ignite scaffold chain mars
+spellshape scaffold chain mars
 ```
 
 Review the empty `x/mars/simulation` folder and the
@@ -49,7 +49,7 @@ Review the empty `x/mars/simulation` folder and the
 Now, scaffold a new message:
 
 ```
-ignite scaffold list user address balance:uint state
+spellshape scaffold list user address balance:uint state
 ```
 
 A new file `x/mars/simulation/user.go` is created and is registered with the
@@ -65,14 +65,14 @@ Run the `BenchmarkSimulation` method into `app/simulation_test.go` to run
 simulation tests for all modules:
 
 ```
-ignite chain simulate
+spellshape chain simulate
 ```
 
 You can also define flags that are provided by the simulation. Flags are defined
 by the method `simapp.GetSimulatorFlags()`:
 
 ```
-ignite chain simulate -v --numBlocks 200 --blockSize 50 --seed 33
+spellshape chain simulate -v --numBlocks 200 --blockSize 50 --seed 33
 ```
 
 Wait for the entire simulation to finish and check the result of the messages.
@@ -94,7 +94,7 @@ Scaffolding a module with params automatically adds the module in the
 `module_simulaton.go` file:
 
 ```
-ignite s module earth --params channel:string,minLaunch:uint,maxLaunch:int
+spellshape s module earth --params channel:string,minLaunch:uint,maxLaunch:int
 ```
 
 After the parameters are scaffolded, change the

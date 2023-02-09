@@ -1,23 +1,23 @@
 ---
 sidebar_position: 1
-description: High-level overview of a new Cosmos SDK blockchain project built with Ignite CLI.
+description: High-level overview of a new Cosmos SDK blockchain project built with Spellshape CLI.
 ---
 
 # Scaffold a chain
 
-The `ignite scaffold chain` command scaffolds a new Cosmos SDK blockchain project.
+The `spellshape scaffold chain` command scaffolds a new Cosmos SDK blockchain project.
 
 ## Build a blockchain app
 
 To build the planet application:
 
 ```bash
-ignite scaffold chain planet
+spellshape scaffold chain planet
 ```
 
 ## Directory structure
 
-The `ignite scaffold chain planet` command creates a directory called `planet` that contains all the files for your project and initializes a local git repository. The `planet` argument is a string that is used for the Go module path. The repository name (`planet`, in this case) is used as the project's name.
+The `spellshape scaffold chain planet` command creates a directory called `planet` that contains all the files for your project and initializes a local git repository. The `planet` argument is a string that is used for the Go module path. The repository name (`planet`, in this case) is used as the project's name.
 
 The project directory structure:
 
@@ -31,7 +31,7 @@ The project directory structure:
 
 ### Application-specific logic
 
-Most of the logic of your application-specific blockchain is written in custom modules. Each module effectively encapsulates an independent piece of functionality. Following the Cosmos SDK convention, custom modules are stored inside the `x` directory. By default, `ignite scaffold chain` scaffolds a module with a name that matches the name of the project. In this example, the module name is `x/planet`.
+Most of the logic of your application-specific blockchain is written in custom modules. Each module effectively encapsulates an independent piece of functionality. Following the Cosmos SDK convention, custom modules are stored inside the `x` directory. By default, `spellshape scaffold chain` scaffolds a module with a name that matches the name of the project. In this example, the module name is `x/planet`.
 
 ### Proto files
 
@@ -43,7 +43,7 @@ Global changes to your blockchain are defined in files inside the `app` director
 
 ### Configuration
 
-The `config.yml` file contains configuration options that Ignite CLI uses to build, initialize, and start your blockchain node in development.  
+The `config.yml` file contains configuration options that Spellshape CLI uses to build, initialize, and start your blockchain node in development.  
 
 ## Address prefix
 
@@ -54,7 +54,7 @@ Account addresses on Cosmos SDK-based blockchains have string prefixes. For exam
 When you create a new blockchain, pass a prefix as a value to the `--address-prefix` flag:
 
 ```bash
-ignite scaffold chain planet --address-prefix moonlight
+spellshape scaffold chain planet --address-prefix moonlight
 ```
 
 Using the `moonlight` prefix, account addresses on your blockchain look like this: `moonlight12fjzdtqfrrve7zyg9sv8j25azw2ua6tvu07ypf`.
@@ -65,4 +65,4 @@ To change the prefix after the blockchain has been scaffolded, modify the `Accou
 
 ## Cosmos SDK version
 
-By default, the `ignite scaffold chain` command creates a Cosmos SDK blockchain using the latest stable version of the Cosmos SDK.
+By default, the `spellshape scaffold chain` command creates a Cosmos SDK blockchain using the latest stable version of the Cosmos SDK.

@@ -1,21 +1,21 @@
 ---
 sidebar_position: 3
-description: Ignite Network commands for coordinators.
+description: Spellshape Network commands for coordinators.
 ---
 
 # Coordinator Guide
 
-Coordinators organize and launch new chains on Ignite Chain.
+Coordinators organize and launch new chains on Spellshape Chain.
 
 ---
 
 ## Publish a chain
 
 The first step in the process of a chain launch is for the coordinator to publish the intention of launching a chain.
-The `publish` command publishes the intention of launching a chain on Ignite from a project git repository.
+The `publish` command publishes the intention of launching a chain on Spellshape from a project git repository.
 
 ```shell
-ignite n chain publish https://github.com/ignite/example
+spellshape n chain publish https://github.com/spellshape/example
 ```
 
 **Output**
@@ -30,7 +30,7 @@ ignite n chain publish https://github.com/ignite/example
 ⋆ Launch ID: 3
 ```
 
-`LaunchID` identifies the published blockchain on Ignite blockchain.
+`LaunchID` identifies the published blockchain on Spellshape blockchain.
 
 ### Specify a initial genesis
 
@@ -44,7 +44,7 @@ A URL must be provided for the `--genesis-url` flag. This can either directly po
 containing a genesis file.
 
 ```shell
-ignite n chain publish https://github.com/ignite/example --genesis-url https://raw.githubusercontent.com/ignite/example/master/genesis/gen.json
+spellshape n chain publish https://github.com/spellshape/example --genesis-url https://raw.githubusercontent.com/spellshape/example/master/genesis/gen.json
 ```
 
 ## Approve validator requests
@@ -55,7 +55,7 @@ validator for the chain.
 The coordinator can list these requests:
 
 ```
-ignite n request list 3
+spellshape n request list 3
 ```
 
 > **NOTE:** here "3" is specifying the `LaunchID`.
@@ -75,7 +75,7 @@ The coordinator can either approve or reject these requests.
 To approve the requests:
 
 ```
-ignite n request approve 3 3,4
+spellshape n request approve 3 3,4
 ```
 
 > **NOTE:** when selecting a list of requests, both syntaxes can be used: `1,2,3,4` and `1-3,4`.
@@ -94,13 +94,13 @@ ignite n request approve 3 3,4
 ✔ Request(s) #3, #4 approved
 ```
 
-Ignite CLI automatically verifies that the requests can be applied for the genesis, the approved requests don't generate
+Spellshape CLI automatically verifies that the requests can be applied for the genesis, the approved requests don't generate
 an invalid genesis.
 
 To reject the requests:
 
 ```
-ignite n request reject 3 3,4
+spellshape n request reject 3 3,4
 ```
 
 **Output**
@@ -122,7 +122,7 @@ This action also sets the launch time (or genesis time) for the chain, the time 
 live.
 
 ```
-ignite n chain launch 3
+spellshape n chain launch 3
 ```
 
 **Output**
@@ -142,5 +142,5 @@ validator set.
 The coordinator can specify a custom time with the `--launch-time` flag.
 
 ```
-ignite n chain launch --launch-time 2022-01-01T00:00:00Z
+spellshape n chain launch --launch-time 2022-01-01T00:00:00Z
 ```

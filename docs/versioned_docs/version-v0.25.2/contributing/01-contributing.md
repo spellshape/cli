@@ -3,7 +3,7 @@ sidebar_position: 1
 slug: /contributing
 ---
 
-# Contributing to Ignite CLI docs
+# Contributing to Spellshape CLI docs
 
 Thank you for visiting our repository and considering making contributions. We appreciate your interest in helping us to create and maintain awesome tutorials and documentation.
 
@@ -11,7 +11,7 @@ To set up your environment for success, follow the [technical setup](02-technica
 
 ## Using this repo
 
-Review existing [Ignite CLI issues](https://github.com/ignite/cli/issues) to see if your question has already been asked and answered.
+Review existing [Spellshape CLI issues](https://github.com/spellshape/cli/issues) to see if your question has already been asked and answered.
 
 - To provide feedback, file an issue and provide generous details to help us understand how we can make it better.
 - To provide a fix, make a direct contribution. If you're not a member or maintainer, fork the repo and then submit a pull request (PR) from your forked repo to the `main` branch.
@@ -49,7 +49,7 @@ Other useful resources:
 
 Technical content includes knowledge base articles and interactive tutorials.
 
-- The Ignite CLI Developer Tutorials content is in the `docs/guide` folder.
+- The Spellshape CLI Developer Tutorials content is in the `docs/guide` folder.
 - The Knowledge Base content is in the `docs/kb` folder.
 - Upgrade information is in the `docs/migration` folder.
 
@@ -61,9 +61,9 @@ As always, work-in-progress content might be happening in other locations and re
 
 ## Who works on the tutorials?
 
-The Ignite product team developers are focused on building Ignite CLI and improving the developer experience. The Ignite Ecosystem Development team owns the technical content and tutorials and manages developer onboarding.
+The Spellshape product team developers are focused on building Spellshape CLI and improving the developer experience. The Spellshape Ecosystem Development team owns the technical content and tutorials and manages developer onboarding.
 
-Meet the [people behind Ignite CLI and our contributors](https://github.com/ignite/cli/graphs/contributors).
+Meet the [people behind Spellshape CLI and our contributors](https://github.com/spellshape/cli/graphs/contributors).
 
 ## Viewing docs builds
 

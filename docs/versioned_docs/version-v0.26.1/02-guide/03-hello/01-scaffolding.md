@@ -12,11 +12,11 @@ the process.
 
 To begin, let's start with a fresh `hello` blockchain. You can either roll back
 the changes you made in the previous section or create a new blockchain using
-Ignite. Either way, you will have a blank blockchain that is ready for you to
+Spellshape. Either way, you will have a blank blockchain that is ready for you to
 work with.
 
 ```
-ignite scaffold chain hello
+spellshape scaffold chain hello
 ```
 
 ## `SayHello` RPC
@@ -50,10 +50,10 @@ message QuerySayHelloResponse {
 ```
 
 To use the types defined in `query.proto`, you must transpile the protocol
-buffer files into Go source code. This can be done by running `ignite chain
+buffer files into Go source code. This can be done by running `spellshape chain
 serve`, which will build and initialize the blockchain and automatically
 generate the Go source code from the protocol buffer files. Alternatively, you
-can run `ignite generate proto-go` to only generate the Go source code from the
+can run `spellshape generate proto-go` to only generate the Go source code from the
 protocol buffer files, without building and initializing the blockchain.
 
 ## `SayHello` keeper method
@@ -209,7 +209,7 @@ Save all the changes you made to the source code of your project and run the
 following command to start a blockchain node:
 
 ```
-ignite chain serve
+spellshape chain serve
 ```
 
 Use the following command to submit the query and receive the response:

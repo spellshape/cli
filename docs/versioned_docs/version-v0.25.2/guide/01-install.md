@@ -1,19 +1,19 @@
 ---
 sidebar_position: 1
-description: Steps to install Ignite CLI on your local computer.
+description: Steps to install Spellshape CLI on your local computer.
 ---
 
-# Install Ignite CLI 
+# Install Spellshape CLI 
 
-You can run [Ignite CLI](https://github.com/ignite/cli) in a web-based Gitpod IDE or you can install Ignite CLI on your local computer.
+You can run [Spellshape CLI](https://github.com/spellshape/cli) in a web-based Gitpod IDE or you can install Spellshape CLI on your local computer.
 
 ## Prerequisites
 
-Be sure you have met the prerequisites before you install and use Ignite CLI.
+Be sure you have met the prerequisites before you install and use Spellshape CLI.
 
 ### Operating systems
 
-Ignite CLI is supported for the following operating systems:
+Spellshape CLI is supported for the following operating systems:
 
 - GNU/Linux
 - macOS
@@ -21,49 +21,49 @@ Ignite CLI is supported for the following operating systems:
 
 ### Go
 
-Ignite CLI is written in the Go programming language. To use Ignite CLI on a local system:
+Spellshape CLI is written in the Go programming language. To use Spellshape CLI on a local system:
 
 - Install [Go](https://golang.org/doc/install) (**version 1.16** or higher)
 - Ensure the Go environment variables are [set properly](https://golang.org/doc/gopath_code#GOPATH) on your system
 
-## Verify your Ignite CLI version
+## Verify your Spellshape CLI version
 
-To verify the version of Ignite CLI you have installed, run the following command:
-
-```bash
-ignite version
-```
-
-## Installing Ignite CLI
-
-To install the latest version of the `ignite` binary use the following command.
+To verify the version of Spellshape CLI you have installed, run the following command:
 
 ```bash
-curl https://get.ignite.com/cli! | bash
+spellshape version
 ```
 
-This command invokes `curl` to download the install script and pipes the output to `bash` to perform the installation. The `ignite` binary is installed in `/usr/local/bin`.
+## Installing Spellshape CLI
 
-To learn more or customize the installation process, see the [installer docs](https://github.com/ignite/installer) on GitHub.
+To install the latest version of the `spellshape` binary use the following command.
+
+```bash
+curl https://get.spellshape.com/cli! | bash
+```
+
+This command invokes `curl` to download the install script and pipes the output to `bash` to perform the installation. The `spellshape` binary is installed in `/usr/local/bin`.
+
+To learn more or customize the installation process, see the [installer docs](https://github.com/spellshape/installer) on GitHub.
 
 ### Write permission
 
-Ignite CLI installation requires write permission to the `/usr/local/bin/` directory. If the installation fails because you do not have write permission to `/usr/local/bin/`, run the following command:
+Spellshape CLI installation requires write permission to the `/usr/local/bin/` directory. If the installation fails because you do not have write permission to `/usr/local/bin/`, run the following command:
 
 ```bash
-curl https://get.ignite.com/cli | bash
+curl https://get.spellshape.com/cli | bash
 ```
 
-Then run this command to move the `ignite` executable to `/usr/local/bin/`:
+Then run this command to move the `spellshape` executable to `/usr/local/bin/`:
 
 ```bash
-sudo mv ignite /usr/local/bin/
+sudo mv spellshape /usr/local/bin/
 ```
 
 On some machines, a permissions error occurs:
 
 ```bash
-mv: rename ./ignite to /usr/local/bin/ignite: Permission denied
+mv: rename ./spellshape to /usr/local/bin/spellshape: Permission denied
 ============
 Error: mv failed
 ```
@@ -71,37 +71,37 @@ Error: mv failed
 In this case, use sudo before `curl` and before `bash`:
 
 ```bash
-sudo curl https://get.ignite.com/cli! | sudo bash
+sudo curl https://get.spellshape.com/cli! | sudo bash
 ```
 
-## Upgrading your Ignite CLI installation
+## Upgrading your Spellshape CLI installation
 
-Before you install a new version of Ignite CLI, remove all existing Ignite CLI installations.
+Before you install a new version of Spellshape CLI, remove all existing Spellshape CLI installations.
 
-To remove the current Ignite CLI installation:
+To remove the current Spellshape CLI installation:
 
-1. On your terminal window, press `Ctrl+C` to stop the chain that you started with `ignite chain serve`.
-1. Remove the Ignite CLI binary with `rm $(which ignite)`.
+1. On your terminal window, press `Ctrl+C` to stop the chain that you started with `spellshape chain serve`.
+1. Remove the Spellshape CLI binary with `rm $(which spellshape)`.
    Depending on your user permissions, run the command with or without `sudo`.
-1. Repeat this step until all `ignite` installations are removed from your system.
+1. Repeat this step until all `spellshape` installations are removed from your system.
 
-After all existing Ignite CLI installations are removed, follow the  [Installing Ignite CLI](#installing-ignite-cli) instructions.
+After all existing Spellshape CLI installations are removed, follow the  [Installing Spellshape CLI](#installing-spellshape-cli) instructions.
 
-For details on version features and changes, see the [changelog.md](https://github.com/ignite/cli/blob/main/changelog.md) in the repo.
+For details on version features and changes, see the [changelog.md](https://github.com/spellshape/cli/blob/main/changelog.md) in the repo.
 
 ## Build from source
 
 To experiment with the source code, you can build from source:
 
 ```bash
-git clone https://github.com/ignite/cli --depth=1
+git clone https://github.com/spellshape/cli --depth=1
 cd cli && make install
 ```
 
 ## Summary
 
 - Verify the prerequisites.
-- To setup a local development environment, install Ignite CLI locally on your computer.
-- Install Ignite CLI by fetching the binary using cURL or by building from source.
-- The latest version is installed by default. You can install previous versions of the precompiled `ignite` binary.
+- To setup a local development environment, install Spellshape CLI locally on your computer.
+- Install Spellshape CLI by fetching the binary using cURL or by building from source.
+- The latest version is installed by default. You can install previous versions of the precompiled `spellshape` binary.
 - Stop the chain and remove existing versions before installing a new version.

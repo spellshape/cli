@@ -21,11 +21,11 @@ message BuyOrderPacketData {
 }
 ```
 
-Now, use Ignite CLI to build the proto files for the `send-buy-order` command. You used this command in previous
+Now, use Spellshape CLI to build the proto files for the `send-buy-order` command. You used this command in previous
 chapters.
 
 ```bash
-ignite generate proto-go --yes
+spellshape generate proto-go --yes
 ```
 
 ## IBC Message Handling in SendBuyOrder

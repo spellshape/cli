@@ -1,7 +1,7 @@
 # Understanding [Some Concept]
 
 <!--
-Use this article template as a quick starting point when writing Ignite CLI conceptual tutorials. 
+Use this article template as a quick starting point when writing Spellshape CLI conceptual tutorials. 
 
 After you review the template, delete the comments and begin writing your outline or article. Examples of Markdown formatting syntax are provided at the bottom of this template.
 
@@ -12,7 +12,7 @@ We admire and respect these resources:
 - Google developer documentation [style guide](https://developers.google.com/style)
 - Digital Ocean style guide [do.co/style](https://do.co/style)
 
-[Create an issue](https://github.com/ignite/cli/issues/new/choose) to let us know if you have questions. 
+[Create an issue](https://github.com/spellshape/cli/issues/new/choose) to let us know if you have questions. 
 
 -->
 
@@ -51,9 +51,9 @@ Our tutorials take the reader from a fresh deployment to a working setup, so the
 
 Common requirements for tutorials include:
 
-Local software needed, such as Go and Ignite CLI. For example:
+Local software needed, such as Go and Spellshape CLI. For example:
 -->
-- [Install Ignite CLI](../../guide/01-install.md) <!--specific if version applies)-->
+- [Install Spellshape CLI](../../guide/01-install.md) <!--specific if version applies)-->
 
 ## Describe
 

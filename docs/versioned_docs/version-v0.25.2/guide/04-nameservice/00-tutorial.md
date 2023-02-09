@@ -8,9 +8,9 @@ slug: /guide/nameservice
 
 The nameservice tutorial provides step-by-step instructions to build a blockchain app for a nameservice. The goal of the nameservice app is to send tokens between participants so that end users can buy names and set a value to the names. 
 
-This tutorial builds on knowlege and skills developed in the earlier tutorials in the Ignite CLI Developer Tutorials. Before you start this building your nameservice app, we recommend that you complete these foundational tutorials:
+This tutorial builds on knowlege and skills developed in the earlier tutorials in the Spellshape CLI Developer Tutorials. Before you start this building your nameservice app, we recommend that you complete these foundational tutorials:
 
-- [Install Ignite CLI](../01-install.md)
+- [Install Spellshape CLI](../01-install.md)
 - [Hello, World](../02-hello.md)
 - [Module Basics](../03-blog/00-build-blog.md)
 
@@ -26,7 +26,7 @@ This tutorial guides you through these steps to build a blockchain for a nameser
 
 ## Prerequisites 
 
-- A supported version of [Ignite CLI](/). To install Ignite CLI, see [Install Ignite CLI](../01-install.md). 
+- A supported version of [Spellshape CLI](/). To install Spellshape CLI, see [Install Spellshape CLI](../01-install.md). 
 * A text editor like [Visual Studio Code](https://code.visualstudio.com/download). 
 * A web browser like [Chrome](https://www.google.com/chrome) or [Firefox](https://www.mozilla.org/en-US/firefox/new).
 - Familiarity with [Cosmos SDK modules](https://docs.cosmos.network/main/building-modules/intro.html) 
@@ -41,7 +41,7 @@ First, see how these simple requirements translate to app design.
 
 A blockchain app is a [replicated deterministic state machine](https://en.wikipedia.org/wiki/State_machine_replication). As a blockchain app developer, you have to define the state machine with a starting state and messages that trigger state transitions. These software components make it all possible! 
 
-- [Ignite CLI](/) is built on top of Cosmos SDK and accelerates chain development by scaffolding everything you need. 
+- [Spellshape CLI](/) is built on top of Cosmos SDK and accelerates chain development by scaffolding everything you need. 
 - The [Cosmos SDK](https://github.com/cosmos/cosmos-sdk) modular framework allows developers like you to create custom blockchains that can natively interact with other blockchains. 
 - [Tendermint](https://docs.tendermint.com/main/introduction/what-is-tendermint.html) software securely and consistently replicates an app on many machines. The Tendermint app-agnostic engine handles the networking and consensus layers of your blockchain. 
 

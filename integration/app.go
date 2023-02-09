@@ -11,13 +11,13 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/yaml.v2"
 
-	chainconfig "github.com/ignite/cli/ignite/config/chain"
-	v1 "github.com/ignite/cli/ignite/config/chain/v1"
-	"github.com/ignite/cli/ignite/pkg/availableport"
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	"github.com/ignite/cli/ignite/pkg/gocmd"
-	"github.com/ignite/cli/ignite/pkg/goenv"
-	"github.com/ignite/cli/ignite/pkg/xurl"
+	chainconfig "github.com/spellshape/cli/spellshape/config/chain"
+	v1 "github.com/spellshape/cli/spellshape/config/chain/v1"
+	"github.com/spellshape/cli/spellshape/pkg/availableport"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
+	"github.com/spellshape/cli/spellshape/pkg/gocmd"
+	"github.com/spellshape/cli/spellshape/pkg/goenv"
+	"github.com/spellshape/cli/spellshape/pkg/xurl"
 )
 
 const ServeTimeout = time.Minute * 15
@@ -63,7 +63,7 @@ func (e Env) Scaffold(name string, flags ...string) App {
 	e.Exec("scaffold an app",
 		step.NewSteps(step.New(
 			step.Exec(
-				IgniteApp,
+				SpellshapeApp,
 				append([]string{
 					"scaffold",
 					"chain",
@@ -141,7 +141,7 @@ func (a App) Serve(msg string, options ...ExecOption) (ok bool) {
 
 	return a.env.Exec(msg,
 		step.NewSteps(step.New(
-			step.Exec(IgniteApp, serveCommand...),
+			step.Exec(SpellshapeApp, serveCommand...),
 			step.Workdir(a.path),
 		)),
 		options...,
@@ -153,7 +153,7 @@ func (a App) Simulate(numBlocks, blockSize int) {
 	a.env.Exec("running the simulation tests",
 		step.NewSteps(step.New(
 			step.Exec(
-				IgniteApp, // TODO
+				SpellshapeApp, // TODO
 				"chain",
 				"simulate",
 				"--numBlocks",
@@ -272,7 +272,7 @@ func (a App) EditConfig(apply func(*chainconfig.Config)) {
 func (a App) GenerateTSClient() bool {
 	return a.env.Exec("generate typescript client", step.NewSteps(
 		step.New(
-			step.Exec(IgniteApp, "g", "ts-client", "--yes", "--clear-cache"),
+			step.Exec(SpellshapeApp, "g", "ts-client", "--yes", "--clear-cache"),
 			step.Workdir(a.path),
 		),
 	))

@@ -12,16 +12,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	chainconfig "github.com/ignite/cli/ignite/config/chain"
-	"github.com/ignite/cli/ignite/config/chain/base"
-	"github.com/ignite/cli/ignite/pkg/cliui/entrywriter"
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	"github.com/ignite/cli/ignite/pkg/cosmosaccount"
-	"github.com/ignite/cli/ignite/pkg/cosmosclient"
-	"github.com/ignite/cli/ignite/pkg/randstr"
-	"github.com/ignite/cli/ignite/pkg/xurl"
-	xyaml "github.com/ignite/cli/ignite/pkg/yaml"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	chainconfig "github.com/spellshape/cli/spellshape/config/chain"
+	"github.com/spellshape/cli/spellshape/config/chain/base"
+	"github.com/spellshape/cli/spellshape/pkg/cliui/entrywriter"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
+	"github.com/spellshape/cli/spellshape/pkg/cosmosaccount"
+	"github.com/spellshape/cli/spellshape/pkg/cosmosclient"
+	"github.com/spellshape/cli/spellshape/pkg/randstr"
+	"github.com/spellshape/cli/spellshape/pkg/xurl"
+	xyaml "github.com/spellshape/cli/spellshape/pkg/yaml"
 )
 
 const (
@@ -83,7 +83,7 @@ func TestNodeQueryBankBalances(t *testing.T) {
 	env.Must(env.Exec("import alice",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"account",
 				"import",
 				alice,
@@ -119,7 +119,7 @@ func TestNodeQueryBankBalances(t *testing.T) {
 		env.Exec("query bank balances by account name",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"query",
 					"bank",
@@ -147,7 +147,7 @@ func TestNodeQueryBankBalances(t *testing.T) {
 		env.Exec("query bank balances by address",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"query",
 					"bank",
@@ -171,7 +171,7 @@ func TestNodeQueryBankBalances(t *testing.T) {
 		env.Exec("query bank balances with pagination -page 1",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"query",
 					"bank",
@@ -198,7 +198,7 @@ func TestNodeQueryBankBalances(t *testing.T) {
 		env.Exec("query bank balances with pagination -page 2",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"query",
 					"bank",
@@ -225,7 +225,7 @@ func TestNodeQueryBankBalances(t *testing.T) {
 		env.Exec("query bank balances fail with non-existent account name",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"query",
 					"bank",
@@ -246,7 +246,7 @@ func TestNodeQueryBankBalances(t *testing.T) {
 		env.Exec("query bank balances fail with non-existent address",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"query",
 					"bank",
@@ -267,7 +267,7 @@ func TestNodeQueryBankBalances(t *testing.T) {
 		env.Exec("query bank balances should fail with a wrong prefix",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"query",
 					"bank",

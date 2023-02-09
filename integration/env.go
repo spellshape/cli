@@ -17,12 +17,12 @@ import (
 	"github.com/cenkalti/backoff"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ignite/cli/ignite/pkg/cosmosfaucet"
-	"github.com/ignite/cli/ignite/pkg/env"
-	"github.com/ignite/cli/ignite/pkg/gocmd"
-	"github.com/ignite/cli/ignite/pkg/gomodulepath"
-	"github.com/ignite/cli/ignite/pkg/httpstatuschecker"
-	"github.com/ignite/cli/ignite/pkg/xurl"
+	"github.com/spellshape/cli/spellshape/pkg/cosmosfaucet"
+	"github.com/spellshape/cli/spellshape/pkg/env"
+	"github.com/spellshape/cli/spellshape/pkg/gocmd"
+	"github.com/spellshape/cli/spellshape/pkg/gomodulepath"
+	"github.com/spellshape/cli/spellshape/pkg/httpstatuschecker"
+	"github.com/spellshape/cli/spellshape/pkg/xurl"
 )
 
 const (
@@ -30,10 +30,10 @@ const (
 )
 
 var (
-	// IgniteApp hold the location of the ignite binary used in the integration
+	// SpellshapeApp hold the location of the spellshape binary used in the integration
 	// tests. The binary is compiled the first time the env.New() function is
 	// invoked.
-	IgniteApp = path.Join(os.TempDir(), "ignite-tests", "ignite")
+	SpellshapeApp = path.Join(os.TempDir(), "spellshape-tests", "spellshape")
 
 	isCI, _           = strconv.ParseBool(os.Getenv("CI"))
 	compileBinaryOnce sync.Once
@@ -56,7 +56,7 @@ func New(t *testing.T) Env {
 	}
 	// To avoid conflicts with the default config folder located in $HOME, we
 	// set an other one thanks to env var.
-	cfgDir := path.Join(t.TempDir(), ".ignite")
+	cfgDir := path.Join(t.TempDir(), ".spellshape")
 	env.SetConfigDir(cfgDir)
 
 	t.Cleanup(cancel)
@@ -76,8 +76,8 @@ func compileBinary(ctx context.Context) {
 		panic(fmt.Sprintf("unable to read go module path: %v", err))
 	}
 	var (
-		output, binary = filepath.Split(IgniteApp)
-		path           = path.Join(appPath, "ignite", "cmd", "ignite")
+		output, binary = filepath.Split(SpellshapeApp)
+		path           = path.Join(appPath, "spellshape", "cmd", "spellshape")
 	)
 	err = gocmd.BuildPath(ctx, output, binary, path, nil)
 	if err != nil {

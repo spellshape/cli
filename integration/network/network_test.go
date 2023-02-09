@@ -14,19 +14,19 @@ import (
 	"github.com/go-git/go-git/v5/plumbing"
 	"github.com/stretchr/testify/require"
 
-	ignitecmd "github.com/ignite/cli/ignite/cmd"
-	chainconfig "github.com/ignite/cli/ignite/config/chain"
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	"github.com/ignite/cli/ignite/pkg/gomodule"
-	"github.com/ignite/cli/ignite/pkg/xgit"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	spellshapecmd "github.com/spellshape/cli/spellshape/cmd"
+	chainconfig "github.com/spellshape/cli/spellshape/config/chain"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
+	"github.com/spellshape/cli/spellshape/pkg/gomodule"
+	"github.com/spellshape/cli/spellshape/pkg/xgit"
 )
 
 const (
 	spnModule            = "github.com/tendermint/spn"
 	spnRepoURL           = "https://" + spnModule
 	spnConfigFile        = "config_2.yml"
-	pluginNetworkRepoURL = "https://" + ignitecmd.PluginNetworkPath
+	pluginNetworkRepoURL = "https://" + spellshapecmd.PluginNetworkPath
 )
 
 // setupSPN executes the following tasks:
@@ -46,15 +46,15 @@ func setupSPN(env envtest.Env) string {
 	// Clone the cli-plugin-network with the expected version
 	err := xgit.Clone(context.Background(), pluginNetworkRepoURL, pluginPath)
 	require.NoError(err)
-	t.Logf("Checkout cli-plugin-revision to ref %q", ignitecmd.PluginNetworkPath)
+	t.Logf("Checkout cli-plugin-revision to ref %q", spellshapecmd.PluginNetworkPath)
 	// Add plugin to config
 	env.Must(env.Exec("add plugin network",
 		step.NewSteps(step.New(
 			// NOTE(tb): to test cli-plugin-network locally (can happen during dev)
 			// comment the first line below and uncomment the second, with the
 			// correct path to the plugin.
-			step.Exec(envtest.IgniteApp, "plugin", "add", "-g", pluginPath),
-			// step.Exec(envtest.IgniteApp, "plugin", "add", "-g", "/home/tom/src/ignite/cli-plugin-network"),
+			step.Exec(envtest.SpellshapeApp, "plugin", "add", "-g", pluginPath),
+			// step.Exec(envtest.SpellshapeApp, "plugin", "add", "-g", "/home/tom/src/spellshape/cli-plugin-network"),
 		)),
 	))
 
@@ -152,9 +152,9 @@ func TestNetworkPublish(t *testing.T) {
 		env.Exec("publish planet chain to spn",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"network", "chain", "publish",
-					"https://github.com/ignite/example",
+					"https://github.com/spellshape/example",
 					"--local",
 					// The hash is used to be sure the test uses the right config
 					// version. Hash value must be updated to the latest when the
@@ -206,7 +206,7 @@ func TestNetworkPublishGenesisConfig(t *testing.T) {
 		env.Exec("publish test chain to spn",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"network", "chain", "publish",
 					"https://github.com/aljo242/test",
 					"--local",

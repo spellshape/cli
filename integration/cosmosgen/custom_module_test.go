@@ -8,11 +8,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	chainconfig "github.com/ignite/cli/ignite/config/chain"
-	"github.com/ignite/cli/ignite/config/chain/base"
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	"github.com/ignite/cli/ignite/pkg/xurl"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	chainconfig "github.com/spellshape/cli/spellshape/config/chain"
+	"github.com/spellshape/cli/spellshape/config/chain/base"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
+	"github.com/spellshape/cli/spellshape/pkg/xurl"
 )
 
 func TestCustomModule(t *testing.T) {
@@ -49,14 +49,14 @@ func TestCustomModule(t *testing.T) {
 
 	env.Must(env.Exec("create a module",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "module", "disco", "--require-registration", "--yes"),
+			step.Exec(envtest.SpellshapeApp, "s", "module", "disco", "--require-registration", "--yes"),
 			step.Workdir(path),
 		)),
 	))
 
 	env.Must(env.Exec("create a list type",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "list", "entry", "name", "--module", "disco", "--yes"),
+			step.Exec(envtest.SpellshapeApp, "s", "list", "entry", "name", "--module", "disco", "--yes"),
 			step.Workdir(path),
 		)),
 	))

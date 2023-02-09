@@ -1,5 +1,5 @@
 ---
-name: Ignite CLI bug report
+name: Spellshape CLI bug report
 about: Create a report to help us improve
 title: ''
 labels: bug
@@ -15,4 +15,4 @@ Steps to reproduce the behavior:
 
 **What version are you using?**
 
-Provide the output of the `ignite version` command.
+Provide the output of the `spellshape version` command.

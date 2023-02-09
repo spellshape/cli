@@ -27,14 +27,14 @@ This tutorial relies on the `blog` blockchain that you built in the `Build a Blo
 
 ## Fetch functions using list command
 
-To get the useful functions for this tutorial, you use the `ignite scaffold list NAME [field]... [flags]` command. Make sure to familiarize yourself with the command.
+To get the useful functions for this tutorial, you use the `spellshape scaffold list NAME [field]... [flags]` command. Make sure to familiarize yourself with the command.
 
 1. Navigate to the `blog` directory that you created in the [Build a blog](index.md) tutorial.
 
 2. To create the source code files to add CRUD (create, read, update, and delete) functionality for data stored as an array, run:
 
 ```bash
-ignite scaffold list comment --no-message creator:string title:string body:string postID:uint createdAt:int 
+spellshape scaffold list comment --no-message creator:string title:string body:string postID:uint createdAt:int 
 ```
 
 The `--no-message` flag disables CRUD interaction messages scaffolding because you will write your own messages.
@@ -81,10 +81,10 @@ message Comment {
 To create a new message that adds a comment to the existing post, run:
 
 ```bash
-ignite scaffold message create-comment postID:uint title body
+spellshape scaffold message create-comment postID:uint title body
 ```
 
-The `ignite scaffold message` command accepts `postID` and a list of fields as arguments. The fields are `title` and `body`.
+The `spellshape scaffold message` command accepts `postID` and a list of fields as arguments. The fields are `title` and `body`.
 
 Here, `postID` is the reference to previously created blog post.
 
@@ -228,13 +228,13 @@ func (k msgServer) CreatePost(goCtx context.Context, msg *types.MsgCreatePost) (
 
 ## Write data to the store
 
-When you define the `Comment` type in a proto file, Ignite CLI (with the help of `protoc`) takes care of generating the required Go files.
+When you define the `Comment` type in a proto file, Spellshape CLI (with the help of `protoc`) takes care of generating the required Go files.
 
-Inside the `proto/blog/comment.proto` file, you can observe, Ignite CLI has already added the required fields inside the `Comment` message.
+Inside the `proto/blog/comment.proto` file, you can observe, Spellshape CLI has already added the required fields inside the `Comment` message.
 
 The contents of the `comment.proto` file are fairly standard and similar to `post.proto`. The file defines a package name that is used to identify messages, among other things, specifies the Go package where new files are generated, and finally defines `message Comment`. 
 
-Each file save triggers an automatic rebuild.  Now, after you build and start your chain with Ignite CLI, the `Comment` type is available.
+Each file save triggers an automatic rebuild.  Now, after you build and start your chain with Spellshape CLI, the `Comment` type is available.
 
 Also, make a small modification in `proto/blog/post.proto` to add `createdAt`:
 
@@ -249,7 +249,7 @@ message Post {
 
 ### Define keeper methods
 
-The function `ignite scaffold list comment --no-message` has fetched all of the required functions for keeper. 
+The function `spellshape scaffold list comment --no-message` has fetched all of the required functions for keeper. 
 
 Inside `x/blog/types/keys.go` file, you can see that the `Comment/value/` and `Comment/count/` keys are added.
 
@@ -287,7 +287,7 @@ func (k Keeper) GetPost(ctx sdk.Context, id uint64) (val types.Post, found bool)
 
 You have manually added the functions to `x/blog/keeper/post.go`. 
 
-When you ran the `ignite scaffold list comment --no-message` command, these functions are automatically implemented in `x/blog/keeper/comment.go`:
+When you ran the `spellshape scaffold list comment --no-message` command, these functions are automatically implemented in `x/blog/keeper/comment.go`:
 
 - `GetCommentCount`
 - `SetCommentCount`
@@ -303,7 +303,7 @@ By following these steps, you have implemented all of the code required to creat
 To create a message, use the `message` command:
 
 ```bash
-ignite scaffold message delete-comment commentID:uint postID:uint 
+spellshape scaffold message delete-comment commentID:uint postID:uint 
 ```
 
 The `message` commands accepts `commentID` and `postID` as arguments.
@@ -393,7 +393,7 @@ func (k msgServer) DeleteComment(goCtx context.Context, msg *types.MsgDeleteComm
 Implement logic to query existing posts:
 
 ```bash
-ignite scaffold query comments id:uint --response title,body
+spellshape scaffold query comments id:uint --response title,body
 ```
 
 Also in `proto/blog/query.proto`, make these updates:
@@ -492,7 +492,7 @@ func (k Keeper) Comments(c context.Context, req *types.QueryCommentsRequest) (*t
 
 Try it out! 
 
-If the chain is yet not started, run `ignite chain serve -r`.
+If the chain is yet not started, run `spellshape chain serve -r`.
 
 Create a post:
 

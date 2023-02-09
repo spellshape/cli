@@ -11,15 +11,15 @@ import (
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	"github.com/stretchr/testify/require"
 
-	chainconfig "github.com/ignite/cli/ignite/config/chain"
-	"github.com/ignite/cli/ignite/config/chain/base"
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	"github.com/ignite/cli/ignite/pkg/cosmosaccount"
-	"github.com/ignite/cli/ignite/pkg/cosmosclient"
-	"github.com/ignite/cli/ignite/pkg/randstr"
-	"github.com/ignite/cli/ignite/pkg/xurl"
-	xyaml "github.com/ignite/cli/ignite/pkg/yaml"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	chainconfig "github.com/spellshape/cli/spellshape/config/chain"
+	"github.com/spellshape/cli/spellshape/config/chain/base"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
+	"github.com/spellshape/cli/spellshape/pkg/cosmosaccount"
+	"github.com/spellshape/cli/spellshape/pkg/cosmosclient"
+	"github.com/spellshape/cli/spellshape/pkg/randstr"
+	"github.com/spellshape/cli/spellshape/pkg/xurl"
+	xyaml "github.com/spellshape/cli/spellshape/pkg/yaml"
 )
 
 func waitForNextBlock(env envtest.Env, client cosmosclient.Client) {
@@ -78,7 +78,7 @@ func TestNodeTxBankSend(t *testing.T) {
 	env.Must(env.Exec("import alice",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"account",
 				"import",
 				"alice",
@@ -92,7 +92,7 @@ func TestNodeTxBankSend(t *testing.T) {
 	env.Must(env.Exec("import bob",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"account",
 				"import",
 				"bob",
@@ -124,7 +124,7 @@ func TestNodeTxBankSend(t *testing.T) {
 		env.Exec("send 100token from alice to bob",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"tx",
 					"bank",
@@ -151,7 +151,7 @@ func TestNodeTxBankSend(t *testing.T) {
 		env.Exec("send 2stake from bob to alice using addresses",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"tx",
 					"bank",
@@ -173,7 +173,7 @@ func TestNodeTxBankSend(t *testing.T) {
 		env.Exec("send 5token from alice to bob using a combination of address and account",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"tx",
 					"bank",
@@ -196,7 +196,7 @@ func TestNodeTxBankSend(t *testing.T) {
 		env.Exec("query bank balances for alice",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"query",
 					"bank",
@@ -220,7 +220,7 @@ func TestNodeTxBankSend(t *testing.T) {
 		env.Exec("query bank balances for bob",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"query",
 					"bank",
@@ -241,7 +241,7 @@ func TestNodeTxBankSend(t *testing.T) {
 		env.Exec("generate unsigned tx",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"tx",
 					"bank",
@@ -268,7 +268,7 @@ func TestNodeTxBankSend(t *testing.T) {
 		env.Exec("send 100token from bob to alice with gas flags",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"tx",
 					"bank",
@@ -289,7 +289,7 @@ func TestNodeTxBankSend(t *testing.T) {
 		env.Exec("send 100token from alice to bob with too little gas",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"tx",
 					"bank",
@@ -311,7 +311,7 @@ func TestNodeTxBankSend(t *testing.T) {
 		env.Exec("generate bank send tx with gas flags",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"tx",
 					"bank",

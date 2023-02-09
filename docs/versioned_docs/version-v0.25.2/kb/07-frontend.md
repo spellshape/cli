@@ -1,5 +1,5 @@
 ---
-description: Details on the Vue frontend app created by Ignite CLI.
+description: Details on the Vue frontend app created by Spellshape CLI.
 sidebar_position: 7
 ---
 
@@ -7,7 +7,7 @@ sidebar_position: 7
 
 A Vue frontend app is created in the `vue` directory when a blockchain is scaffolded. To start the frontend app run `npm i && npm run dev` in the `vue` directory.
 
-The frontend app is built using the `@starport/vue` and `@starport/vuex` packages. For details, see the [monorepo for Ignite CLI front-end development](https://github.com/ignite/web).
+The frontend app is built using the `@starport/vue` and `@starport/vuex` packages. For details, see the [monorepo for Spellshape CLI front-end development](https://github.com/spellshape/web).
 
 ## Client code generation
 
@@ -32,10 +32,10 @@ By default, the filesystem is watched and the clients are regenerated automatica
 To regenerate all clients for custom and standard Cosmos SDK modules, run this command:
 
 ```bash
-ignite generate vuex
+spellshape generate vuex
 ```
 
-(Note: this command also runs the typescript client generation and you do not need to run `ignite generate ts-client` separately.)
+(Note: this command also runs the typescript client generation and you do not need to run `spellshape generate ts-client` separately.)
 ## Preventing client code regeneration	
 
 To prevent regenerating the client, remove the `client:vuex` property from `config.yml`.	

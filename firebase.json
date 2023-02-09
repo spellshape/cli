@@ -9,17 +9,17 @@
     "redirects": [
       {
         "source": "/kb/types",
-        "destination": "/cli#ignite-scaffold-list",
+        "destination": "/cli#spellshape-scaffold-list",
         "type": 301
       },
       {
         "source": "/kb/scaffold-chain",
-        "destination": "/cli#ignite-scaffold-chain",
+        "destination": "/cli#spellshape-scaffold-chain",
         "type": 301
       },
       {
         "source": "/kb/serve",
-        "destination": "/cli#ignite-chain-serve",
+        "destination": "/cli#spellshape-chain-serve",
         "type": 301
       },
       {
@@ -29,7 +29,7 @@
       },
       {
         "source": "/kb/params",
-        "destination": "/cli#ignite-scaffold-module",
+        "destination": "/cli#spellshape-scaffold-module",
         "type": 301
       },
       {
@@ -38,7 +38,7 @@
         "type": 301
       }
     ],
-    "target": "docs.ignite.com",
+    "target": "docs.spellshape.com",
     "public": "docs/build",
     "cleanUrls": true
   }

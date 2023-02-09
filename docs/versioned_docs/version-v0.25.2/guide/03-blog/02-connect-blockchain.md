@@ -39,7 +39,7 @@ The `go.mod` file is created inside your `blogclient` directory.
 Your blockchain client has only two dependencies: 
 
 - The `blog` blockchain `types` for message types and a query client
-- `ignite` for the `cosmosclient` blockchain client
+- `spellshape` for the `cosmosclient` blockchain client
 
 ```go-module
 module blogclient
@@ -48,7 +48,7 @@ go 1.18
 
 require (
 	blog v0.0.0-00010101000000-000000000000
-	github.com/ignite/cli v0.23.0
+	github.com/spellshape/cli v0.23.0
 )
 
 replace blog => ../blog
@@ -77,7 +77,7 @@ import (
 	"log"
 
 	// Importing the general purpose Cosmos blockchain client
-	"github.com/ignite/cli/ignite/pkg/cosmosclient"
+	"github.com/spellshape/cli/spellshape/pkg/cosmosclient"
 
 	// Importing the types package of your blog blockchain
 	"blog/x/blog/types"
@@ -98,7 +98,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// Account `alice` was initialized during `ignite chain serve`
+	// Account `alice` was initialized during `spellshape chain serve`
 	accountName := "alice"
 
 	// Get account from the keyring
@@ -149,11 +149,11 @@ func main() {
 Read the comments in the code carefully to learn details about each line of code.
 
 To learn more about the `cosmosclient` package, see the Go 
-[cosmosclient](https://pkg.go.dev/github.com/ignite/cli/ignite/pkg/cosmosclient) package documentation. Details are provided to learn how to use the `Client` type with `Options` and `KeyringBackend`.
+[cosmosclient](https://pkg.go.dev/github.com/spellshape/cli/spellshape/pkg/cosmosclient) package documentation. Details are provided to learn how to use the `Client` type with `Options` and `KeyringBackend`.
 
 ## Run the blockchain and the client
 
-Make sure your blog blockchain is still running with `ignite chain serve`.
+Make sure your blog blockchain is still running with `spellshape chain serve`.
 
 Install dependencies for your `blogclient`:
 

@@ -6,10 +6,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	pluginsconfig "github.com/ignite/cli/ignite/config/plugins"
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	"github.com/ignite/cli/ignite/services/plugin"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	pluginsconfig "github.com/spellshape/cli/spellshape/config/plugins"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
+	"github.com/spellshape/cli/spellshape/services/plugin"
 )
 
 func TestAddRemovePlugin(t *testing.T) {
@@ -18,7 +18,7 @@ func TestAddRemovePlugin(t *testing.T) {
 		assert     = assert.New(t)
 		env        = envtest.New(t)
 		app        = env.Scaffold("github.com/test/blog")
-		pluginRepo = "github.com/ignite/example-plugin"
+		pluginRepo = "github.com/spellshape/example-plugin"
 
 		assertPlugins = func(expectedLocalPlugins, expectedGlobalPlugins []pluginsconfig.Plugin) {
 			localCfg, err := pluginsconfig.ParseDir(app.SourcePath())
@@ -38,7 +38,7 @@ func TestAddRemovePlugin(t *testing.T) {
 
 	env.Must(env.Exec("add plugin locally",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "plugin", "add", pluginRepo, "k1=v1", "k2=v2"),
+			step.Exec(envtest.SpellshapeApp, "plugin", "add", pluginRepo, "k1=v1", "k2=v2"),
 			step.Workdir(app.SourcePath()),
 		)),
 	))
@@ -59,7 +59,7 @@ func TestAddRemovePlugin(t *testing.T) {
 
 	env.Must(env.Exec("remove plugin locally",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "plugin", "remove", pluginRepo),
+			step.Exec(envtest.SpellshapeApp, "plugin", "remove", pluginRepo),
 			step.Workdir(app.SourcePath()),
 		)),
 	))
@@ -69,7 +69,7 @@ func TestAddRemovePlugin(t *testing.T) {
 
 	env.Must(env.Exec("add plugin globally",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "plugin", "add", pluginRepo, "-g"),
+			step.Exec(envtest.SpellshapeApp, "plugin", "add", pluginRepo, "-g"),
 			step.Workdir(app.SourcePath()),
 		)),
 	))
@@ -86,7 +86,7 @@ func TestAddRemovePlugin(t *testing.T) {
 
 	env.Must(env.Exec("remove plugin globally",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "plugin", "remove", pluginRepo, "-g"),
+			step.Exec(envtest.SpellshapeApp, "plugin", "remove", pluginRepo, "-g"),
 			step.Workdir(app.SourcePath()),
 		)),
 	))
@@ -102,7 +102,7 @@ func TestPluginScaffold(t *testing.T) {
 
 	env.Must(env.Exec("add a plugin",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "plugin", "scaffold", "test"),
+			step.Exec(envtest.SpellshapeApp, "plugin", "scaffold", "test"),
 			step.Workdir(env.TmpDir()),
 		)),
 	))

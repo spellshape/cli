@@ -1,6 +1,6 @@
-# Ignite CLI Action
+# Spellshape CLI Action
 
-This action makes the `ignite` CLI available as a Github Action.
+This action makes the `spellshape` CLI available as a Github Action.
 
 ## Quick start
 
@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Print Help 
-        uses: ignite/cli/actions/cli@main
+        uses: spellshape/cli/actions/cli@main
         with:
           args: -h 
 ```

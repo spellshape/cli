@@ -1,58 +1,58 @@
 ---
-description: Ignite CLI docs.
+description: Spellshape CLI docs.
 ---
 
 # CLI commands
 
-Documentation for Ignite CLI.
-## ignite
+Documentation for Spellshape CLI.
+## spellshape
 
-Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
+Spellshape CLI offers everything you need to scaffold, test, build, and launch your blockchain
 
 **Synopsis**
 
-Ignite CLI is a tool for creating sovereign blockchains built with Cosmos SDK, the world’s
-most popular modular blockchain framework. Ignite CLI offers everything you need to scaffold,
+Spellshape CLI is a tool for creating sovereign blockchains built with Cosmos SDK, the world’s
+most popular modular blockchain framework. Spellshape CLI offers everything you need to scaffold,
 test, build, and launch your blockchain.
 
 To get started, create a blockchain:
 
-	ignite scaffold chain example
+	spellshape scaffold chain example
 
 
 **Options**
 
 ```
-  -h, --help   help for ignite
+  -h, --help   help for spellshape
 ```
 
 **SEE ALSO**
 
-* [ignite account](#ignite-account)	 - Create, delete, and show Ignite accounts
-* [ignite chain](#ignite-chain)	 - Build, init and start a blockchain node
-* [ignite completion](#ignite-completion)	 - Generate the autocompletion script for the specified shell
-* [ignite docs](#ignite-docs)	 - Show Ignite CLI docs
-* [ignite generate](#ignite-generate)	 - Generate clients, API docs from source code
-* [ignite network](#ignite-network)	 - Launch a blockchain in production
-* [ignite node](#ignite-node)	 - Make requests to a live blockchain node
-* [ignite plugin](#ignite-plugin)	 - Handle plugins
-* [ignite relayer](#ignite-relayer)	 - Connect blockchains with an IBC relayer
-* [ignite scaffold](#ignite-scaffold)	 - Create a new blockchain, module, message, query, and more
-* [ignite tools](#ignite-tools)	 - Tools for advanced users
-* [ignite version](#ignite-version)	 - Print the current build information
+* [spellshape account](#spellshape-account)	 - Create, delete, and show Spellshape accounts
+* [spellshape chain](#spellshape-chain)	 - Build, init and start a blockchain node
+* [spellshape completion](#spellshape-completion)	 - Generate the autocompletion script for the specified shell
+* [spellshape docs](#spellshape-docs)	 - Show Spellshape CLI docs
+* [spellshape generate](#spellshape-generate)	 - Generate clients, API docs from source code
+* [spellshape network](#spellshape-network)	 - Launch a blockchain in production
+* [spellshape node](#spellshape-node)	 - Make requests to a live blockchain node
+* [spellshape plugin](#spellshape-plugin)	 - Handle plugins
+* [spellshape relayer](#spellshape-relayer)	 - Connect blockchains with an IBC relayer
+* [spellshape scaffold](#spellshape-scaffold)	 - Create a new blockchain, module, message, query, and more
+* [spellshape tools](#spellshape-tools)	 - Tools for advanced users
+* [spellshape version](#spellshape-version)	 - Print the current build information
 
 
-## ignite account
+## spellshape account
 
-Create, delete, and show Ignite accounts
+Create, delete, and show Spellshape accounts
 
 **Synopsis**
 
-Commands for managing Ignite accounts. An Ignite account is a private/public
-keypair stored in a keyring. Currently Ignite accounts are used when interacting
-with Ignite relayer commands and when using "ignite network" commands.
+Commands for managing Spellshape accounts. An Spellshape account is a private/public
+keypair stored in a keyring. Currently Spellshape accounts are used when interacting
+with Spellshape relayer commands and when using "spellshape network" commands.
 
-Note: Ignite account commands are not for managing your chain's keys and accounts. Use
+Note: Spellshape account commands are not for managing your chain's keys and accounts. Use
 you chain's binary to manage accounts from "config.yml". For example, if your
 blockchain is called "mychain", use "mychaind keys" to manage keys for the
 chain.
@@ -63,26 +63,26 @@ chain.
 ```
   -h, --help                     help for account
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **SEE ALSO**
 
-* [ignite](#ignite)	 - Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
-* [ignite account create](#ignite-account-create)	 - Create a new account
-* [ignite account delete](#ignite-account-delete)	 - Delete an account by name
-* [ignite account export](#ignite-account-export)	 - Export an account as a private key
-* [ignite account import](#ignite-account-import)	 - Import an account by using a mnemonic or a private key
-* [ignite account list](#ignite-account-list)	 - Show a list of all accounts
-* [ignite account show](#ignite-account-show)	 - Show detailed information about a particular account
+* [spellshape](#spellshape)	 - Spellshape CLI offers everything you need to scaffold, test, build, and launch your blockchain
+* [spellshape account create](#spellshape-account-create)	 - Create a new account
+* [spellshape account delete](#spellshape-account-delete)	 - Delete an account by name
+* [spellshape account export](#spellshape-account-export)	 - Export an account as a private key
+* [spellshape account import](#spellshape-account-import)	 - Import an account by using a mnemonic or a private key
+* [spellshape account list](#spellshape-account-list)	 - Show a list of all accounts
+* [spellshape account show](#spellshape-account-show)	 - Show detailed information about a particular account
 
 
-## ignite account create
+## spellshape account create
 
 Create a new account
 
 ```
-ignite account create [name] [flags]
+spellshape account create [name] [flags]
 ```
 
 **Options**
@@ -95,20 +95,20 @@ ignite account create [name] [flags]
 
 ```
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **SEE ALSO**
 
-* [ignite account](#ignite-account)	 - Create, delete, and show Ignite accounts
+* [spellshape account](#spellshape-account)	 - Create, delete, and show Spellshape accounts
 
 
-## ignite account delete
+## spellshape account delete
 
 Delete an account by name
 
 ```
-ignite account delete [name] [flags]
+spellshape account delete [name] [flags]
 ```
 
 **Options**
@@ -121,20 +121,20 @@ ignite account delete [name] [flags]
 
 ```
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **SEE ALSO**
 
-* [ignite account](#ignite-account)	 - Create, delete, and show Ignite accounts
+* [spellshape account](#spellshape-account)	 - Create, delete, and show Spellshape accounts
 
 
-## ignite account export
+## spellshape account export
 
 Export an account as a private key
 
 ```
-ignite account export [name] [flags]
+spellshape account export [name] [flags]
 ```
 
 **Options**
@@ -150,20 +150,20 @@ ignite account export [name] [flags]
 
 ```
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **SEE ALSO**
 
-* [ignite account](#ignite-account)	 - Create, delete, and show Ignite accounts
+* [spellshape account](#spellshape-account)	 - Create, delete, and show Spellshape accounts
 
 
-## ignite account import
+## spellshape account import
 
 Import an account by using a mnemonic or a private key
 
 ```
-ignite account import [name] [flags]
+spellshape account import [name] [flags]
 ```
 
 **Options**
@@ -179,20 +179,20 @@ ignite account import [name] [flags]
 
 ```
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **SEE ALSO**
 
-* [ignite account](#ignite-account)	 - Create, delete, and show Ignite accounts
+* [spellshape account](#spellshape-account)	 - Create, delete, and show Spellshape accounts
 
 
-## ignite account list
+## spellshape account list
 
 Show a list of all accounts
 
 ```
-ignite account list [flags]
+spellshape account list [flags]
 ```
 
 **Options**
@@ -206,20 +206,20 @@ ignite account list [flags]
 
 ```
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **SEE ALSO**
 
-* [ignite account](#ignite-account)	 - Create, delete, and show Ignite accounts
+* [spellshape account](#spellshape-account)	 - Create, delete, and show Spellshape accounts
 
 
-## ignite account show
+## spellshape account show
 
 Show detailed information about a particular account
 
 ```
-ignite account show [name] [flags]
+spellshape account show [name] [flags]
 ```
 
 **Options**
@@ -233,15 +233,15 @@ ignite account show [name] [flags]
 
 ```
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **SEE ALSO**
 
-* [ignite account](#ignite-account)	 - Create, delete, and show Ignite accounts
+* [spellshape account](#spellshape-account)	 - Create, delete, and show Spellshape accounts
 
 
-## ignite chain
+## spellshape chain
 
 Build, init and start a blockchain node
 
@@ -251,7 +251,7 @@ Commands in this namespace let you to build, initialize, and start your
 blockchain node locally for development purposes.
 
 To run these commands you should be inside the project's directory so that
-Ignite can find the source code. To ensure that you are, run "ls", you should
+Spellshape can find the source code. To ensure that you are, run "ls", you should
 see the following files in the output: "go.mod", "x", "proto", "app", etc.
 
 By default the "build" command will identify the "main" package of the project,
@@ -299,23 +299,23 @@ chain.
 **Options**
 
 ```
-  -c, --config string   path to Ignite config file (default: ./config.yml)
+  -c, --config string   path to Spellshape config file (default: ./config.yml)
   -h, --help            help for chain
   -y, --yes             answers interactive yes/no questions with yes
 ```
 
 **SEE ALSO**
 
-* [ignite](#ignite)	 - Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
-* [ignite chain build](#ignite-chain-build)	 - Build a node binary
-* [ignite chain debug](#ignite-chain-debug)	 - Launch a debugger for a blockchain app
-* [ignite chain faucet](#ignite-chain-faucet)	 - Send coins to an account
-* [ignite chain init](#ignite-chain-init)	 - Initialize your chain
-* [ignite chain serve](#ignite-chain-serve)	 - Start a blockchain node in development
-* [ignite chain simulate](#ignite-chain-simulate)	 - Run simulation testing for the blockchain
+* [spellshape](#spellshape)	 - Spellshape CLI offers everything you need to scaffold, test, build, and launch your blockchain
+* [spellshape chain build](#spellshape-chain-build)	 - Build a node binary
+* [spellshape chain debug](#spellshape-chain-debug)	 - Launch a debugger for a blockchain app
+* [spellshape chain faucet](#spellshape-chain-faucet)	 - Send coins to an account
+* [spellshape chain init](#spellshape-chain-init)	 - Initialize your chain
+* [spellshape chain serve](#spellshape-chain-serve)	 - Start a blockchain node in development
+* [spellshape chain simulate](#spellshape-chain-simulate)	 - Run simulation testing for the blockchain
 
 
-## ignite chain build
+## spellshape chain build
 
 Build a node binary
 
@@ -327,26 +327,26 @@ installs the binary in the $(go env GOPATH)/bin directory.
 
 You can customize the output directory for the binary using a flag:
 
-	ignite chain build --output dist
+	spellshape chain build --output dist
 
-To compile the binary Ignite first compiles protocol buffer (proto) files into
+To compile the binary Spellshape first compiles protocol buffer (proto) files into
 Go source code. Proto files contain required type and services definitions. If
 you're using another program to compile proto files, you can use a flag to tell
-Ignite to skip the proto compilation step:
+Spellshape to skip the proto compilation step:
 
-	ignite chain build --skip-proto
+	spellshape chain build --skip-proto
 
-Afterwards, Ignite install dependencies specified in the go.mod file. By default
-Ignite doesn't check that dependencies of the main module stored in the module
+Afterwards, Spellshape install dependencies specified in the go.mod file. By default
+Spellshape doesn't check that dependencies of the main module stored in the module
 cache have not been modified since they were downloaded. To enforce dependency
 checking (essentially, running "go mod verify") use a flag:
 
-	ignite chain build --check-dependencies
+	spellshape chain build --check-dependencies
 
-Next, Ignite identifies the "main" package of the project. By default the "main"
+Next, Spellshape identifies the "main" package of the project. By default the "main"
 package is located in "cmd/{app}d" directory, where "{app}" is the name of the
 scaffolded project and "d" stands for daemon. If your project contains more
-than one "main" package, specify the path to the one that Ignite should compile
+than one "main" package, specify the path to the one that Spellshape should compile
 in config.yml:
 
 	build:
@@ -371,11 +371,11 @@ project's source directory. Specify the release targets with GOOS:GOARCH build
 tags. If the optional --release.targets is not specified, a binary is created
 for your current environment.
 
-	ignite chain build --release -t linux:amd64 -t darwin:amd64 -t darwin:arm64
+	spellshape chain build --release -t linux:amd64 -t darwin:amd64 -t darwin:arm64
 
 
 ```
-ignite chain build [flags]
+spellshape chain build [flags]
 ```
 
 **Options**
@@ -397,16 +397,16 @@ ignite chain build [flags]
 **Options inherited from parent commands**
 
 ```
-  -c, --config string   path to Ignite config file (default: ./config.yml)
+  -c, --config string   path to Spellshape config file (default: ./config.yml)
   -y, --yes             answers interactive yes/no questions with yes
 ```
 
 **SEE ALSO**
 
-* [ignite chain](#ignite-chain)	 - Build, init and start a blockchain node
+* [spellshape chain](#spellshape-chain)	 - Build, init and start a blockchain node
 
 
-## ignite chain debug
+## spellshape chain debug
 
 Launch a debugger for a blockchain app
 
@@ -414,7 +414,7 @@ Launch a debugger for a blockchain app
 
 The debug command starts a debug server and launches a debugger.
 
-Ignite uses the Delve debugger by default. Delve enables you to interact with
+Spellshape uses the Delve debugger by default. Delve enables you to interact with
 your program by controlling the execution of the process, evaluating variables,
 and providing information of thread / goroutine state, CPU register state and
 more.
@@ -426,17 +426,17 @@ JSON-RPC or DAP client connections.
 
 To start a debug server use the following flag:
 
-	ignite chain debug --server
+	spellshape chain debug --server
 
 To start a debug server with a custom address use the following flags:
 
-	ignite chain debug --server --server-address 127.0.0.1:30500
+	spellshape chain debug --server --server-address 127.0.0.1:30500
 
 The debug server stops automatically when the client connection is closed.
 
 
 ```
-ignite chain debug [flags]
+spellshape chain debug [flags]
 ```
 
 **Options**
@@ -451,21 +451,21 @@ ignite chain debug [flags]
 **Options inherited from parent commands**
 
 ```
-  -c, --config string   path to Ignite config file (default: ./config.yml)
+  -c, --config string   path to Spellshape config file (default: ./config.yml)
   -y, --yes             answers interactive yes/no questions with yes
 ```
 
 **SEE ALSO**
 
-* [ignite chain](#ignite-chain)	 - Build, init and start a blockchain node
+* [spellshape chain](#spellshape-chain)	 - Build, init and start a blockchain node
 
 
-## ignite chain faucet
+## spellshape chain faucet
 
 Send coins to an account
 
 ```
-ignite chain faucet [address] [coin<,...>] [flags]
+spellshape chain faucet [address] [coin<,...>] [flags]
 ```
 
 **Options**
@@ -480,24 +480,24 @@ ignite chain faucet [address] [coin<,...>] [flags]
 **Options inherited from parent commands**
 
 ```
-  -c, --config string   path to Ignite config file (default: ./config.yml)
+  -c, --config string   path to Spellshape config file (default: ./config.yml)
   -y, --yes             answers interactive yes/no questions with yes
 ```
 
 **SEE ALSO**
 
-* [ignite chain](#ignite-chain)	 - Build, init and start a blockchain node
+* [spellshape chain](#spellshape-chain)	 - Build, init and start a blockchain node
 
 
-## ignite chain init
+## spellshape chain init
 
 Initialize your chain
 
 **Synopsis**
 
-The init command compiles and installs the binary (like "ignite chain build")
+The init command compiles and installs the binary (like "spellshape chain build")
 and uses that binary to initialize the blockchain's data directory for one
-validator. To learn how the build process works, refer to "ignite chain build
+validator. To learn how the build process works, refer to "spellshape chain build
 --help".
 
 By default, the data directory will be initialized in $HOME/.mychain, where
@@ -532,7 +532,7 @@ default the gas price is set to 0 to allow "free" transactions), sets the block
 time to 5s, and changes the output format to JSON. To see what kind of values
 this configuration accepts see the generated TOML files in the data directory.
 
-As part of the initialization process Ignite creates on-chain accounts with
+As part of the initialization process Spellshape creates on-chain accounts with
 token balances. By default, config.yml has two accounts in the top-level
 "accounts" property. You can add more accounts and change their token balances.
 Refer to config.yml guide to see which values you can set.
@@ -562,7 +562,7 @@ commands manually to ensure a production-level node initialization.
 
 
 ```
-ignite chain init [flags]
+spellshape chain init [flags]
 ```
 
 **Options**
@@ -580,49 +580,49 @@ ignite chain init [flags]
 **Options inherited from parent commands**
 
 ```
-  -c, --config string   path to Ignite config file (default: ./config.yml)
+  -c, --config string   path to Spellshape config file (default: ./config.yml)
   -y, --yes             answers interactive yes/no questions with yes
 ```
 
 **SEE ALSO**
 
-* [ignite chain](#ignite-chain)	 - Build, init and start a blockchain node
+* [spellshape chain](#spellshape-chain)	 - Build, init and start a blockchain node
 
 
-## ignite chain serve
+## spellshape chain serve
 
 Start a blockchain node in development
 
 **Synopsis**
 
-The serve command compiles and installs the binary (like "ignite chain build"),
+The serve command compiles and installs the binary (like "spellshape chain build"),
 uses that binary to initialize the blockchain's data directory for one validator
-(like "ignite chain init"), and starts the node locally for development purposes
+(like "spellshape chain init"), and starts the node locally for development purposes
 with automatic code reloading.
 
-Automatic code reloading means Ignite starts watching the project directory.
-Whenever a file change is detected, Ignite automatically rebuilds, reinitializes
+Automatic code reloading means Spellshape starts watching the project directory.
+Whenever a file change is detected, Spellshape automatically rebuilds, reinitializes
 and restarts the node.
 
-Whenever possible Ignite will try to keep the current state of the chain by
+Whenever possible Spellshape will try to keep the current state of the chain by
 exporting and importing the genesis file.
 
-To force Ignite to start from a clean slate even if a genesis file exists, use
+To force Spellshape to start from a clean slate even if a genesis file exists, use
 the following flag:
 
-	ignite chain serve --reset-once
+	spellshape chain serve --reset-once
 
-To force Ignite to reset the state every time the source code is modified, use
+To force Spellshape to reset the state every time the source code is modified, use
 the following flag:
 
-	ignite chain serve --force-reset
+	spellshape chain serve --force-reset
 
-With Ignite it's possible to start more than one blockchain from the same source
+With Spellshape it's possible to start more than one blockchain from the same source
 code using different config files. This is handy if you're building
 inter-blockchain functionality and, for example, want to try sending packets
 from one blockchain to another. To start a node using a specific config file:
 
-	ignite chain serve --config mars.yml
+	spellshape chain serve --config mars.yml
 
 The serve command is meant to be used ONLY FOR DEVELOPMENT PURPOSES. Under the
 hood, it runs "appd start", where "appd" is the name of your chain's binary. For
@@ -630,7 +630,7 @@ production, you may want to run "appd start" manually.
 
 
 ```
-ignite chain serve [flags]
+spellshape chain serve [flags]
 ```
 
 **Options**
@@ -652,16 +652,16 @@ ignite chain serve [flags]
 **Options inherited from parent commands**
 
 ```
-  -c, --config string   path to Ignite config file (default: ./config.yml)
+  -c, --config string   path to Spellshape config file (default: ./config.yml)
   -y, --yes             answers interactive yes/no questions with yes
 ```
 
 **SEE ALSO**
 
-* [ignite chain](#ignite-chain)	 - Build, init and start a blockchain node
+* [spellshape chain](#spellshape-chain)	 - Build, init and start a blockchain node
 
 
-## ignite chain simulate
+## spellshape chain simulate
 
 Run simulation testing for the blockchain
 
@@ -670,7 +670,7 @@ Run simulation testing for the blockchain
 Run simulation testing for the blockchain. It sends many randomized-input messages of each module to a simulated node and checks if invariants break
 
 ```
-ignite chain simulate [flags]
+spellshape chain simulate [flags]
 ```
 
 **Options**
@@ -698,22 +698,22 @@ ignite chain simulate [flags]
 **Options inherited from parent commands**
 
 ```
-  -c, --config string   path to Ignite config file (default: ./config.yml)
+  -c, --config string   path to Spellshape config file (default: ./config.yml)
   -y, --yes             answers interactive yes/no questions with yes
 ```
 
 **SEE ALSO**
 
-* [ignite chain](#ignite-chain)	 - Build, init and start a blockchain node
+* [spellshape chain](#spellshape-chain)	 - Build, init and start a blockchain node
 
 
-## ignite completion
+## spellshape completion
 
 Generate the autocompletion script for the specified shell
 
 **Synopsis**
 
-Generate the autocompletion script for ignite for the specified shell.
+Generate the autocompletion script for spellshape for the specified shell.
 See each sub-command's help for details on how to use the generated script.
 
 
@@ -725,14 +725,14 @@ See each sub-command's help for details on how to use the generated script.
 
 **SEE ALSO**
 
-* [ignite](#ignite)	 - Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
-* [ignite completion bash](#ignite-completion-bash)	 - Generate the autocompletion script for bash
-* [ignite completion fish](#ignite-completion-fish)	 - Generate the autocompletion script for fish
-* [ignite completion powershell](#ignite-completion-powershell)	 - Generate the autocompletion script for powershell
-* [ignite completion zsh](#ignite-completion-zsh)	 - Generate the autocompletion script for zsh
+* [spellshape](#spellshape)	 - Spellshape CLI offers everything you need to scaffold, test, build, and launch your blockchain
+* [spellshape completion bash](#spellshape-completion-bash)	 - Generate the autocompletion script for bash
+* [spellshape completion fish](#spellshape-completion-fish)	 - Generate the autocompletion script for fish
+* [spellshape completion powershell](#spellshape-completion-powershell)	 - Generate the autocompletion script for powershell
+* [spellshape completion zsh](#spellshape-completion-zsh)	 - Generate the autocompletion script for zsh
 
 
-## ignite completion bash
+## spellshape completion bash
 
 Generate the autocompletion script for bash
 
@@ -745,23 +745,23 @@ If it is not installed already, you can install it via your OS's package manager
 
 To load completions in your current shell session:
 
-	source <(ignite completion bash)
+	source <(spellshape completion bash)
 
 To load completions for every new session, execute once:
 
 **#### Linux:**
 
-	ignite completion bash > /etc/bash_completion.d/ignite
+	spellshape completion bash > /etc/bash_completion.d/spellshape
 
 **#### macOS:**
 
-	ignite completion bash > $(brew --prefix)/etc/bash_completion.d/ignite
+	spellshape completion bash > $(brew --prefix)/etc/bash_completion.d/spellshape
 
 You will need to start a new shell for this setup to take effect.
 
 
 ```
-ignite completion bash
+spellshape completion bash
 ```
 
 **Options**
@@ -773,10 +773,10 @@ ignite completion bash
 
 **SEE ALSO**
 
-* [ignite completion](#ignite-completion)	 - Generate the autocompletion script for the specified shell
+* [spellshape completion](#spellshape-completion)	 - Generate the autocompletion script for the specified shell
 
 
-## ignite completion fish
+## spellshape completion fish
 
 Generate the autocompletion script for fish
 
@@ -786,17 +786,17 @@ Generate the autocompletion script for the fish shell.
 
 To load completions in your current shell session:
 
-	ignite completion fish | source
+	spellshape completion fish | source
 
 To load completions for every new session, execute once:
 
-	ignite completion fish > ~/.config/fish/completions/ignite.fish
+	spellshape completion fish > ~/.config/fish/completions/spellshape.fish
 
 You will need to start a new shell for this setup to take effect.
 
 
 ```
-ignite completion fish [flags]
+spellshape completion fish [flags]
 ```
 
 **Options**
@@ -808,10 +808,10 @@ ignite completion fish [flags]
 
 **SEE ALSO**
 
-* [ignite completion](#ignite-completion)	 - Generate the autocompletion script for the specified shell
+* [spellshape completion](#spellshape-completion)	 - Generate the autocompletion script for the specified shell
 
 
-## ignite completion powershell
+## spellshape completion powershell
 
 Generate the autocompletion script for powershell
 
@@ -821,14 +821,14 @@ Generate the autocompletion script for powershell.
 
 To load completions in your current shell session:
 
-	ignite completion powershell | Out-String | Invoke-Expression
+	spellshape completion powershell | Out-String | Invoke-Expression
 
 To load completions for every new session, add the output of the above command
 to your powershell profile.
 
 
 ```
-ignite completion powershell [flags]
+spellshape completion powershell [flags]
 ```
 
 **Options**
@@ -840,10 +840,10 @@ ignite completion powershell [flags]
 
 **SEE ALSO**
 
-* [ignite completion](#ignite-completion)	 - Generate the autocompletion script for the specified shell
+* [spellshape completion](#spellshape-completion)	 - Generate the autocompletion script for the specified shell
 
 
-## ignite completion zsh
+## spellshape completion zsh
 
 Generate the autocompletion script for zsh
 
@@ -858,23 +858,23 @@ to enable it.  You can execute the following once:
 
 To load completions in your current shell session:
 
-	source <(ignite completion zsh); compdef _ignite ignite
+	source <(spellshape completion zsh); compdef _spellshape spellshape
 
 To load completions for every new session, execute once:
 
 **#### Linux:**
 
-	ignite completion zsh > "${fpath[1]}/_ignite"
+	spellshape completion zsh > "${fpath[1]}/_spellshape"
 
 **#### macOS:**
 
-	ignite completion zsh > $(brew --prefix)/share/zsh/site-functions/_ignite
+	spellshape completion zsh > $(brew --prefix)/share/zsh/site-functions/_spellshape
 
 You will need to start a new shell for this setup to take effect.
 
 
 ```
-ignite completion zsh [flags]
+spellshape completion zsh [flags]
 ```
 
 **Options**
@@ -886,15 +886,15 @@ ignite completion zsh [flags]
 
 **SEE ALSO**
 
-* [ignite completion](#ignite-completion)	 - Generate the autocompletion script for the specified shell
+* [spellshape completion](#spellshape-completion)	 - Generate the autocompletion script for the specified shell
 
 
-## ignite docs
+## spellshape docs
 
-Show Ignite CLI docs
+Show Spellshape CLI docs
 
 ```
-ignite docs [flags]
+spellshape docs [flags]
 ```
 
 **Options**
@@ -905,10 +905,10 @@ ignite docs [flags]
 
 **SEE ALSO**
 
-* [ignite](#ignite)	 - Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
+* [spellshape](#spellshape)	 - Spellshape CLI offers everything you need to scaffold, test, build, and launch your blockchain
 
 
-## ignite generate
+## spellshape generate
 
 Generate clients, API docs from source code
 
@@ -933,21 +933,21 @@ meant to be edited by hand.
 
 **SEE ALSO**
 
-* [ignite](#ignite)	 - Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
-* [ignite generate composables](#ignite-generate-composables)	 - TypeScript frontend client and Vue 3 composables
-* [ignite generate hooks](#ignite-generate-hooks)	 - TypeScript frontend client and React hooks
-* [ignite generate openapi](#ignite-generate-openapi)	 - OpenAPI spec for your chain
-* [ignite generate proto-go](#ignite-generate-proto-go)	 - Compile protocol buffer files to Go source code required by Cosmos SDK
-* [ignite generate ts-client](#ignite-generate-ts-client)	 - TypeScript frontend client
-* [ignite generate vuex](#ignite-generate-vuex)	 - *DEPRECATED* TypeScript frontend client and Vuex stores
+* [spellshape](#spellshape)	 - Spellshape CLI offers everything you need to scaffold, test, build, and launch your blockchain
+* [spellshape generate composables](#spellshape-generate-composables)	 - TypeScript frontend client and Vue 3 composables
+* [spellshape generate hooks](#spellshape-generate-hooks)	 - TypeScript frontend client and React hooks
+* [spellshape generate openapi](#spellshape-generate-openapi)	 - OpenAPI spec for your chain
+* [spellshape generate proto-go](#spellshape-generate-proto-go)	 - Compile protocol buffer files to Go source code required by Cosmos SDK
+* [spellshape generate ts-client](#spellshape-generate-ts-client)	 - TypeScript frontend client
+* [spellshape generate vuex](#spellshape-generate-vuex)	 - *DEPRECATED* TypeScript frontend client and Vuex stores
 
 
-## ignite generate composables
+## spellshape generate composables
 
 TypeScript frontend client and Vue 3 composables
 
 ```
-ignite generate composables [flags]
+spellshape generate composables [flags]
 ```
 
 **Options**
@@ -967,15 +967,15 @@ ignite generate composables [flags]
 
 **SEE ALSO**
 
-* [ignite generate](#ignite-generate)	 - Generate clients, API docs from source code
+* [spellshape generate](#spellshape-generate)	 - Generate clients, API docs from source code
 
 
-## ignite generate hooks
+## spellshape generate hooks
 
 TypeScript frontend client and React hooks
 
 ```
-ignite generate hooks [flags]
+spellshape generate hooks [flags]
 ```
 
 **Options**
@@ -995,15 +995,15 @@ ignite generate hooks [flags]
 
 **SEE ALSO**
 
-* [ignite generate](#ignite-generate)	 - Generate clients, API docs from source code
+* [spellshape generate](#spellshape-generate)	 - Generate clients, API docs from source code
 
 
-## ignite generate openapi
+## spellshape generate openapi
 
 OpenAPI spec for your chain
 
 ```
-ignite generate openapi [flags]
+spellshape generate openapi [flags]
 ```
 
 **Options**
@@ -1022,15 +1022,15 @@ ignite generate openapi [flags]
 
 **SEE ALSO**
 
-* [ignite generate](#ignite-generate)	 - Generate clients, API docs from source code
+* [spellshape generate](#spellshape-generate)	 - Generate clients, API docs from source code
 
 
-## ignite generate proto-go
+## spellshape generate proto-go
 
 Compile protocol buffer files to Go source code required by Cosmos SDK
 
 ```
-ignite generate proto-go [flags]
+spellshape generate proto-go [flags]
 ```
 
 **Options**
@@ -1049,10 +1049,10 @@ ignite generate proto-go [flags]
 
 **SEE ALSO**
 
-* [ignite generate](#ignite-generate)	 - Generate clients, API docs from source code
+* [spellshape generate](#spellshape-generate)	 - Generate clients, API docs from source code
 
 
-## ignite generate ts-client
+## spellshape generate ts-client
 
 TypeScript frontend client
 
@@ -1069,16 +1069,16 @@ can customize the output directory in config.yml:
 
 Output can also be customized by using a flag:
 
-	ignite generate ts-client --output new-path
+	spellshape generate ts-client --output new-path
 
 TypeScript client code can be automatically regenerated on reset or source code
 changes when the blockchain is started with a flag:
 
-	ignite chain serve --generate-clients
+	spellshape chain serve --generate-clients
 
 
 ```
-ignite generate ts-client [flags]
+spellshape generate ts-client [flags]
 ```
 
 **Options**
@@ -1099,15 +1099,15 @@ ignite generate ts-client [flags]
 
 **SEE ALSO**
 
-* [ignite generate](#ignite-generate)	 - Generate clients, API docs from source code
+* [spellshape generate](#spellshape-generate)	 - Generate clients, API docs from source code
 
 
-## ignite generate vuex
+## spellshape generate vuex
 
 *DEPRECATED* TypeScript frontend client and Vuex stores
 
 ```
-ignite generate vuex [flags]
+spellshape generate vuex [flags]
 ```
 
 **Options**
@@ -1127,21 +1127,21 @@ ignite generate vuex [flags]
 
 **SEE ALSO**
 
-* [ignite generate](#ignite-generate)	 - Generate clients, API docs from source code
+* [spellshape generate](#spellshape-generate)	 - Generate clients, API docs from source code
 
 
-## ignite network
+## spellshape network
 
 Launch a blockchain in production
 
 **Synopsis**
 
 
-Ignite Network commands allow to coordinate the launch of sovereign Cosmos blockchains.
+Spellshape Network commands allow to coordinate the launch of sovereign Cosmos blockchains.
 
 To launch a Cosmos blockchain you need someone to be a coordinator and others to
 be validators. These are just roles, anyone can be a coordinator or a validator.
-A coordinator publishes information about a chain to be launched on the Ignite
+A coordinator publishes information about a chain to be launched on the Spellshape
 blockchain, approves validator requests and coordinates the launch. Validators
 send requests to join a chain and start their nodes when a blockchain is ready
 for launch.
@@ -1149,7 +1149,7 @@ for launch.
 To publish the information about your chain as a coordinator run the following
 command (the URL should point to a repository with a Cosmos SDK chain):
 
-	ignite network chain publish github.com/ignite/example
+	spellshape network chain publish github.com/spellshape/example
 
 This command will return a launch identifier you will be using in the following
 commands. Let's say this identifier is 42.
@@ -1158,26 +1158,26 @@ Next, ask validators to initialize their nodes and request to join the network
 as validators. For a testnet you can use the default values suggested by the
 CLI.
 
-	ignite network chain init 42
+	spellshape network chain init 42
 
-	ignite network chain join 42 --amount 95000000stake
+	spellshape network chain join 42 --amount 95000000stake
 
 As a coordinator list all validator requests:
 
-	ignite network request list 42
+	spellshape network request list 42
 
 Approve validator requests:
 
-	ignite network request approve 42 1,2
+	spellshape network request approve 42 1,2
 
 Once you've approved all validators you need in the validator set, announce that
 the chain is ready for launch:
 
-	ignite network chain launch 42
+	spellshape network chain launch 42
 
 Validators can now prepare their nodes for launch:
 
-	ignite network chain prepare 42
+	spellshape network chain prepare 42
 
 The output of this command will show a command that a validator would use to
 launch their node, for example “exampled --home ~/.example”. After enough
@@ -1190,34 +1190,34 @@ validators launch their nodes, a blockchain will be live.
   -h, --help                        help for network
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite](#ignite)	 - Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
-* [ignite network chain](#ignite-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
-* [ignite network coordinator](#ignite-network-coordinator)	 - Show and update a coordinator profile
-* [ignite network profile](#ignite-network-profile)	 - Show the address profile info
-* [ignite network project](#ignite-network-project)	 - Handle projects
-* [ignite network request](#ignite-network-request)	 - Create, show, reject and approve requests
-* [ignite network reward](#ignite-network-reward)	 - Manage network rewards
-* [ignite network tool](#ignite-network-tool)	 - Commands to run subsidiary tools
-* [ignite network validator](#ignite-network-validator)	 - Show and update a validator profile
-* [ignite network version](#ignite-network-version)	 - Version of the plugin
+* [spellshape](#spellshape)	 - Spellshape CLI offers everything you need to scaffold, test, build, and launch your blockchain
+* [spellshape network chain](#spellshape-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
+* [spellshape network coordinator](#spellshape-network-coordinator)	 - Show and update a coordinator profile
+* [spellshape network profile](#spellshape-network-profile)	 - Show the address profile info
+* [spellshape network project](#spellshape-network-project)	 - Handle projects
+* [spellshape network request](#spellshape-network-request)	 - Create, show, reject and approve requests
+* [spellshape network reward](#spellshape-network-reward)	 - Manage network rewards
+* [spellshape network tool](#spellshape-network-tool)	 - Commands to run subsidiary tools
+* [spellshape network validator](#spellshape-network-validator)	 - Show and update a validator profile
+* [spellshape network version](#spellshape-network-version)	 - Version of the plugin
 
 
-## ignite network chain
+## spellshape network chain
 
 Publish a chain, join as a validator and prepare node for launch
 
 **Synopsis**
 
 The "chain" namespace features the most commonly used commands for launching
-blockchains with Ignite.
+blockchains with Spellshape.
 
-As a coordinator you "publish" your blockchain to Ignite. When enough validators
+As a coordinator you "publish" your blockchain to Spellshape. When enough validators
 are approved for the genesis and no changes are excepted to be made to the
 genesis, a coordinator announces that the chain is ready for launch with the
 "launch" command. In the case of an unsuccessful launch, the coordinator can revert it
@@ -1233,7 +1233,7 @@ install the chain's binary locally. The binary can be used, for example, to
 initialize a validator node or to interact with the chain after it has been
 launched.
 
-All chains published to Ignite can be listed by using the "list" command.
+All chains published to Spellshape can be listed by using the "list" command.
 
 
 **Options**
@@ -1247,39 +1247,39 @@ All chains published to Ignite can be listed by using the "list" command.
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network](#ignite-network)	 - Launch a blockchain in production
-* [ignite network chain init](#ignite-network-chain-init)	 - Initialize a chain from a published chain ID
-* [ignite network chain install](#ignite-network-chain-install)	 - Install chain binary for a launch
-* [ignite network chain join](#ignite-network-chain-join)	 - Request to join a network as a validator
-* [ignite network chain launch](#ignite-network-chain-launch)	 - Trigger the launch of a chain
-* [ignite network chain list](#ignite-network-chain-list)	 - List published chains
-* [ignite network chain prepare](#ignite-network-chain-prepare)	 - Prepare the chain for launch
-* [ignite network chain publish](#ignite-network-chain-publish)	 - Publish a new chain to start a new network
-* [ignite network chain revert-launch](#ignite-network-chain-revert-launch)	 - Revert launch of a network as a coordinator
-* [ignite network chain show](#ignite-network-chain-show)	 - Show details of a chain
+* [spellshape network](#spellshape-network)	 - Launch a blockchain in production
+* [spellshape network chain init](#spellshape-network-chain-init)	 - Initialize a chain from a published chain ID
+* [spellshape network chain install](#spellshape-network-chain-install)	 - Install chain binary for a launch
+* [spellshape network chain join](#spellshape-network-chain-join)	 - Request to join a network as a validator
+* [spellshape network chain launch](#spellshape-network-chain-launch)	 - Trigger the launch of a chain
+* [spellshape network chain list](#spellshape-network-chain-list)	 - List published chains
+* [spellshape network chain prepare](#spellshape-network-chain-prepare)	 - Prepare the chain for launch
+* [spellshape network chain publish](#spellshape-network-chain-publish)	 - Publish a new chain to start a new network
+* [spellshape network chain revert-launch](#spellshape-network-chain-revert-launch)	 - Revert launch of a network as a coordinator
+* [spellshape network chain show](#spellshape-network-chain-show)	 - Show details of a chain
 
 
-## ignite network chain init
+## spellshape network chain init
 
 Initialize a chain from a published chain ID
 
 **Synopsis**
 
-Ignite network chain init is a command used by validators to initialize a
-validator node for a blockchain from the information stored on the Ignite chain.
+Spellshape network chain init is a command used by validators to initialize a
+validator node for a blockchain from the information stored on the Spellshape chain.
 
-	ignite network chain init 42
+	spellshape network chain init 42
 
 This command fetches the information about a chain with launch ID 42. The source
 code of the chain is cloned in a temporary directory, and the node's binary is
 compiled from the source. The binary is then used to initialize the node. By
-default, Ignite uses "~/spn/[launch-id]/" as the home directory for the blockchain.
+default, Spellshape uses "~/spn/[launch-id]/" as the home directory for the blockchain.
 
 An important part of initializing a validator node is creation of the gentx (a
 transaction that adds a validator at the genesis of the chain).
@@ -1291,13 +1291,13 @@ the values in non-interactive mode.
 Use the "--home" flag to choose a different path for the home directory of the
 blockchain:
 
-	ignite network chain init 42 --home ~/mychain
+	spellshape network chain init 42 --home ~/mychain
 
 The end result of the "init" command is a validator home directory with a
 genesis validator transaction (gentx) file.
 
 ```
-ignite network chain init [launch-id] [flags]
+spellshape network chain init [launch-id] [flags]
 ```
 
 **Options**
@@ -1309,7 +1309,7 @@ ignite network chain init [launch-id] [flags]
   -h, --help                                help for init
       --home string                         home directory used for blockchains
       --keyring-backend string              keyring backend to store your account keys (default "test")
-      --keyring-dir string                  accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string                  accounts keyring directory (default "/home/runner/.spellshape/accounts")
       --validator-account string            account for the chain validator (default "default")
       --validator-details string            details about the validator
       --validator-gas-price string          validator gas price
@@ -1326,21 +1326,21 @@ ignite network chain init [launch-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain](#ignite-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
+* [spellshape network chain](#spellshape-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
 
 
-## ignite network chain install
+## spellshape network chain install
 
 Install chain binary for a launch
 
 ```
-ignite network chain install [launch-id] [flags]
+spellshape network chain install [launch-id] [flags]
 ```
 
 **Options**
@@ -1357,16 +1357,16 @@ ignite network chain install [launch-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain](#ignite-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
+* [spellshape network chain](#spellshape-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
 
 
-## ignite network chain join
+## spellshape network chain join
 
 Request to join a network as a validator
 
@@ -1375,7 +1375,7 @@ Request to join a network as a validator
 The "join" command is used by validators to send a request to join a blockchain.
 The required argument is a launch ID of a blockchain. The "join" command expects
 that the validator has already setup a home directory for the blockchain and has
-a gentx either by running "ignite network chain init" or initializing the data
+a gentx either by running "spellshape network chain init" or initializing the data
 directory manually with the chain's binary.
 
 By default the "join" command just sends the request to join as a validator.
@@ -1386,10 +1386,10 @@ The following command will send a request to join blockchain with launch ID 42
 as a validator and request to be added as an account with a token balance of
 95000000 STAKE.
 
-	ignite network chain join 42 --amount 95000000stake
+	spellshape network chain join 42 --amount 95000000stake
 
-A request to join as a validator contains a gentx file. Ignite looks for gentx
-in a home directory used by "ignite network chain init" by default. To use a
+A request to join as a validator contains a gentx file. Spellshape looks for gentx
+in a home directory used by "spellshape network chain init" by default. To use a
 different directory, use the "--home" flag or pass a gentx file directly with
 the  "--gentx" flag.
 
@@ -1399,15 +1399,15 @@ IP address and will attempt to automatically detect and fill in the value. If
 you want to manually specify the IP address, you can use the "--peer-address"
 flag:
 
-	ignite network chain join 42 --peer-address 0.0.0.0
+	spellshape network chain join 42 --peer-address 0.0.0.0
 
-Since "join" broadcasts a transaction to the Ignite blockchain, you will need an
-account on the Ignite blockchain. During the testnet phase, however, Ignite
+Since "join" broadcasts a transaction to the Spellshape blockchain, you will need an
+account on the Spellshape blockchain. During the testnet phase, however, Spellshape
 automatically requests tokens from a faucet.
 
 
 ```
-ignite network chain join [launch-id] [flags]
+spellshape network chain join [launch-id] [flags]
 ```
 
 **Options**
@@ -1420,7 +1420,7 @@ ignite network chain join [launch-id] [flags]
   -h, --help                     help for join
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
       --no-account               prevent sending a request for a genesis account
       --peer-address string      peer's address
   -y, --yes                      answers interactive yes/no questions with yes
@@ -1431,16 +1431,16 @@ ignite network chain join [launch-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain](#ignite-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
+* [spellshape network chain](#spellshape-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
 
 
-## ignite network chain launch
+## spellshape network chain launch
 
 Trigger the launch of a chain
 
@@ -1451,30 +1451,30 @@ launched.
 
 Only the coordinator of the chain can execute the launch command.
 
-	ignite network chain launch 42
+	spellshape network chain launch 42
 
 After the launch command is executed no changes to the genesis are accepted. For
-example, validators will no longer be able to successfully execute the "ignite
+example, validators will no longer be able to successfully execute the "spellshape
 network chain join" command to apply as a validator.
 
 The launch command sets the date and time after which the chain will start. By
 default, the current time is set. To give validators more time to prepare for
 the launch, set the time with the "--launch-time" flag:
 
-	ignite network chain launch 42 --launch-time 2023-01-01T00:00:00Z
+	spellshape network chain launch 42 --launch-time 2023-01-01T00:00:00Z
 
 After the launch command is executed, validators can generate the finalized
 genesis and prepare their nodes for the launch. For example, validators can run
-"ignite network chain prepare" to generate the genesis and populate the peer
+"spellshape network chain prepare" to generate the genesis and populate the peer
 list.
 
 If you want to change the launch time or open up the genesis file for changes
-you can use "ignite network chain revert-launch" to make it possible, for
+you can use "spellshape network chain revert-launch" to make it possible, for
 example, to accept new validators and add accounts.
 
 
 ```
-ignite network chain launch [launch-id] [flags]
+spellshape network chain launch [launch-id] [flags]
 ```
 
 **Options**
@@ -1483,7 +1483,7 @@ ignite network chain launch [launch-id] [flags]
       --from string              account name to use for sending transactions to SPN (default "default")
   -h, --help                     help for launch
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
       --launch-time string       timestamp the chain is effectively launched (example "2022-01-01T00:00:00Z")
 ```
 
@@ -1492,21 +1492,21 @@ ignite network chain launch [launch-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain](#ignite-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
+* [spellshape network chain](#spellshape-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
 
 
-## ignite network chain list
+## spellshape network chain list
 
 List published chains
 
 ```
-ignite network chain list [flags]
+spellshape network chain list [flags]
 ```
 
 **Options**
@@ -1523,16 +1523,16 @@ ignite network chain list [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain](#ignite-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
+* [spellshape network chain](#spellshape-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
 
 
-## ignite network chain prepare
+## spellshape network chain prepare
 
 Prepare the chain for launch
 
@@ -1542,25 +1542,25 @@ The prepare command prepares a validator node for the chain launch by generating
 the final genesis and adding IP addresses of peers to the validator's
 configuration file.
 
-	ignite network chain prepare 42
+	spellshape network chain prepare 42
 
-By default, Ignite uses "$HOME/spn/LAUNCH_ID" as the data directory. If you used
+By default, Spellshape uses "$HOME/spn/LAUNCH_ID" as the data directory. If you used
 a different data directory when initializing the node, use the "--home" flag and
 set the correct path to the data directory.
 
-Ignite generates the genesis file in "config/genesis.json" and adds peer IPs by
+Spellshape generates the genesis file in "config/genesis.json" and adds peer IPs by
 modifying "config/config.toml".
 
 The prepare command should be executed after the coordinator has triggered the
-chain launch and finalized the genesis with "ignite network chain launch". You
-can force Ignite to run the prepare command without checking if the launch has
+chain launch and finalized the genesis with "spellshape network chain launch". You
+can force Spellshape to run the prepare command without checking if the launch has
 been triggered with the "--force" flag (this is not recommended).
 
 After the prepare command is executed the node is ready to be started.
 
 
 ```
-ignite network chain prepare [launch-id] [flags]
+spellshape network chain prepare [launch-id] [flags]
 ```
 
 **Options**
@@ -1573,7 +1573,7 @@ ignite network chain prepare [launch-id] [flags]
   -h, --help                     help for prepare
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **Options inherited from parent commands**
@@ -1581,36 +1581,36 @@ ignite network chain prepare [launch-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain](#ignite-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
+* [spellshape network chain](#spellshape-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
 
 
-## ignite network chain publish
+## spellshape network chain publish
 
 Publish a new chain to start a new network
 
 **Synopsis**
 
-To begin the process of launching a blockchain with Ignite, a coordinator needs
+To begin the process of launching a blockchain with Spellshape, a coordinator needs
 to publish the information about a blockchain. The only required bit of
 information is the URL of the source code of the blockchain.
 
 The following command publishes the information about an example blockchain:
 
-	ignite network chain publish github.com/ignite/example
+	spellshape network chain publish github.com/spellshape/example
 
 This command fetches the source code of the blockchain, compiles the binary,
 verifies that a blockchain can be started with the binary, and publishes the
-information about the blockchain to Ignite. Currently, only public repositories
+information about the blockchain to Spellshape. Currently, only public repositories
 are supported. The command returns an integer number that acts as an identifier
-of the chain on Ignite.
+of the chain on Spellshape.
 
-By publishing a blockchain on Ignite you become the "coordinator" of this
+By publishing a blockchain on Spellshape you become the "coordinator" of this
 blockchain. A coordinator is an account that has the authority to approve and
 reject validator requests, set parameters of the blockchain and trigger the
 launch of the chain.
@@ -1619,22 +1619,22 @@ The default Git branch is used when publishing a chain. If you want to use a
 specific branch, tag or a commit hash, use "--branch", "--tag", or "--hash"
 flags respectively.
 
-The repository name is used as the default chain ID. Ignite does not ensure that
+The repository name is used as the default chain ID. Spellshape does not ensure that
 chain IDs are unique, but they have to have a valid format: [string]-[integer].
 To set a custom chain ID use the "--chain-id" flag.
 
-	ignite network chain publish github.com/ignite/example --chain-id foo-1
+	spellshape network chain publish github.com/spellshape/example --chain-id foo-1
 
 Once the chain is published users can request accounts with coin balances to be
 added to the chain's genesis. By default, users are free to request any number
 of tokens. If you want all users requesting tokens to get the same amount, use
 the "--account-balance" flag with a list of coins.
 
-	ignite network chain publish github.com/ignite/example --account-balance 2000foocoin
+	spellshape network chain publish github.com/spellshape/example --account-balance 2000foocoin
 
 
 ```
-ignite network chain publish [source-url] [flags]
+spellshape network chain publish [source-url] [flags]
 ```
 
 **Options**
@@ -1647,13 +1647,13 @@ ignite network chain publish [source-url] [flags]
       --check-dependencies       verify that cached dependencies have not been modified since they were downloaded
       --clear-cache              clear the build cache (advanced)
       --from string              account name to use for sending transactions to SPN (default "default")
-      --genesis-config string    name of an Ignite config file in the repo for custom Genesis
+      --genesis-config string    name of an Spellshape config file in the repo for custom Genesis
       --genesis-url string       URL to a custom Genesis
       --hash string              Git hash to use for the repo
   -h, --help                     help for publish
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
       --mainnet                  initialize a mainnet project
       --metadata string          add chain metadata
       --no-check                 skip verifying chain's integrity
@@ -1671,16 +1671,16 @@ ignite network chain publish [source-url] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain](#ignite-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
+* [spellshape network chain](#spellshape-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
 
 
-## ignite network chain revert-launch
+## spellshape network chain revert-launch
 
 Revert launch of a network as a coordinator
 
@@ -1690,7 +1690,7 @@ The revert launch command reverts the previously scheduled launch of a chain.
 
 Only the coordinator of the chain can execute the launch command.
 
-	ignite network chain revert-launch 42
+	spellshape network chain revert-launch 42
 
 After the revert launch command is executed, changes to the genesis of the chain
 are allowed again. For example, validators will be able to request to join the
@@ -1698,7 +1698,7 @@ chain. Revert launch also resets the launch time.
 
 
 ```
-ignite network chain revert-launch [launch-id] [flags]
+spellshape network chain revert-launch [launch-id] [flags]
 ```
 
 **Options**
@@ -1707,7 +1707,7 @@ ignite network chain revert-launch [launch-id] [flags]
       --from string              account name to use for sending transactions to SPN (default "default")
   -h, --help                     help for revert-launch
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **Options inherited from parent commands**
@@ -1715,16 +1715,16 @@ ignite network chain revert-launch [launch-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain](#ignite-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
+* [spellshape network chain](#spellshape-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
 
 
-## ignite network chain show
+## spellshape network chain show
 
 Show details of a chain
 
@@ -1739,26 +1739,26 @@ Show details of a chain
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain](#ignite-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
-* [ignite network chain show accounts](#ignite-network-chain-show-accounts)	 - Show all vesting and genesis accounts of the chain
-* [ignite network chain show genesis](#ignite-network-chain-show-genesis)	 - Show the chain genesis file
-* [ignite network chain show info](#ignite-network-chain-show-info)	 - Show info details of the chain
-* [ignite network chain show peers](#ignite-network-chain-show-peers)	 - Show peers list of the chain
-* [ignite network chain show validators](#ignite-network-chain-show-validators)	 - Show all validators of the chain
+* [spellshape network chain](#spellshape-network-chain)	 - Publish a chain, join as a validator and prepare node for launch
+* [spellshape network chain show accounts](#spellshape-network-chain-show-accounts)	 - Show all vesting and genesis accounts of the chain
+* [spellshape network chain show genesis](#spellshape-network-chain-show-genesis)	 - Show the chain genesis file
+* [spellshape network chain show info](#spellshape-network-chain-show-info)	 - Show info details of the chain
+* [spellshape network chain show peers](#spellshape-network-chain-show-peers)	 - Show peers list of the chain
+* [spellshape network chain show validators](#spellshape-network-chain-show-validators)	 - Show all validators of the chain
 
 
-## ignite network chain show accounts
+## spellshape network chain show accounts
 
 Show all vesting and genesis accounts of the chain
 
 ```
-ignite network chain show accounts [launch-id] [flags]
+spellshape network chain show accounts [launch-id] [flags]
 ```
 
 **Options**
@@ -1773,21 +1773,21 @@ ignite network chain show accounts [launch-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain show](#ignite-network-chain-show)	 - Show details of a chain
+* [spellshape network chain show](#spellshape-network-chain-show)	 - Show details of a chain
 
 
-## ignite network chain show genesis
+## spellshape network chain show genesis
 
 Show the chain genesis file
 
 ```
-ignite network chain show genesis [launch-id] [flags]
+spellshape network chain show genesis [launch-id] [flags]
 ```
 
 **Options**
@@ -1803,21 +1803,21 @@ ignite network chain show genesis [launch-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain show](#ignite-network-chain-show)	 - Show details of a chain
+* [spellshape network chain show](#spellshape-network-chain-show)	 - Show details of a chain
 
 
-## ignite network chain show info
+## spellshape network chain show info
 
 Show info details of the chain
 
 ```
-ignite network chain show info [launch-id] [flags]
+spellshape network chain show info [launch-id] [flags]
 ```
 
 **Options**
@@ -1831,21 +1831,21 @@ ignite network chain show info [launch-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain show](#ignite-network-chain-show)	 - Show details of a chain
+* [spellshape network chain show](#spellshape-network-chain-show)	 - Show details of a chain
 
 
-## ignite network chain show peers
+## spellshape network chain show peers
 
 Show peers list of the chain
 
 ```
-ignite network chain show peers [launch-id] [flags]
+spellshape network chain show peers [launch-id] [flags]
 ```
 
 **Options**
@@ -1860,21 +1860,21 @@ ignite network chain show peers [launch-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain show](#ignite-network-chain-show)	 - Show details of a chain
+* [spellshape network chain show](#spellshape-network-chain-show)	 - Show details of a chain
 
 
-## ignite network chain show validators
+## spellshape network chain show validators
 
 Show all validators of the chain
 
 ```
-ignite network chain show validators [launch-id] [flags]
+spellshape network chain show validators [launch-id] [flags]
 ```
 
 **Options**
@@ -1889,16 +1889,16 @@ ignite network chain show validators [launch-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network chain show](#ignite-network-chain-show)	 - Show details of a chain
+* [spellshape network chain show](#spellshape-network-chain-show)	 - Show details of a chain
 
 
-## ignite network coordinator
+## spellshape network coordinator
 
 Show and update a coordinator profile
 
@@ -1913,24 +1913,24 @@ Show and update a coordinator profile
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network](#ignite-network)	 - Launch a blockchain in production
-* [ignite network coordinator set](#ignite-network-coordinator-set)	 - Set an information in a coordinator profile
-* [ignite network coordinator show](#ignite-network-coordinator-show)	 - Show a coordinator profile
+* [spellshape network](#spellshape-network)	 - Launch a blockchain in production
+* [spellshape network coordinator set](#spellshape-network-coordinator-set)	 - Set an information in a coordinator profile
+* [spellshape network coordinator show](#spellshape-network-coordinator-show)	 - Show a coordinator profile
 
 
-## ignite network coordinator set
+## spellshape network coordinator set
 
 Set an information in a coordinator profile
 
 **Synopsis**
 
-Coordinators on Ignite can set a profile containing a description for the coordinator.
+Coordinators on Spellshape can set a profile containing a description for the coordinator.
 The coordinator set command allows to set information for the coordinator.
 The following information can be set:
 - details: general information about the coordinator.
@@ -1939,7 +1939,7 @@ The following information can be set:
 
 
 ```
-ignite network coordinator set details|identity|website [value] [flags]
+spellshape network coordinator set details|identity|website [value] [flags]
 ```
 
 **Options**
@@ -1949,7 +1949,7 @@ ignite network coordinator set details|identity|website [value] [flags]
   -h, --help                     help for set
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **Options inherited from parent commands**
@@ -1957,21 +1957,21 @@ ignite network coordinator set details|identity|website [value] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network coordinator](#ignite-network-coordinator)	 - Show and update a coordinator profile
+* [spellshape network coordinator](#spellshape-network-coordinator)	 - Show and update a coordinator profile
 
 
-## ignite network coordinator show
+## spellshape network coordinator show
 
 Show a coordinator profile
 
 ```
-ignite network coordinator show [address] [flags]
+spellshape network coordinator show [address] [flags]
 ```
 
 **Options**
@@ -1985,21 +1985,21 @@ ignite network coordinator show [address] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network coordinator](#ignite-network-coordinator)	 - Show and update a coordinator profile
+* [spellshape network coordinator](#spellshape-network-coordinator)	 - Show and update a coordinator profile
 
 
-## ignite network profile
+## spellshape network profile
 
 Show the address profile info
 
 ```
-ignite network profile [project-id] [flags]
+spellshape network profile [project-id] [flags]
 ```
 
 **Options**
@@ -2016,16 +2016,16 @@ ignite network profile [project-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network](#ignite-network)	 - Launch a blockchain in production
+* [spellshape network](#spellshape-network)	 - Launch a blockchain in production
 
 
-## ignite network project
+## spellshape network project
 
 Handle projects
 
@@ -2040,21 +2040,21 @@ Handle projects
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network](#ignite-network)	 - Launch a blockchain in production
-* [ignite network project account](#ignite-network-project-account)	 - Handle project accounts
-* [ignite network project create](#ignite-network-project-create)	 - Create a project
-* [ignite network project list](#ignite-network-project-list)	 - List published projects
-* [ignite network project show](#ignite-network-project-show)	 - Show published project
-* [ignite network project update](#ignite-network-project-update)	 - Update details fo the project of the project
+* [spellshape network](#spellshape-network)	 - Launch a blockchain in production
+* [spellshape network project account](#spellshape-network-project-account)	 - Handle project accounts
+* [spellshape network project create](#spellshape-network-project-create)	 - Create a project
+* [spellshape network project list](#spellshape-network-project-list)	 - List published projects
+* [spellshape network project show](#spellshape-network-project-show)	 - Show published project
+* [spellshape network project update](#spellshape-network-project-update)	 - Update details fo the project of the project
 
 
-## ignite network project account
+## spellshape network project account
 
 Handle project accounts
 
@@ -2069,22 +2069,22 @@ Handle project accounts
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network project](#ignite-network-project)	 - Handle projects
-* [ignite network project account list](#ignite-network-project-account-list)	 - Show all mainnet and mainnet vesting of the project
+* [spellshape network project](#spellshape-network-project)	 - Handle projects
+* [spellshape network project account list](#spellshape-network-project-account-list)	 - Show all mainnet and mainnet vesting of the project
 
 
-## ignite network project account list
+## spellshape network project account list
 
 Show all mainnet and mainnet vesting of the project
 
 ```
-ignite network project account list [project-id] [flags]
+spellshape network project account list [project-id] [flags]
 ```
 
 **Options**
@@ -2098,21 +2098,21 @@ ignite network project account list [project-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network project account](#ignite-network-project-account)	 - Handle project accounts
+* [spellshape network project account](#spellshape-network-project-account)	 - Handle project accounts
 
 
-## ignite network project create
+## spellshape network project create
 
 Create a project
 
 ```
-ignite network project create [name] [total-supply] [flags]
+spellshape network project create [name] [total-supply] [flags]
 ```
 
 **Options**
@@ -2122,7 +2122,7 @@ ignite network project create [name] [total-supply] [flags]
   -h, --help                     help for create
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
       --metadata string          Add a metadata to the chain
 ```
 
@@ -2131,21 +2131,21 @@ ignite network project create [name] [total-supply] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network project](#ignite-network-project)	 - Handle projects
+* [spellshape network project](#spellshape-network-project)	 - Handle projects
 
 
-## ignite network project list
+## spellshape network project list
 
 List published projects
 
 ```
-ignite network project list [flags]
+spellshape network project list [flags]
 ```
 
 **Options**
@@ -2159,21 +2159,21 @@ ignite network project list [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network project](#ignite-network-project)	 - Handle projects
+* [spellshape network project](#spellshape-network-project)	 - Handle projects
 
 
-## ignite network project show
+## spellshape network project show
 
 Show published project
 
 ```
-ignite network project show [project-id] [flags]
+spellshape network project show [project-id] [flags]
 ```
 
 **Options**
@@ -2187,21 +2187,21 @@ ignite network project show [project-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network project](#ignite-network-project)	 - Handle projects
+* [spellshape network project](#spellshape-network-project)	 - Handle projects
 
 
-## ignite network project update
+## spellshape network project update
 
 Update details fo the project of the project
 
 ```
-ignite network project update [project-id] [flags]
+spellshape network project update [project-id] [flags]
 ```
 
 **Options**
@@ -2210,7 +2210,7 @@ ignite network project update [project-id] [flags]
       --from string              account name to use for sending transactions to SPN (default "default")
   -h, --help                     help for update
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
       --metadata string          update the project metadata
       --name string              update the project name
       --total-supply string      update the total of the mainnet of a project
@@ -2221,16 +2221,16 @@ ignite network project update [project-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network project](#ignite-network-project)	 - Handle projects
+* [spellshape network project](#spellshape-network-project)	 - Handle projects
 
 
-## ignite network request
+## spellshape network request
 
 Create, show, reject and approve requests
 
@@ -2239,7 +2239,7 @@ Create, show, reject and approve requests
 The "request" namespace contains commands for creating, showing, approving, and
 rejecting requests.
 
-A request is mechanism in Ignite that allows changes to be made to the genesis
+A request is mechanism in Spellshape that allows changes to be made to the genesis
 file like adding accounts with token balances and validators. Anyone can submit
 a request, but only the coordinator of a chain can approve or reject a request.
 
@@ -2262,25 +2262,25 @@ Each request has a status:
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network](#ignite-network)	 - Launch a blockchain in production
-* [ignite network request add-account](#ignite-network-request-add-account)	 - Send request to add account
-* [ignite network request approve](#ignite-network-request-approve)	 - Approve requests
-* [ignite network request change-param](#ignite-network-request-change-param)	 - Send request to change a module param
-* [ignite network request list](#ignite-network-request-list)	 - List all requests for a chain
-* [ignite network request reject](#ignite-network-request-reject)	 - Reject requests
-* [ignite network request remove-account](#ignite-network-request-remove-account)	 - Send request to remove a genesis account
-* [ignite network request remove-validator](#ignite-network-request-remove-validator)	 - Send request to remove a validator
-* [ignite network request show](#ignite-network-request-show)	 - Show detailed information about a request
-* [ignite network request verify](#ignite-network-request-verify)	 - Verify the request and simulate the chain genesis from them
+* [spellshape network](#spellshape-network)	 - Launch a blockchain in production
+* [spellshape network request add-account](#spellshape-network-request-add-account)	 - Send request to add account
+* [spellshape network request approve](#spellshape-network-request-approve)	 - Approve requests
+* [spellshape network request change-param](#spellshape-network-request-change-param)	 - Send request to change a module param
+* [spellshape network request list](#spellshape-network-request-list)	 - List all requests for a chain
+* [spellshape network request reject](#spellshape-network-request-reject)	 - Reject requests
+* [spellshape network request remove-account](#spellshape-network-request-remove-account)	 - Send request to remove a genesis account
+* [spellshape network request remove-validator](#spellshape-network-request-remove-validator)	 - Send request to remove a validator
+* [spellshape network request show](#spellshape-network-request-show)	 - Show detailed information about a request
+* [spellshape network request verify](#spellshape-network-request-verify)	 - Verify the request and simulate the chain genesis from them
 
 
-## ignite network request add-account
+## spellshape network request add-account
 
 Send request to add account
 
@@ -2300,7 +2300,7 @@ in an error.
 
 
 ```
-ignite network request add-account [launch-id] [address] [coins] [flags]
+spellshape network request add-account [launch-id] [address] [coins] [flags]
 ```
 
 **Options**
@@ -2311,7 +2311,7 @@ ignite network request add-account [launch-id] [address] [coins] [flags]
   -h, --help                     help for add-account
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **Options inherited from parent commands**
@@ -2319,16 +2319,16 @@ ignite network request add-account [launch-id] [address] [coins] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network request](#ignite-network-request)	 - Create, show, reject and approve requests
+* [spellshape network request](#spellshape-network-request)	 - Create, show, reject and approve requests
 
 
-## ignite network request approve
+## spellshape network request approve
 
 Approve requests
 
@@ -2338,23 +2338,23 @@ The "approve" command is used by a chain's coordinator to approve requests.
 Multiple requests can be approved using a comma-separated list and/or using a
 dash syntax.
 
-	ignite network request approve 42 1,2,3-6,7,8
+	spellshape network request approve 42 1,2,3-6,7,8
 
 The command above approves requests with IDs from 1 to 8 included on a chain
 with a launch ID 42.
 
-When requests are approved Ignite applies the requested changes and simulates
+When requests are approved Spellshape applies the requested changes and simulates
 initializing and launching the chain locally. If the chain starts successfully,
 requests are considered to be "verified" and are approved. If one or more
 requested changes stop the chain from launching locally, the verification
 process fails and the approval of all requests is canceled. To skip the
 verification process use the "--no-verification" flag.
 
-Note that Ignite will try to approve requests in the same order as request IDs
+Note that Spellshape will try to approve requests in the same order as request IDs
 are submitted to the "approve" command.
 
 ```
-ignite network request approve [launch-id] [number<,...>] [flags]
+spellshape network request approve [launch-id] [number<,...>] [flags]
 ```
 
 **Options**
@@ -2365,7 +2365,7 @@ ignite network request approve [launch-id] [number<,...>] [flags]
   -h, --help                     help for approve
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
       --no-verification          approve the requests without verifying them
 ```
 
@@ -2374,21 +2374,21 @@ ignite network request approve [launch-id] [number<,...>] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network request](#ignite-network-request)	 - Create, show, reject and approve requests
+* [spellshape network request](#spellshape-network-request)	 - Create, show, reject and approve requests
 
 
-## ignite network request change-param
+## spellshape network request change-param
 
 Send request to change a module param
 
 ```
-ignite network request change-param [launch-id] [module-name] [param-name] [value (json, string, number)] [flags]
+spellshape network request change-param [launch-id] [module-name] [param-name] [value (json, string, number)] [flags]
 ```
 
 **Options**
@@ -2399,7 +2399,7 @@ ignite network request change-param [launch-id] [module-name] [param-name] [valu
   -h, --help                     help for change-param
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **Options inherited from parent commands**
@@ -2407,21 +2407,21 @@ ignite network request change-param [launch-id] [module-name] [param-name] [valu
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network request](#ignite-network-request)	 - Create, show, reject and approve requests
+* [spellshape network request](#spellshape-network-request)	 - Create, show, reject and approve requests
 
 
-## ignite network request list
+## spellshape network request list
 
 List all requests for a chain
 
 ```
-ignite network request list [launch-id] [flags]
+spellshape network request list [launch-id] [flags]
 ```
 
 **Options**
@@ -2436,16 +2436,16 @@ ignite network request list [launch-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network request](#ignite-network-request)	 - Create, show, reject and approve requests
+* [spellshape network request](#spellshape-network-request)	 - Create, show, reject and approve requests
 
 
-## ignite network request reject
+## spellshape network request reject
 
 Reject requests
 
@@ -2453,13 +2453,13 @@ Reject requests
 
 The "reject" command is used by a chain's coordinator to reject requests.
 
-	ignite network request reject 42 1,2,3-6,7,8
+	spellshape network request reject 42 1,2,3-6,7,8
 
 The syntax of the "reject" command is similar to that of the "approve" command.
 
 
 ```
-ignite network request reject [launch-id] [number<,...>] [flags]
+spellshape network request reject [launch-id] [number<,...>] [flags]
 ```
 
 **Options**
@@ -2469,7 +2469,7 @@ ignite network request reject [launch-id] [number<,...>] [flags]
   -h, --help                     help for reject
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **Options inherited from parent commands**
@@ -2477,21 +2477,21 @@ ignite network request reject [launch-id] [number<,...>] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network request](#ignite-network-request)	 - Create, show, reject and approve requests
+* [spellshape network request](#spellshape-network-request)	 - Create, show, reject and approve requests
 
 
-## ignite network request remove-account
+## spellshape network request remove-account
 
 Send request to remove a genesis account
 
 ```
-ignite network request remove-account [launch-id] [address] [flags]
+spellshape network request remove-account [launch-id] [address] [flags]
 ```
 
 **Options**
@@ -2502,7 +2502,7 @@ ignite network request remove-account [launch-id] [address] [flags]
   -h, --help                     help for remove-account
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **Options inherited from parent commands**
@@ -2510,21 +2510,21 @@ ignite network request remove-account [launch-id] [address] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network request](#ignite-network-request)	 - Create, show, reject and approve requests
+* [spellshape network request](#spellshape-network-request)	 - Create, show, reject and approve requests
 
 
-## ignite network request remove-validator
+## spellshape network request remove-validator
 
 Send request to remove a validator
 
 ```
-ignite network request remove-validator [launch-id] [address] [flags]
+spellshape network request remove-validator [launch-id] [address] [flags]
 ```
 
 **Options**
@@ -2535,7 +2535,7 @@ ignite network request remove-validator [launch-id] [address] [flags]
   -h, --help                     help for remove-validator
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **Options inherited from parent commands**
@@ -2543,21 +2543,21 @@ ignite network request remove-validator [launch-id] [address] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network request](#ignite-network-request)	 - Create, show, reject and approve requests
+* [spellshape network request](#spellshape-network-request)	 - Create, show, reject and approve requests
 
 
-## ignite network request show
+## spellshape network request show
 
 Show detailed information about a request
 
 ```
-ignite network request show [launch-id] [request-id] [flags]
+spellshape network request show [launch-id] [request-id] [flags]
 ```
 
 **Options**
@@ -2571,16 +2571,16 @@ ignite network request show [launch-id] [request-id] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network request](#ignite-network-request)	 - Create, show, reject and approve requests
+* [spellshape network request](#spellshape-network-request)	 - Create, show, reject and approve requests
 
 
-## ignite network request verify
+## spellshape network request verify
 
 Verify the request and simulate the chain genesis from them
 
@@ -2593,7 +2593,7 @@ only checks them.
 
 
 ```
-ignite network request verify [launch-id] [number<,...>] [flags]
+spellshape network request verify [launch-id] [number<,...>] [flags]
 ```
 
 **Options**
@@ -2604,7 +2604,7 @@ ignite network request verify [launch-id] [number<,...>] [flags]
   -h, --help                     help for verify
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **Options inherited from parent commands**
@@ -2612,16 +2612,16 @@ ignite network request verify [launch-id] [number<,...>] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network request](#ignite-network-request)	 - Create, show, reject and approve requests
+* [spellshape network request](#spellshape-network-request)	 - Create, show, reject and approve requests
 
 
-## ignite network reward
+## spellshape network reward
 
 Manage network rewards
 
@@ -2636,23 +2636,23 @@ Manage network rewards
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network](#ignite-network)	 - Launch a blockchain in production
-* [ignite network reward release](#ignite-network-reward-release)	 - Connect the monitoring modules of launched chains with SPN
-* [ignite network reward set](#ignite-network-reward-set)	 - set a network chain reward
+* [spellshape network](#spellshape-network)	 - Launch a blockchain in production
+* [spellshape network reward release](#spellshape-network-reward-release)	 - Connect the monitoring modules of launched chains with SPN
+* [spellshape network reward set](#spellshape-network-reward-set)	 - set a network chain reward
 
 
-## ignite network reward release
+## spellshape network reward release
 
 Connect the monitoring modules of launched chains with SPN
 
 ```
-ignite network reward release [launch-id] [chain-rpc] [flags]
+spellshape network reward release [launch-id] [chain-rpc] [flags]
 ```
 
 **Options**
@@ -2676,21 +2676,21 @@ ignite network reward release [launch-id] [chain-rpc] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network reward](#ignite-network-reward)	 - Manage network rewards
+* [spellshape network reward](#spellshape-network-reward)	 - Manage network rewards
 
 
-## ignite network reward set
+## spellshape network reward set
 
 set a network chain reward
 
 ```
-ignite network reward set [launch-id] [last-reward-height] [coins] [flags]
+spellshape network reward set [launch-id] [last-reward-height] [coins] [flags]
 ```
 
 **Options**
@@ -2700,7 +2700,7 @@ ignite network reward set [launch-id] [last-reward-height] [coins] [flags]
   -h, --help                     help for set
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **Options inherited from parent commands**
@@ -2708,16 +2708,16 @@ ignite network reward set [launch-id] [last-reward-height] [coins] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network reward](#ignite-network-reward)	 - Manage network rewards
+* [spellshape network reward](#spellshape-network-reward)	 - Manage network rewards
 
 
-## ignite network tool
+## spellshape network tool
 
 Commands to run subsidiary tools
 
@@ -2732,17 +2732,17 @@ Commands to run subsidiary tools
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network](#ignite-network)	 - Launch a blockchain in production
-* [ignite network tool proxy-tunnel](#ignite-network-tool-proxy-tunnel)	 - Setup a proxy tunnel via HTTP
+* [spellshape network](#spellshape-network)	 - Launch a blockchain in production
+* [spellshape network tool proxy-tunnel](#spellshape-network-tool-proxy-tunnel)	 - Setup a proxy tunnel via HTTP
 
 
-## ignite network tool proxy-tunnel
+## spellshape network tool proxy-tunnel
 
 Setup a proxy tunnel via HTTP
 
@@ -2760,7 +2760,7 @@ approving validator requests that has HTTP tunneling enabled instead of plain
 TCP connections.
 
 ```
-ignite network tool proxy-tunnel SPN_CONFIG_FILE [flags]
+spellshape network tool proxy-tunnel SPN_CONFIG_FILE [flags]
 ```
 
 **Options**
@@ -2774,16 +2774,16 @@ ignite network tool proxy-tunnel SPN_CONFIG_FILE [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network tool](#ignite-network-tool)	 - Commands to run subsidiary tools
+* [spellshape network tool](#spellshape-network-tool)	 - Commands to run subsidiary tools
 
 
-## ignite network validator
+## spellshape network validator
 
 Show and update a validator profile
 
@@ -2798,24 +2798,24 @@ Show and update a validator profile
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network](#ignite-network)	 - Launch a blockchain in production
-* [ignite network validator set](#ignite-network-validator-set)	 - Set an information in a validator profile
-* [ignite network validator show](#ignite-network-validator-show)	 - Show a validator profile
+* [spellshape network](#spellshape-network)	 - Launch a blockchain in production
+* [spellshape network validator set](#spellshape-network-validator-set)	 - Set an information in a validator profile
+* [spellshape network validator show](#spellshape-network-validator-show)	 - Show a validator profile
 
 
-## ignite network validator set
+## spellshape network validator set
 
 Set an information in a validator profile
 
 **Synopsis**
 
-Validators on Ignite can set a profile containing a description for the validator.
+Validators on Spellshape can set a profile containing a description for the validator.
 The validator set command allows to set information for the validator.
 The following information can be set:
 - details: general information about the validator.
@@ -2825,7 +2825,7 @@ The following information can be set:
 
 
 ```
-ignite network validator set details|identity|website|security [value] [flags]
+spellshape network validator set details|identity|website|security [value] [flags]
 ```
 
 **Options**
@@ -2835,7 +2835,7 @@ ignite network validator set details|identity|website|security [value] [flags]
   -h, --help                     help for set
       --home string              home directory used for blockchains
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **Options inherited from parent commands**
@@ -2843,21 +2843,21 @@ ignite network validator set details|identity|website|security [value] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network validator](#ignite-network-validator)	 - Show and update a validator profile
+* [spellshape network validator](#spellshape-network-validator)	 - Show and update a validator profile
 
 
-## ignite network validator show
+## spellshape network validator show
 
 Show a validator profile
 
 ```
-ignite network validator show [address] [flags]
+spellshape network validator show [address] [flags]
 ```
 
 **Options**
@@ -2871,16 +2871,16 @@ ignite network validator show [address] [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network validator](#ignite-network-validator)	 - Show and update a validator profile
+* [spellshape network validator](#spellshape-network-validator)	 - Show and update a validator profile
 
 
-## ignite network version
+## spellshape network version
 
 Version of the plugin
 
@@ -2890,7 +2890,7 @@ The version of the plugin to use to interact with a chain might be specified by 
 
 
 ```
-ignite network version [flags]
+spellshape network version [flags]
 ```
 
 **Options**
@@ -2904,16 +2904,16 @@ ignite network version [flags]
 ```
       --local                       Use local SPN network
       --nightly                     Use nightly SPN network
-      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.ignite.com:443")
-      --spn-node-address string     SPN node address (default "https://rpc.devnet.ignite.com:443")
+      --spn-faucet-address string   SPN faucet address (default "https://faucet.devnet.spellshape.com:443")
+      --spn-node-address string     SPN node address (default "https://rpc.devnet.spellshape.com:443")
 ```
 
 **SEE ALSO**
 
-* [ignite network](#ignite-network)	 - Launch a blockchain in production
+* [spellshape network](#spellshape-network)	 - Launch a blockchain in production
 
 
-## ignite node
+## spellshape node
 
 Make requests to a live blockchain node
 
@@ -2926,12 +2926,12 @@ Make requests to a live blockchain node
 
 **SEE ALSO**
 
-* [ignite](#ignite)	 - Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
-* [ignite node query](#ignite-node-query)	 - Querying subcommands
-* [ignite node tx](#ignite-node-tx)	 - Transactions subcommands
+* [spellshape](#spellshape)	 - Spellshape CLI offers everything you need to scaffold, test, build, and launch your blockchain
+* [spellshape node query](#spellshape-node-query)	 - Querying subcommands
+* [spellshape node tx](#spellshape-node-tx)	 - Transactions subcommands
 
 
-## ignite node query
+## spellshape node query
 
 Querying subcommands
 
@@ -2949,12 +2949,12 @@ Querying subcommands
 
 **SEE ALSO**
 
-* [ignite node](#ignite-node)	 - Make requests to a live blockchain node
-* [ignite node query bank](#ignite-node-query-bank)	 - Querying commands for the bank module
-* [ignite node query tx](#ignite-node-query-tx)	 - Query for transaction by hash
+* [spellshape node](#spellshape-node)	 - Make requests to a live blockchain node
+* [spellshape node query bank](#spellshape-node-query-bank)	 - Querying commands for the bank module
+* [spellshape node query tx](#spellshape-node-query-tx)	 - Query for transaction by hash
 
 
-## ignite node query bank
+## spellshape node query bank
 
 Querying commands for the bank module
 
@@ -2972,16 +2972,16 @@ Querying commands for the bank module
 
 **SEE ALSO**
 
-* [ignite node query](#ignite-node-query)	 - Querying subcommands
-* [ignite node query bank balances](#ignite-node-query-bank-balances)	 - Query for account balances by account name or address
+* [spellshape node query](#spellshape-node-query)	 - Querying subcommands
+* [spellshape node query bank balances](#spellshape-node-query-bank-balances)	 - Query for account balances by account name or address
 
 
-## ignite node query bank balances
+## spellshape node query bank balances
 
 Query for account balances by account name or address
 
 ```
-ignite node query bank balances [from_account_or_address] [flags]
+spellshape node query bank balances [from_account_or_address] [flags]
 ```
 
 **Options**
@@ -2992,7 +2992,7 @@ ignite node query bank balances [from_account_or_address] [flags]
   -h, --help                     help for balances
       --home string              directory where the blockchain node is initialized
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
       --limit uint               pagination limit of all balances to query for (default 100)
       --offset uint              pagination offset of all balances to query for
       --page uint                pagination page of all balances to query for. This sets offset to a multiple of limit (default 1)
@@ -3008,15 +3008,15 @@ ignite node query bank balances [from_account_or_address] [flags]
 
 **SEE ALSO**
 
-* [ignite node query bank](#ignite-node-query-bank)	 - Querying commands for the bank module
+* [spellshape node query bank](#spellshape-node-query-bank)	 - Querying commands for the bank module
 
 
-## ignite node query tx
+## spellshape node query tx
 
 Query for transaction by hash
 
 ```
-ignite node query tx [hash] [flags]
+spellshape node query tx [hash] [flags]
 ```
 
 **Options**
@@ -3033,10 +3033,10 @@ ignite node query tx [hash] [flags]
 
 **SEE ALSO**
 
-* [ignite node query](#ignite-node-query)	 - Querying subcommands
+* [spellshape node query](#spellshape-node-query)	 - Querying subcommands
 
 
-## ignite node tx
+## spellshape node tx
 
 Transactions subcommands
 
@@ -3051,7 +3051,7 @@ Transactions subcommands
   -h, --help                     help for tx
       --home string              directory where the blockchain node is initialized
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **Options inherited from parent commands**
@@ -3062,11 +3062,11 @@ Transactions subcommands
 
 **SEE ALSO**
 
-* [ignite node](#ignite-node)	 - Make requests to a live blockchain node
-* [ignite node tx bank](#ignite-node-tx-bank)	 - Bank transaction subcommands
+* [spellshape node](#spellshape-node)	 - Make requests to a live blockchain node
+* [spellshape node tx bank](#spellshape-node-tx-bank)	 - Bank transaction subcommands
 
 
-## ignite node tx bank
+## spellshape node tx bank
 
 Bank transaction subcommands
 
@@ -3086,22 +3086,22 @@ Bank transaction subcommands
       --generate-only            build an unsigned transaction and write it to STDOUT
       --home string              directory where the blockchain node is initialized
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
       --node string              <host>:<port> to tendermint rpc interface for this chain (default "https://rpc.cosmos.network:443")
 ```
 
 **SEE ALSO**
 
-* [ignite node tx](#ignite-node-tx)	 - Transactions subcommands
-* [ignite node tx bank send](#ignite-node-tx-bank-send)	 - Send funds from one account to another.
+* [spellshape node tx](#spellshape-node-tx)	 - Transactions subcommands
+* [spellshape node tx bank send](#spellshape-node-tx-bank-send)	 - Send funds from one account to another.
 
 
-## ignite node tx bank send
+## spellshape node tx bank send
 
 Send funds from one account to another.
 
 ```
-ignite node tx bank send [from_account_or_address] [to_account_or_address] [amount] [flags]
+spellshape node tx bank send [from_account_or_address] [to_account_or_address] [amount] [flags]
 ```
 
 **Options**
@@ -3120,16 +3120,16 @@ ignite node tx bank send [from_account_or_address] [to_account_or_address] [amou
       --generate-only            build an unsigned transaction and write it to STDOUT
       --home string              directory where the blockchain node is initialized
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
       --node string              <host>:<port> to tendermint rpc interface for this chain (default "https://rpc.cosmos.network:443")
 ```
 
 **SEE ALSO**
 
-* [ignite node tx bank](#ignite-node-tx-bank)	 - Bank transaction subcommands
+* [spellshape node tx bank](#spellshape-node-tx-bank)	 - Bank transaction subcommands
 
 
-## ignite plugin
+## spellshape plugin
 
 Handle plugins
 
@@ -3141,16 +3141,16 @@ Handle plugins
 
 **SEE ALSO**
 
-* [ignite](#ignite)	 - Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
-* [ignite plugin add](#ignite-plugin-add)	 - Adds a plugin declaration to a plugin configuration
-* [ignite plugin describe](#ignite-plugin-describe)	 - Output information about the a registered plugin
-* [ignite plugin list](#ignite-plugin-list)	 - List declared plugins and status
-* [ignite plugin remove](#ignite-plugin-remove)	 - Removes a plugin declaration from a chain's plugin configuration
-* [ignite plugin scaffold](#ignite-plugin-scaffold)	 - Scaffold a new plugin
-* [ignite plugin update](#ignite-plugin-update)	 - Update plugins
+* [spellshape](#spellshape)	 - Spellshape CLI offers everything you need to scaffold, test, build, and launch your blockchain
+* [spellshape plugin add](#spellshape-plugin-add)	 - Adds a plugin declaration to a plugin configuration
+* [spellshape plugin describe](#spellshape-plugin-describe)	 - Output information about the a registered plugin
+* [spellshape plugin list](#spellshape-plugin-list)	 - List declared plugins and status
+* [spellshape plugin remove](#spellshape-plugin-remove)	 - Removes a plugin declaration from a chain's plugin configuration
+* [spellshape plugin scaffold](#spellshape-plugin-scaffold)	 - Scaffold a new plugin
+* [spellshape plugin update](#spellshape-plugin-update)	 - Update plugins
 
 
-## ignite plugin add
+## spellshape plugin add
 
 Adds a plugin declaration to a plugin configuration
 
@@ -3160,25 +3160,25 @@ Adds a plugin declaration to a plugin configuration.
 Respects key value pairs declared after the plugin path to be added to the
 generated configuration definition.
 Example:
-  ignite plugin add github.com/org/my-plugin/ foo=bar baz=qux
+  spellshape plugin add github.com/org/my-plugin/ foo=bar baz=qux
 
 ```
-ignite plugin add [path] [key=value]... [flags]
+spellshape plugin add [path] [key=value]... [flags]
 ```
 
 **Options**
 
 ```
-  -g, --global   use global plugins configuration ($HOME/.ignite/plugins/plugins.yml)
+  -g, --global   use global plugins configuration ($HOME/.spellshape/plugins/plugins.yml)
   -h, --help     help for add
 ```
 
 **SEE ALSO**
 
-* [ignite plugin](#ignite-plugin)	 - Handle plugins
+* [spellshape plugin](#spellshape-plugin)	 - Handle plugins
 
 
-## ignite plugin describe
+## spellshape plugin describe
 
 Output information about the a registered plugin
 
@@ -3187,7 +3187,7 @@ Output information about the a registered plugin
 Output information about a registered plugins commands and hooks.
 
 ```
-ignite plugin describe [path] [flags]
+spellshape plugin describe [path] [flags]
 ```
 
 **Options**
@@ -3198,10 +3198,10 @@ ignite plugin describe [path] [flags]
 
 **SEE ALSO**
 
-* [ignite plugin](#ignite-plugin)	 - Handle plugins
+* [spellshape plugin](#spellshape-plugin)	 - Handle plugins
 
 
-## ignite plugin list
+## spellshape plugin list
 
 List declared plugins and status
 
@@ -3210,7 +3210,7 @@ List declared plugins and status
 Prints status and information of declared plugins
 
 ```
-ignite plugin list [flags]
+spellshape plugin list [flags]
 ```
 
 **Options**
@@ -3221,30 +3221,30 @@ ignite plugin list [flags]
 
 **SEE ALSO**
 
-* [ignite plugin](#ignite-plugin)	 - Handle plugins
+* [spellshape plugin](#spellshape-plugin)	 - Handle plugins
 
 
-## ignite plugin remove
+## spellshape plugin remove
 
 Removes a plugin declaration from a chain's plugin configuration
 
 ```
-ignite plugin remove [path] [flags]
+spellshape plugin remove [path] [flags]
 ```
 
 **Options**
 
 ```
-  -g, --global   use global plugins configuration ($HOME/.ignite/plugins/plugins.yml)
+  -g, --global   use global plugins configuration ($HOME/.spellshape/plugins/plugins.yml)
   -h, --help     help for remove
 ```
 
 **SEE ALSO**
 
-* [ignite plugin](#ignite-plugin)	 - Handle plugins
+* [spellshape plugin](#spellshape-plugin)	 - Handle plugins
 
 
-## ignite plugin scaffold
+## spellshape plugin scaffold
 
 Scaffold a new plugin
 
@@ -3253,7 +3253,7 @@ Scaffold a new plugin
 Scaffolds a new plugin in the current directory with the given repository path configured. A git repository will be created with the given module name, unless the current directory is already a git repository.
 
 ```
-ignite plugin scaffold [github.com/org/repo] [flags]
+spellshape plugin scaffold [github.com/org/repo] [flags]
 ```
 
 **Options**
@@ -3264,10 +3264,10 @@ ignite plugin scaffold [github.com/org/repo] [flags]
 
 **SEE ALSO**
 
-* [ignite plugin](#ignite-plugin)	 - Handle plugins
+* [spellshape plugin](#spellshape-plugin)	 - Handle plugins
 
 
-## ignite plugin update
+## spellshape plugin update
 
 Update plugins
 
@@ -3276,7 +3276,7 @@ Update plugins
 Updates a plugin specified by path. If no path is specified all declared plugins are updated
 
 ```
-ignite plugin update [path] [flags]
+spellshape plugin update [path] [flags]
 ```
 
 **Options**
@@ -3287,10 +3287,10 @@ ignite plugin update [path] [flags]
 
 **SEE ALSO**
 
-* [ignite plugin](#ignite-plugin)	 - Handle plugins
+* [spellshape plugin](#spellshape-plugin)	 - Handle plugins
 
 
-## ignite relayer
+## spellshape relayer
 
 Connect blockchains with an IBC relayer
 
@@ -3302,17 +3302,17 @@ Connect blockchains with an IBC relayer
 
 **SEE ALSO**
 
-* [ignite](#ignite)	 - Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
-* [ignite relayer configure](#ignite-relayer-configure)	 - Configure source and target chains for relaying
-* [ignite relayer connect](#ignite-relayer-connect)	 - Link chains associated with paths and start relaying tx packets in between
+* [spellshape](#spellshape)	 - Spellshape CLI offers everything you need to scaffold, test, build, and launch your blockchain
+* [spellshape relayer configure](#spellshape-relayer-configure)	 - Configure source and target chains for relaying
+* [spellshape relayer connect](#spellshape-relayer-connect)	 - Link chains associated with paths and start relaying tx packets in between
 
 
-## ignite relayer configure
+## spellshape relayer configure
 
 Configure source and target chains for relaying
 
 ```
-ignite relayer configure [flags]
+spellshape relayer configure [flags]
 ```
 
 **Options**
@@ -3321,7 +3321,7 @@ ignite relayer configure [flags]
   -a, --advanced                  advanced configuration options for custom IBC modules
   -h, --help                      help for configure
       --keyring-backend string    keyring backend to store your account keys (default "test")
-      --keyring-dir string        accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string        accounts keyring directory (default "/home/runner/.spellshape/accounts")
       --ordered                   set the channel as ordered
   -r, --reset                     reset the relayer config
       --source-account string     source Account
@@ -3346,15 +3346,15 @@ ignite relayer configure [flags]
 
 **SEE ALSO**
 
-* [ignite relayer](#ignite-relayer)	 - Connect blockchains with an IBC relayer
+* [spellshape relayer](#spellshape-relayer)	 - Connect blockchains with an IBC relayer
 
 
-## ignite relayer connect
+## spellshape relayer connect
 
 Link chains associated with paths and start relaying tx packets in between
 
 ```
-ignite relayer connect [<path>,...] [flags]
+spellshape relayer connect [<path>,...] [flags]
 ```
 
 **Options**
@@ -3362,15 +3362,15 @@ ignite relayer connect [<path>,...] [flags]
 ```
   -h, --help                     help for connect
       --keyring-backend string   keyring backend to store your account keys (default "test")
-      --keyring-dir string       accounts keyring directory (default "/home/runner/.ignite/accounts")
+      --keyring-dir string       accounts keyring directory (default "/home/runner/.spellshape/accounts")
 ```
 
 **SEE ALSO**
 
-* [ignite relayer](#ignite-relayer)	 - Connect blockchains with an IBC relayer
+* [spellshape relayer](#spellshape-relayer)	 - Connect blockchains with an IBC relayer
 
 
-## ignite scaffold
+## spellshape scaffold
 
 Create a new blockchain, module, message, query, and more
 
@@ -3380,10 +3380,10 @@ Scaffolding is a quick way to generate code for major pieces of your
 application.
 
 For details on each scaffolding target (chain, module, message, etc.) run the
-corresponding command with a "--help" flag, for example, "ignite scaffold chain
+corresponding command with a "--help" flag, for example, "spellshape scaffold chain
 --help".
 
-The Ignite team strongly recommends committing the code to a version control
+The Spellshape team strongly recommends committing the code to a version control
 system before running scaffolding commands. This will make it easier to see the
 changes to the source code as well as undo the command if you've decided to roll
 back the changes.
@@ -3439,21 +3439,21 @@ with an "--ibc" flag. Note that the default module is not IBC-enabled.
 
 **SEE ALSO**
 
-* [ignite](#ignite)	 - Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
-* [ignite scaffold chain](#ignite-scaffold-chain)	 - New Cosmos SDK blockchain
-* [ignite scaffold list](#ignite-scaffold-list)	 - CRUD for data stored as an array
-* [ignite scaffold map](#ignite-scaffold-map)	 - CRUD for data stored as key-value pairs
-* [ignite scaffold message](#ignite-scaffold-message)	 - Message to perform state transition on the blockchain
-* [ignite scaffold module](#ignite-scaffold-module)	 - Custom Cosmos SDK module
-* [ignite scaffold packet](#ignite-scaffold-packet)	 - Message for sending an IBC packet
-* [ignite scaffold query](#ignite-scaffold-query)	 - Query for fetching data from a blockchain
-* [ignite scaffold react](#ignite-scaffold-react)	 - React web app template
-* [ignite scaffold single](#ignite-scaffold-single)	 - CRUD for data stored in a single location
-* [ignite scaffold type](#ignite-scaffold-type)	 - Type definition
-* [ignite scaffold vue](#ignite-scaffold-vue)	 - Vue 3 web app template
+* [spellshape](#spellshape)	 - Spellshape CLI offers everything you need to scaffold, test, build, and launch your blockchain
+* [spellshape scaffold chain](#spellshape-scaffold-chain)	 - New Cosmos SDK blockchain
+* [spellshape scaffold list](#spellshape-scaffold-list)	 - CRUD for data stored as an array
+* [spellshape scaffold map](#spellshape-scaffold-map)	 - CRUD for data stored as key-value pairs
+* [spellshape scaffold message](#spellshape-scaffold-message)	 - Message to perform state transition on the blockchain
+* [spellshape scaffold module](#spellshape-scaffold-module)	 - Custom Cosmos SDK module
+* [spellshape scaffold packet](#spellshape-scaffold-packet)	 - Message for sending an IBC packet
+* [spellshape scaffold query](#spellshape-scaffold-query)	 - Query for fetching data from a blockchain
+* [spellshape scaffold react](#spellshape-scaffold-react)	 - React web app template
+* [spellshape scaffold single](#spellshape-scaffold-single)	 - CRUD for data stored in a single location
+* [spellshape scaffold type](#spellshape-scaffold-type)	 - Type definition
+* [spellshape scaffold vue](#spellshape-scaffold-vue)	 - Vue 3 web app template
 
 
-## ignite scaffold chain
+## spellshape scaffold chain
 
 New Cosmos SDK blockchain
 
@@ -3464,15 +3464,15 @@ Create a new application-specific Cosmos SDK blockchain.
 For example, the following command will create a blockchain called "hello" in
 the "hello/" directory:
 
-	ignite scaffold chain hello
+	spellshape scaffold chain hello
 
 A project name can be a simple name or a URL. The name will be used as the Go
 module path for the project. Examples of project names:
 
-	ignite scaffold chain foo
-	ignite scaffold chain foo/bar
-	ignite scaffold chain example.org/foo
-	ignite scaffold chain github.com/username/foo
+	spellshape scaffold chain foo
+	spellshape scaffold chain foo/bar
+	spellshape scaffold chain example.org/foo
+	spellshape scaffold chain github.com/username/foo
 		
 A new directory with source code files will be created in the current directory.
 To use a different path use the "--path" flag.
@@ -3480,9 +3480,9 @@ To use a different path use the "--path" flag.
 Most of the logic of your blockchain is written in custom modules. Each module
 effectively encapsulates an independent piece of functionality. Following the
 Cosmos SDK convention, custom modules are stored inside the "x/" directory. By
-default, Ignite creates a module with a name that matches the name of the
+default, Spellshape creates a module with a name that matches the name of the
 project. To create a blockchain without a default module use the "--no-module"
-flag. Additional modules can be added after a project is created with "ignite
+flag. Additional modules can be added after a project is created with "spellshape
 scaffold module" command.
 
 Account addresses on Cosmos SDK-based blockchains have string prefixes. For
@@ -3490,9 +3490,9 @@ example, the Cosmos Hub blockchain uses the default "cosmos" prefix, so that
 addresses look like this: "cosmos12fjzdtqfrrve7zyg9sv8j25azw2ua6tvu07ypf". To
 use a custom address prefix use the "--address-prefix" flag. For example:
 
-	ignite scaffold chain foo --address-prefix bar
+	spellshape scaffold chain foo --address-prefix bar
 
-By default when compiling a blockchain's source code Ignite creates a cache to
+By default when compiling a blockchain's source code Spellshape creates a cache to
 speed up the build process. To clear the cache when building a blockchain use
 the "--clear-cache" flag. It is very unlikely you will ever need to use this
 flag.
@@ -3502,7 +3502,7 @@ about Cosmos SDK on https://docs.cosmos.network
 
 
 ```
-ignite scaffold chain [name] [flags]
+spellshape scaffold chain [name] [flags]
 ```
 
 **Options**
@@ -3517,10 +3517,10 @@ ignite scaffold chain [name] [flags]
 
 **SEE ALSO**
 
-* [ignite scaffold](#ignite-scaffold)	 - Create a new blockchain, module, message, query, and more
+* [spellshape scaffold](#spellshape-scaffold)	 - Create a new blockchain, module, message, query, and more
 
 
-## ignite scaffold list
+## spellshape scaffold list
 
 CRUD for data stored as an array
 
@@ -3551,7 +3551,7 @@ provides the logic to create, read, update, and delete instances of the type.
 For example, let's review a command that generates the code to handle a list of
 posts and each post has "title" and "body" fields:
 
-	ignite scaffold list post title body
+	spellshape scaffold list post title body
 
 This provides you with a "Post" type, MsgCreatePost, MsgUpdatePost,
 MsgDeletePost and two queries: Post and PostAll. The compiled CLI, let's say the
@@ -3568,12 +3568,12 @@ different type, you can specify it after a colon ":". The following types are
 supported: string, bool, int, uint, coin, array.string, array.int, array.uint,
 array.coin. An example of using field types:
 
-	ignite scaffold list pool amount:coin tags:array.string height:int
+	spellshape scaffold list pool amount:coin tags:array.string height:int
 
 Supported types:
 
 | Type         | Alias   | Index | Code Type | Description                     |
-|--------------|---------|-------|-----------|---------------------------------|
+| ------------ | ------- | ----- | --------- | ------------------------------- |
 | string       | -       | yes   | string    | Text type                       |
 | array.string | strings | no    | []string  | List of text type               |
 | bool         | -       | yes   | bool      | Boolean type                    |
@@ -3585,15 +3585,15 @@ Supported types:
 | array.coin   | coins   | no    | sdk.Coins | List of Cosmos SDK coin types   |
 
 "Index" indicates whether the type can be used as an index in
-"ignite scaffold map".
+"spellshape scaffold map".
 
-Ignite also supports custom types:
+Spellshape also supports custom types:
 
-	ignite scaffold list product-details name desc
-	ignite scaffold list product price:coin details:ProductDetails
+	spellshape scaffold list product-details name desc
+	spellshape scaffold list product price:coin details:ProductDetails
 
 In the example above the "ProductDetails" type was defined first, and then used
-as a custom type for the "details" field. Ignite doesn't support arrays of
+as a custom type for the "details" field. Spellshape doesn't support arrays of
 custom types yet.
 
 Your chain will accept custom types in JSON-notation:
@@ -3604,26 +3604,26 @@ By default the code will be scaffolded in the module that matches your project's
 name. If you have several modules in your project, you might want to specify a
 different module:
 
-	ignite scaffold list post title body --module blog
+	spellshape scaffold list post title body --module blog
 
 By default, each message comes with a "creator" field that represents the
 address of the transaction signer. You can customize the name of this field with
 a flag:
 
-	ignite scaffold list post title body --signer author
+	spellshape scaffold list post title body --signer author
 
 It's possible to scaffold just the getter/setter logic without the CRUD
 messages. This is useful when you want the methods to handle a type, but would
 like to scaffold messages manually. Use a flag to skip message scaffolding:
 
-	ignite scaffold list post title body --no-message
+	spellshape scaffold list post title body --no-message
 
 The "creator" field is not generated if a list is scaffolded with the
 "--no-message" flag.
 
 
 ```
-ignite scaffold list NAME [field]... [flags]
+spellshape scaffold list NAME [field]... [flags]
 ```
 
 **Options**
@@ -3641,10 +3641,10 @@ ignite scaffold list NAME [field]... [flags]
 
 **SEE ALSO**
 
-* [ignite scaffold](#ignite-scaffold)	 - Create a new blockchain, module, message, query, and more
+* [spellshape scaffold](#spellshape-scaffold)	 - Create a new blockchain, module, message, query, and more
 
 
-## ignite scaffold map
+## spellshape scaffold map
 
 CRUD for data stored as key-value pairs
 
@@ -3654,14 +3654,14 @@ The "map" scaffolding command is used to generate files that implement the logic
 for storing and interacting with data stored as key-value pairs (or a
 dictionary) in the blockchain state.
 
-The "map" command is very similar to "ignite scaffold list" with the main
+The "map" command is very similar to "spellshape scaffold list" with the main
 difference in how values are indexed. With "list" values are indexed by an
 incrementing integer, whereas "list" values are indexed by a user-provided value
 (or multiple values).
 
 Let's use the same blog post example:
 
-	ignite scaffold map post title body
+	spellshape scaffold map post title body
 
 This command scaffolds a "Post" type and CRUD functionality to create, read,
 updated, and delete posts. However, when creating a new post with your chain's
@@ -3680,7 +3680,7 @@ for the "hello" key.
 To customize the index, use the "--index" flag. Multiple indices can be
 provided, which simplifies querying values. For example:
 
-	ignite scaffold map product price desc --index category,guid
+	spellshape scaffold map product price desc --index category,guid
 
 With this command, you would get a "Product" value indexed by both a category
 and a GUID (globally unique ID). This will let you programmatically fetch
@@ -3692,7 +3692,7 @@ custom types.
 
 
 ```
-ignite scaffold map NAME [field]... [flags]
+spellshape scaffold map NAME [field]... [flags]
 ```
 
 **Options**
@@ -3711,10 +3711,10 @@ ignite scaffold map NAME [field]... [flags]
 
 **SEE ALSO**
 
-* [ignite scaffold](#ignite-scaffold)	 - Create a new blockchain, module, message, query, and more
+* [spellshape scaffold](#spellshape-scaffold)	 - Create a new blockchain, module, message, query, and more
 
 
-## ignite scaffold message
+## spellshape scaffold message
 
 Message to perform state transition on the blockchain
 
@@ -3734,10 +3734,10 @@ accounts. The send message has three fields: from address (sender), to address
 the token amount will be deducted from the sender's account and added to the
 recipient's account.
 
-Ignite's message scaffolding lets you create new types of messages and add them
+Spellshape's message scaffolding lets you create new types of messages and add them
 to your chain. For example:
 
-	ignite scaffold message add-pool amount:coins denom active:bool --module dex
+	spellshape scaffold message add-pool amount:coins denom active:bool --module dex
 
 The command above will create a new message MsgAddPool with three fields: amount
 (in tokens), denom (a string), and active (a boolean). The message will be added
@@ -3746,27 +3746,27 @@ to the "dex" module.
 By default, the message is defined as a proto message in the
 "proto/{app}/{module}/tx.proto" and registered in the "Msg" service. A CLI command to
 create and broadcast a transaction with MsgAddPool is created in the module's
-"cli" package. Additionally, Ignite scaffolds a message constructor and the code
+"cli" package. Additionally, Spellshape scaffolds a message constructor and the code
 to satisfy the sdk.Msg interface and register the message in the module.
 
-Most importantly in the "keeper" package Ignite scaffolds an "AddPool" function.
+Most importantly in the "keeper" package Spellshape scaffolds an "AddPool" function.
 Inside this function, you can implement message handling logic.
 
 When successfully processed a message can return data. Use the —response flag to
 specify response fields and their types. For example
 
-	ignite scaffold message create-post title body --response id:int,title
+	spellshape scaffold message create-post title body --response id:int,title
 
 The command above will scaffold MsgCreatePost which returns both an ID (an
 integer) and a title (a string).
 
-Message scaffolding follows the rules as "ignite scaffold list/map/single" and
-supports fields with standard and custom types. See "ignite scaffold list —help"
+Message scaffolding follows the rules as "spellshape scaffold list/map/single" and
+supports fields with standard and custom types. See "spellshape scaffold list —help"
 for details.
 
 
 ```
-ignite scaffold message [name] [field1] [field2] ... [flags]
+spellshape scaffold message [name] [field1] [field2] ... [flags]
 ```
 
 **Options**
@@ -3785,10 +3785,10 @@ ignite scaffold message [name] [field1] [field2] ... [flags]
 
 **SEE ALSO**
 
-* [ignite scaffold](#ignite-scaffold)	 - Create a new blockchain, module, message, query, and more
+* [spellshape scaffold](#spellshape-scaffold)	 - Create a new blockchain, module, message, query, and more
 
 
-## ignite scaffold module
+## spellshape scaffold module
 
 Custom Cosmos SDK module
 
@@ -3817,7 +3817,7 @@ flag.
 
 To scaffold an IBC-enabled module use the "--ibc" flag. An IBC-enabled module is
 like a regular module with the addition of IBC-specific logic and placeholders
-to scaffold IBC packets with "ignite scaffold packet".
+to scaffold IBC packets with "spellshape scaffold packet".
 
 A module can depend on one or more other modules and import their keeper
 methods. To scaffold a module with a dependency use the "--dep" flag
@@ -3827,7 +3827,7 @@ sending tokens between accounts. The method for sending tokens is a defined in
 the "bank"'s module keeper. You can scaffold a "foo" module with the dependency
 on "bank" with the following command:
 
-	ignite scaffold module foo --dep bank
+	spellshape scaffold module foo --dep bank
 
 You can then define which methods you want to import from the "bank" keeper in
 "expected_keepers.go".
@@ -3835,7 +3835,7 @@ You can then define which methods you want to import from the "bank" keeper in
 You can also scaffold a module with a list of dependencies that can include both
 standard and custom modules (provided they exist):
 
-	ignite scaffold module bar --dep foo,mint,account,FeeGrant
+	spellshape scaffold module bar --dep foo,mint,account,FeeGrant
 
 Note: the "--dep" flag doesn't install third-party modules into your
 application, it just generates extra code that specifies which existing modules
@@ -3848,14 +3848,14 @@ blockchain is running. An example of a param is "Inflation rate change" of the
 that accepts a list of param names. By default params are of type "string", but
 you can specify a type for each param. For example:
 
-	ignite scaffold module foo --params baz:uint,bar:bool
+	spellshape scaffold module foo --params baz:uint,bar:bool
 
 Refer to Cosmos SDK documentation to learn more about modules, dependencies and
 params.
 
 
 ```
-ignite scaffold module [name] [flags]
+spellshape scaffold module [name] [flags]
 ```
 
 **Options**
@@ -3874,10 +3874,10 @@ ignite scaffold module [name] [flags]
 
 **SEE ALSO**
 
-* [ignite scaffold](#ignite-scaffold)	 - Create a new blockchain, module, message, query, and more
+* [spellshape scaffold](#spellshape-scaffold)	 - Create a new blockchain, module, message, query, and more
 
 
-## ignite scaffold packet
+## spellshape scaffold packet
 
 Message for sending an IBC packet
 
@@ -3886,7 +3886,7 @@ Message for sending an IBC packet
 Scaffold an IBC packet in a specific IBC-enabled Cosmos SDK module
 
 ```
-ignite scaffold packet [packetName] [field1] [field2] ... --module [moduleName] [flags]
+spellshape scaffold packet [packetName] [field1] [field2] ... --module [moduleName] [flags]
 ```
 
 **Options**
@@ -3904,15 +3904,15 @@ ignite scaffold packet [packetName] [field1] [field2] ... --module [moduleName] 
 
 **SEE ALSO**
 
-* [ignite scaffold](#ignite-scaffold)	 - Create a new blockchain, module, message, query, and more
+* [spellshape scaffold](#spellshape-scaffold)	 - Create a new blockchain, module, message, query, and more
 
 
-## ignite scaffold query
+## spellshape scaffold query
 
 Query for fetching data from a blockchain
 
 ```
-ignite scaffold query [name] [request_field1] [request_field2] ... [flags]
+spellshape scaffold query [name] [request_field1] [request_field2] ... [flags]
 ```
 
 **Options**
@@ -3930,15 +3930,15 @@ ignite scaffold query [name] [request_field1] [request_field2] ... [flags]
 
 **SEE ALSO**
 
-* [ignite scaffold](#ignite-scaffold)	 - Create a new blockchain, module, message, query, and more
+* [spellshape scaffold](#spellshape-scaffold)	 - Create a new blockchain, module, message, query, and more
 
 
-## ignite scaffold react
+## spellshape scaffold react
 
 React web app template
 
 ```
-ignite scaffold react [flags]
+spellshape scaffold react [flags]
 ```
 
 **Options**
@@ -3951,15 +3951,15 @@ ignite scaffold react [flags]
 
 **SEE ALSO**
 
-* [ignite scaffold](#ignite-scaffold)	 - Create a new blockchain, module, message, query, and more
+* [spellshape scaffold](#spellshape-scaffold)	 - Create a new blockchain, module, message, query, and more
 
 
-## ignite scaffold single
+## spellshape scaffold single
 
 CRUD for data stored in a single location
 
 ```
-ignite scaffold single NAME [field]... [flags]
+spellshape scaffold single NAME [field]... [flags]
 ```
 
 **Options**
@@ -3977,15 +3977,15 @@ ignite scaffold single NAME [field]... [flags]
 
 **SEE ALSO**
 
-* [ignite scaffold](#ignite-scaffold)	 - Create a new blockchain, module, message, query, and more
+* [spellshape scaffold](#spellshape-scaffold)	 - Create a new blockchain, module, message, query, and more
 
 
-## ignite scaffold type
+## spellshape scaffold type
 
 Type definition
 
 ```
-ignite scaffold type NAME [field]... [flags]
+spellshape scaffold type NAME [field]... [flags]
 ```
 
 **Options**
@@ -4003,15 +4003,15 @@ ignite scaffold type NAME [field]... [flags]
 
 **SEE ALSO**
 
-* [ignite scaffold](#ignite-scaffold)	 - Create a new blockchain, module, message, query, and more
+* [spellshape scaffold](#spellshape-scaffold)	 - Create a new blockchain, module, message, query, and more
 
 
-## ignite scaffold vue
+## spellshape scaffold vue
 
 Vue 3 web app template
 
 ```
-ignite scaffold vue [flags]
+spellshape scaffold vue [flags]
 ```
 
 **Options**
@@ -4024,10 +4024,10 @@ ignite scaffold vue [flags]
 
 **SEE ALSO**
 
-* [ignite scaffold](#ignite-scaffold)	 - Create a new blockchain, module, message, query, and more
+* [spellshape scaffold](#spellshape-scaffold)	 - Create a new blockchain, module, message, query, and more
 
 
-## ignite tools
+## spellshape tools
 
 Tools for advanced users
 
@@ -4039,24 +4039,24 @@ Tools for advanced users
 
 **SEE ALSO**
 
-* [ignite](#ignite)	 - Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
-* [ignite tools ibc-relayer](#ignite-tools-ibc-relayer)	 - TypeScript implementation of an IBC relayer
-* [ignite tools ibc-setup](#ignite-tools-ibc-setup)	 - Collection of commands to quickly setup a relayer
-* [ignite tools protoc](#ignite-tools-protoc)	 - Execute the protoc command
+* [spellshape](#spellshape)	 - Spellshape CLI offers everything you need to scaffold, test, build, and launch your blockchain
+* [spellshape tools ibc-relayer](#spellshape-tools-ibc-relayer)	 - TypeScript implementation of an IBC relayer
+* [spellshape tools ibc-setup](#spellshape-tools-ibc-setup)	 - Collection of commands to quickly setup a relayer
+* [spellshape tools protoc](#spellshape-tools-protoc)	 - Execute the protoc command
 
 
-## ignite tools ibc-relayer
+## spellshape tools ibc-relayer
 
 TypeScript implementation of an IBC relayer
 
 ```
-ignite tools ibc-relayer [--] [...] [flags]
+spellshape tools ibc-relayer [--] [...] [flags]
 ```
 
 **Examples**
 
 ```
-ignite tools ibc-relayer -- -h
+spellshape tools ibc-relayer -- -h
 ```
 
 **Options**
@@ -4067,22 +4067,22 @@ ignite tools ibc-relayer -- -h
 
 **SEE ALSO**
 
-* [ignite tools](#ignite-tools)	 - Tools for advanced users
+* [spellshape tools](#spellshape-tools)	 - Tools for advanced users
 
 
-## ignite tools ibc-setup
+## spellshape tools ibc-setup
 
 Collection of commands to quickly setup a relayer
 
 ```
-ignite tools ibc-setup [--] [...] [flags]
+spellshape tools ibc-setup [--] [...] [flags]
 ```
 
 **Examples**
 
 ```
-ignite tools ibc-setup -- -h
-ignite tools ibc-setup -- init --src relayer_test_1 --dest relayer_test_2
+spellshape tools ibc-setup -- -h
+spellshape tools ibc-setup -- init --src relayer_test_1 --dest relayer_test_2
 ```
 
 **Options**
@@ -4093,10 +4093,10 @@ ignite tools ibc-setup -- init --src relayer_test_1 --dest relayer_test_2
 
 **SEE ALSO**
 
-* [ignite tools](#ignite-tools)	 - Tools for advanced users
+* [spellshape tools](#spellshape-tools)	 - Tools for advanced users
 
 
-## ignite tools protoc
+## spellshape tools protoc
 
 Execute the protoc command
 
@@ -4105,13 +4105,13 @@ Execute the protoc command
 The protoc command. You don't need to setup the global protoc include folder with -I, it's automatically handled
 
 ```
-ignite tools protoc [--] [...] [flags]
+spellshape tools protoc [--] [...] [flags]
 ```
 
 **Examples**
 
 ```
-ignite tools protoc -- --version
+spellshape tools protoc -- --version
 ```
 
 **Options**
@@ -4122,15 +4122,15 @@ ignite tools protoc -- --version
 
 **SEE ALSO**
 
-* [ignite tools](#ignite-tools)	 - Tools for advanced users
+* [spellshape tools](#spellshape-tools)	 - Tools for advanced users
 
 
-## ignite version
+## spellshape version
 
 Print the current build information
 
 ```
-ignite version [flags]
+spellshape version [flags]
 ```
 
 **Options**
@@ -4141,5 +4141,5 @@ ignite version [flags]
 
 **SEE ALSO**
 
-* [ignite](#ignite)	 - Ignite CLI offers everything you need to scaffold, test, build, and launch your blockchain
+* [spellshape](#spellshape)	 - Spellshape CLI offers everything you need to scaffold, test, build, and launch your blockchain
 

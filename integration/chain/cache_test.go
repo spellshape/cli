@@ -11,8 +11,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
 )
 
 func TestCliWithCaching(t *testing.T) {
@@ -30,7 +30,7 @@ func TestCliWithCaching(t *testing.T) {
 	env.Must(env.Exec("create a message",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"s",
 				"message",
 				"mymessage",
@@ -45,7 +45,7 @@ func TestCliWithCaching(t *testing.T) {
 	env.Must(env.Exec("create a query",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"s",
 				"query",
 				"myQuery",
@@ -59,7 +59,7 @@ func TestCliWithCaching(t *testing.T) {
 	env.Must(env.Exec("build",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"c",
 				"build",
 			),
@@ -74,7 +74,7 @@ func TestCliWithCaching(t *testing.T) {
 	env.Must(env.Exec("build",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"c",
 				"build",
 			),

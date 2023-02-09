@@ -18,7 +18,7 @@ ENV GOPROXY https://proxy.golang.org
 #
 FROM base as builder
 
-WORKDIR /ignite
+WORKDIR /spellshape
 
 # cache dependencies.
 COPY ./go.mod . 
@@ -36,16 +36,16 @@ FROM base
 RUN useradd -ms /bin/bash tendermint
 USER tendermint
 
-COPY --from=builder /go/bin/ignite /usr/bin
+COPY --from=builder /go/bin/spellshape /usr/bin
 
 WORKDIR /apps
 
 # see docs for exposed ports:
-#   https://docs.ignite.com/kb/config.html#host
+#   https://docs.spellshape.com/kb/config.html#host
 EXPOSE 26657
 EXPOSE 26656
 EXPOSE 6060 
 EXPOSE 9090 
 EXPOSE 1317 
 
-ENTRYPOINT ["ignite"]
+ENTRYPOINT ["spellshape"]

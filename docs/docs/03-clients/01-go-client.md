@@ -6,7 +6,7 @@ title: Go client
 # A client in the Go programming language
 
 In this tutorial, we will show you how to create a standalone Go program that
-serves as a client for a blockchain. We will use the Ignite CLI to set up a
+serves as a client for a blockchain. We will use the Spellshape CLI to set up a
 standard blockchain. To communicate with the blockchain, we will utilize the
 `cosmosclient` package, which provides an easy-to-use interface for interacting
 with the blockchain. You will learn how to use the `cosmosclient` package to
@@ -16,10 +16,10 @@ Go and the `cosmosclient` package.
 
 ## Create a blockchain
 
-To create a blockchain using the Ignite CLI, use the following command:
+To create a blockchain using the Spellshape CLI, use the following command:
 
 ```
-ignite scaffold chain blog
+spellshape scaffold chain blog
 ```
 
 This will create a new Cosmos SDK blockchain called "blog".
@@ -30,7 +30,7 @@ operations on blog posts. To do this, you can use the following command:
 
 ```
 cd blog
-ignite scaffold list post title body
+spellshape scaffold list post title body
 ```
 
 This will generate the necessary code for the "blog" model, including functions
@@ -43,7 +43,7 @@ functional Cosmos SDK blockchain with the ability to manage blog posts.
 Start your blockchain node with the following command:
 
 ```
-ignite chain serve
+spellshape chain serve
 ```
 
 ## Creating a blockchain client
@@ -81,7 +81,7 @@ go 1.19
 
 require (
 	blog v0.0.0-00010101000000-000000000000
-	github.com/ignite/cli v0.25.2
+	github.com/spellshape/cli v0.25.2
 )
 
 replace blog => ../blog
@@ -91,7 +91,7 @@ replace github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alp
 Your package will import two dependencies:
 
 * `blog`, which contains `types` of messages and a query client
-* `ignite` for the `cosmosclient` package
+* `spellshape` for the `cosmosclient` package
 
 The `replace` directive uses the package from the local `blog` directory and is
 specified as a relative path to the `blogclient` directory.
@@ -119,7 +119,7 @@ import (
 	"log"
 
 	// Importing the general purpose Cosmos blockchain client
-	"github.com/ignite/cli/ignite/pkg/cosmosclient"
+	"github.com/spellshape/cli/spellshape/pkg/cosmosclient"
 
 	// Importing the types package of your blog blockchain
 	"blog/x/blog/types"
@@ -135,7 +135,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// Account `alice` was initialized during `ignite chain serve`
+	// Account `alice` was initialized during `spellshape chain serve`
 	accountName := "alice"
 
 	// Get account from the keyring
@@ -207,13 +207,13 @@ post on the `blog` blockchain using the client.
 
 To find out more about the `cosmosclient` package, you can refer to the Go
 package documentation for
-[`cosmosclient`](https://pkg.go.dev/github.com/ignite/cli/ignite/pkg/cosmosclient).
+[`cosmosclient`](https://pkg.go.dev/github.com/spellshape/cli/spellshape/pkg/cosmosclient).
 This documentation provides information on how to use the `Client` type with
 `Options` and `KeyringBackend`.
 
 ## Run the blockchain and the client
 
-Make sure your blog blockchain is still running with `ignite chain serve`.
+Make sure your blog blockchain is still running with `spellshape chain serve`.
 
 Run the blockchain client:
 

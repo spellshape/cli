@@ -37,12 +37,12 @@ versions of cli to guarantee that no regression is introduced -->
 
 ## Post-release checklist
 
-- [ ] Update [`changelog.md`](https://github.com/ignite/cli/blob/main/changelog.md)
-- [ ] Update [`readme.md](https://github.com/ignite/cli/blob/main/readme.md):
+- [ ] Update [`changelog.md`](https://github.com/spellshape/cli/blob/main/changelog.md)
+- [ ] Update [`readme.md](https://github.com/spellshape/cli/blob/main/readme.md):
   - [ ] Version matrix.
   - [ ] Link to Gitpod with a URL to the newly released stable version.
 - [ ] Update docs site:
-  - [ ] Add new release tag to [`docs/versioned_docs`](https://github.com/ignite/cli/tree/main/docs/versioned_docs).
-- [ ] After changes to docs site are deployed, check [docs.ignite.com/](https://docs.ignite.com/) is updated.
+  - [ ] Add new release tag to [`docs/versioned_docs`](https://github.com/spellshape/cli/tree/main/docs/versioned_docs).
+- [ ] After changes to docs site are deployed, check [docs.spellshape.com/](https://docs.spellshape.com/) is updated.
 
 ____

@@ -4,21 +4,21 @@ slug: /
 
 import ProjectsTable from '@site/src/components/ProjectsTable';
 
-# Introduction to Ignite
+# Introduction to Spellshape
 
-[Ignite CLI](https://github.com/ignite/cli) offers everything you need to build, test, and launch your blockchain with a
-decentralized worldwide community. Ignite CLI is built on top of [Cosmos SDK](https://docs.cosmos.network), the world’s
-most popular blockchain framework. Ignite CLI accelerates chain development by scaffolding everything you need so you
+[Spellshape CLI](https://github.com/spellshape/cli) offers everything you need to build, test, and launch your blockchain with a
+decentralized worldwide community. Spellshape CLI is built on top of [Cosmos SDK](https://docs.cosmos.network), the world’s
+most popular blockchain framework. Spellshape CLI accelerates chain development by scaffolding everything you need so you
 can focus on business logic.
 
-## What is Ignite CLI?
+## What is Spellshape CLI?
 
-Ignite CLI is an easy-to-use CLI tool for creating and maintaining sovereign application-specific blockchains.
-Blockchains created with Ignite CLI use Cosmos SDK and Tendermint. Ignite CLI and the Cosmos SDK modules are written in
-the Go programming language. The scaffolded blockchain that is created with Ignite CLI includes a command line interface
+Spellshape CLI is an easy-to-use CLI tool for creating and maintaining sovereign application-specific blockchains.
+Blockchains created with Spellshape CLI use Cosmos SDK and Tendermint. Spellshape CLI and the Cosmos SDK modules are written in
+the Go programming language. The scaffolded blockchain that is created with Spellshape CLI includes a command line interface
 that lets you manage keys, create validators, and send tokens.
 
-With just a few commands, you can use Ignite CLI to:
+With just a few commands, you can use Spellshape CLI to:
 
 - Create a modular blockchain written in Go
 - Scaffold modules, messages, types with CRUD operations, IBC packets, and more
@@ -27,12 +27,12 @@ With just a few commands, you can use Ignite CLI to:
 - Use generated TypeScript/Vuex clients to interact with your blockchain
 - Use the Vue.js web app template with a set of components and Vuex modules
 
-## Install Ignite CLI
+## Install Spellshape CLI
 
-To install the `ignite` binary in `/usr/local/bin` run the following command:
+To install the `spellshape` binary in `/usr/local/bin` run the following command:
 
 ```
-curl https://get.ignite.com/cli | bash
+curl https://get.spellshape.com/cli | bash
 ```
 
 ## Projects using Tendermint and Cosmos SDK
@@ -41,7 +41,7 @@ Many projects already showcase the Tendermint BFT consensus engine and the Cosmo
 the [Cosmos ecosystem](https://cosmos.network/ecosystem/apps) to discover a wide variety of apps, blockchains, wallets,
 and explorers that are built in the Cosmos ecosystem.
 
-## Projects building with Ignite CLI
+## Projects building with Spellshape CLI
 
 <ProjectsTable data={[
   { name: "Stride Labs", logo: "img/logo/stride.svg"},

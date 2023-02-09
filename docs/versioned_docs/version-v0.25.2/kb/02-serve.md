@@ -1,6 +1,6 @@
 ---
 order: 2
-description: Use the Ignite CLI serve command to start your blockchain.
+description: Use the Spellshape CLI serve command to start your blockchain.
 ---
 
 # Start a blockchain
@@ -12,23 +12,23 @@ Blockchains are decentralized applications.
 
 ## Start a blockchain node in development
 
-Switch to the directory that contains a blockchain that was scaffolded with Ignite CLI. To start the blockchain node, run the following command:
+Switch to the directory that contains a blockchain that was scaffolded with Spellshape CLI. To start the blockchain node, run the following command:
 
 ```bash
-ignite chain serve
+spellshape chain serve
 ```
 
 This command initializes a chain, builds the code, starts a single validator node, and starts watching for file changes.
 
 Whenever a file is changed, the chain is automatically reinitialized, rebuilt, and started again. The chain's state is preserved if the changes to the source code are compatible with the previous state. This state preservation is beneficial for development purposes.
 
-Because the `ignite chain serve` command is a development tool, it should not be used in a production environment. Read on to learn the process of running a blockchain in production.
+Because the `spellshape chain serve` command is a development tool, it should not be used in a production environment. Read on to learn the process of running a blockchain in production.
 
-## The Magic of `ignite chain serve`
+## The Magic of `spellshape chain serve`
 
-The `ignite chain serve` command starts a fully operational blockchain.
+The `spellshape chain serve` command starts a fully operational blockchain.
 
-The `ignite chain serve` command performs the following tasks:
+The `spellshape chain serve` command performs the following tasks:
 
 - Installs dependencies
 - Imports state, if possible
@@ -48,7 +48,7 @@ You can use flags to configure how the blockchain runs.
 
 ## Define how your blockchain starts
 
-Flags for the `ignite chain serve` command determine how your blockchain starts. All flags are optional.
+Flags for the `spellshape chain serve` command determine how your blockchain starts. All flags are optional.
 
 `--config`
 
@@ -72,7 +72,7 @@ Specify a custom home directory.
 
 ## Start a blockchain node in production
 
-The `ignite chain serve` and `ignite chain build` commands compile the source code of the chain in a binary file and install the binary in `~/go/bin`. By default, the binary name is the name of the repository appended with `d`. For example, if you scaffold a chain using `ignite scaffold chain mars`, then the binary is named `marsd`.
+The `spellshape chain serve` and `spellshape chain build` commands compile the source code of the chain in a binary file and install the binary in `~/go/bin`. By default, the binary name is the name of the repository appended with `d`. For example, if you scaffold a chain using `spellshape scaffold chain mars`, then the binary is named `marsd`.
 
 You can customize the binary name in `config.yml`:
 

@@ -1,13 +1,13 @@
 # Vue frontend
 
-Welcome to this tutorial on using Ignite to develop a web application for your
-blockchain with Vue 3. Ignite is a tool that simplifies the process of building
+Welcome to this tutorial on using Spellshape to develop a web application for your
+blockchain with Vue 3. Spellshape is a tool that simplifies the process of building
 a blockchain application by providing a set of templates and generators that can
 be used to get up and running quickly.
 
-One of the features of Ignite is its support for [Vue 3](https://vuejs.org/), a
+One of the features of Spellshape is its support for [Vue 3](https://vuejs.org/), a
 popular JavaScript framework for building user interfaces. In this tutorial, you
-will learn how to use Ignite to create a new blockchain and scaffold a Vue
+will learn how to use Spellshape to create a new blockchain and scaffold a Vue
 frontend template. This will give you a basic foundation for your web
 application and make it easier to get started building out the rest of your
 application.
@@ -28,14 +28,14 @@ Prerequisites:
 Create a new blockchain project:
 
 ```
-ignite scaffold chain example
+spellshape scaffold chain example
 ```
 
 To create a Vue frontend template, go to the `example` directory and run the
 following command:
 
 ```
-ignite scaffold vue
+spellshape scaffold vue
 ```
 
 This will create a new Vue project in the `vue` directory. This project can be
@@ -44,7 +44,7 @@ blockchain. To generate an API client, run the following command in the
 `example` directory:
 
 ```
-ignite generate composables
+spellshape generate composables
 ```
 
 This command generates two directories:
@@ -86,7 +86,7 @@ accounts:
 Replace the `struggle since...` mnemonic with the one you saved in the previous
 step.
 
-Adding an account with a mnemonic to the config file will tell Ignite CLI to add
+Adding an account with a mnemonic to the config file will tell Spellshape CLI to add
 the account to the blockchain when you start it. This is useful for development
 purposes, but you should not do this in production.
 
@@ -95,7 +95,7 @@ purposes, but you should not do this in production.
 In the `example` directory run the following command to start your blockchain:
 
 ```
-ignite chain serve
+spellshape chain serve
 ```
 
 To start your Vue application, go to the `vue` directory and run the following
@@ -136,8 +136,8 @@ properly interact with a Cosmos chain. The address prefix is used to identify
 the chain that the app is connected to, and must match the prefix used by the
 chain.
 
-By default, Ignite creates a chain with the the `cosmos` prefix. If you have
-created your chain with `ignite scaffold chain ... --adddress-prefix foo` or
+By default, Spellshape creates a chain with the the `cosmos` prefix. If you have
+created your chain with `spellshape scaffold chain ... --adddress-prefix foo` or
 manually changed the prefix in the source code of the chain, you need to set the
 prefix in the Vue app.
 

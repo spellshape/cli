@@ -1,8 +1,8 @@
-project_name: ignite
+project_name: spellshape
 builds:
-  - main: ./ignite/cmd/ignite
+  - main: ./spellshape/cmd/spellshape
     ldflags:
-      - -s -w -X github.com/ignite/cli/ignite/version.Version={{.Tag}}
+      - -s -w -X github.com/spellshape/cli/spellshape/version.Version={{.Tag}}
     goos:
       - linux
       - darwin

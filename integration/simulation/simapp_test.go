@@ -5,8 +5,8 @@ package simulation_test
 import (
 	"testing"
 
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
 )
 
 func TestGenerateAnAppAndSimulate(t *testing.T) {
@@ -17,35 +17,35 @@ func TestGenerateAnAppAndSimulate(t *testing.T) {
 
 	env.Must(env.Exec("create a list",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "list", "--yes", "foo", "foobar"),
+			step.Exec(envtest.SpellshapeApp, "s", "list", "--yes", "foo", "foobar"),
 			step.Workdir(app.SourcePath()),
 		)),
 	))
 
 	env.Must(env.Exec("create an singleton type",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "single", "--yes", "baz", "foobar"),
+			step.Exec(envtest.SpellshapeApp, "s", "single", "--yes", "baz", "foobar"),
 			step.Workdir(app.SourcePath()),
 		)),
 	))
 
 	env.Must(env.Exec("create an singleton type",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "list", "--yes", "noSimapp", "foobar", "--no-simulation"),
+			step.Exec(envtest.SpellshapeApp, "s", "list", "--yes", "noSimapp", "foobar", "--no-simulation"),
 			step.Workdir(app.SourcePath()),
 		)),
 	))
 
 	env.Must(env.Exec("create a message",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "message", "--yes", "msgFoo", "foobar"),
+			step.Exec(envtest.SpellshapeApp, "s", "message", "--yes", "msgFoo", "foobar"),
 			step.Workdir(app.SourcePath()),
 		)),
 	))
 
 	env.Must(env.Exec("scaffold a new module",
 		step.NewSteps(step.New(
-			step.Exec(envtest.IgniteApp, "s", "module", "--yes", "new_module"),
+			step.Exec(envtest.SpellshapeApp, "s", "module", "--yes", "new_module"),
 			step.Workdir(app.SourcePath()),
 		)),
 	))
@@ -53,7 +53,7 @@ func TestGenerateAnAppAndSimulate(t *testing.T) {
 	env.Must(env.Exec("create a map",
 		step.NewSteps(step.New(
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"s",
 				"map",
 				"--yes",

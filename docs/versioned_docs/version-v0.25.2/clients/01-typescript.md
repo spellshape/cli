@@ -5,7 +5,7 @@ description: Information about the generated Typescript client code.
 
 # Typescript code generation
 
-The `ignite generate ts-client` command generates a Typescript client for your blockchain project.
+The `spellshape generate ts-client` command generates a Typescript client for your blockchain project.
 
 ## Client code generation
 
@@ -28,7 +28,7 @@ By default, the filesystem is watched and the clients are regenerated automatica
 To regenerate all clients for custom and standard Cosmos SDK modules, run this command:
 
 ```bash
-ignite generate ts-client
+spellshape generate ts-client
 ```
 
 ## Preventing client code regeneration	
@@ -85,7 +85,7 @@ By default, the generated client exports a client class that includes all the Co
 
 To instantiate the client you need to provide environment information (endpoints and chain prefix) and an optional wallet (implementing the CosmJS OfflineSigner interface).
 
-For example, to connect to a local chain instance running under the Ignite CLI defaults, using a CosmJS wallet:
+For example, to connect to a local chain instance running under the Spellshape CLI defaults, using a CosmJS wallet:
 
 ```typescript
 import { Client } from '<path-to-ts-client>';
@@ -135,14 +135,14 @@ const tx_result = await client.CosmosBankV1Beta1.tx.sendMsgSend(
 If you prefer, you can construct a lighter client using only the modules you are interested in by importing the generic client class and expanding it with the modules you need:
 
 ```typescript
-import { IgniteClient } from '<path-to-ts-client>/client';
+import { SpellshapeClient } from '<path-to-ts-client>/client';
 import { Module as CosmosBankV1Beta1 } from '<path-to-ts-client>/cosmos.bank.v1beta1'
 import { Module as CosmosStakingV1Beta1 } from '<path-to-ts-client>/cosmos.staking.v1beta1'
 import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
 
 const mnemonic = "surround miss nominee dream gap cross assault thank captain prosper drop duty group candy wealth weather scale put";
 const wallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic);
-const CustomClient = IgniteClient.plugin([CosmosBankV1Beta1, CosmosStakingV1Beta1]);
+const CustomClient = SpellshapeClient.plugin([CosmosBankV1Beta1, CosmosStakingV1Beta1]);
 
 const client = new CustomClient({ 
 		apiURL: "http://localhost:1317",
@@ -249,7 +249,7 @@ const client = new Client({
 );
 ```
 
-The problem is that for a new Ignite CLI scaffolded chain, Keplr has no knowledge of it thus requiring an initial call to [`experimentalSuggestChain()`](https://docs.keplr.app/api/suggest-chain.html) method to add the chain information to the user's Keplr instance.
+The problem is that for a new Spellshape CLI scaffolded chain, Keplr has no knowledge of it thus requiring an initial call to [`experimentalSuggestChain()`](https://docs.keplr.app/api/suggest-chain.html) method to add the chain information to the user's Keplr instance.
 
 The generated client makes this easier by offering a `useKeplr()` method that autodiscovers the chain information and sets it up for you. Thus you can instantiate the client without a wallet and then call `useKeplr()` to enable transacting via Keplr like so:
 

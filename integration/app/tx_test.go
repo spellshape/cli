@@ -13,11 +13,11 @@ import (
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ignite/cli/ignite/pkg/cmdrunner"
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	"github.com/ignite/cli/ignite/pkg/randstr"
-	"github.com/ignite/cli/ignite/pkg/xurl"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
+	"github.com/spellshape/cli/spellshape/pkg/randstr"
+	"github.com/spellshape/cli/spellshape/pkg/xurl"
 )
 
 func TestSignTxWithDashedAppName(t *testing.T) {
@@ -38,7 +38,7 @@ func TestSignTxWithDashedAppName(t *testing.T) {
 		step.NewSteps(step.New(
 			step.Workdir(app.SourcePath()),
 			step.Exec(
-				envtest.IgniteApp,
+				envtest.SpellshapeApp,
 				"scaffold",
 				"list",
 				"item",

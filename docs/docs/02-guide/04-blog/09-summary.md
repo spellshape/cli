@@ -1,11 +1,11 @@
 # Summary
 
 Congratulations on completing the Blog tutorial and building your first
-functional application-specific blockchain using Ignite and Cosmos SDK! This is
+functional application-specific blockchain using Spellshape and Cosmos SDK! This is
 a significant accomplishment, and you should be proud of the hard work and
 dedication you put into it.
 
-One of the great things about using Ignite is that it allows you to quickly
+One of the great things about using Spellshape is that it allows you to quickly
 generate most of the code for your app with just a few commands. This not only
 saves you time, but also provides a solid structure for you to build upon as you
 develop your app further. In this tutorial, you were able to create code for

@@ -3,30 +3,30 @@ sidebar_position: 2
 description: Step-by-step guidance to build your first blockchain and your first Cosmos SDK module. 
 ---
 
-# Hello, Ignite CLI 
+# Hello, Spellshape CLI 
 
 This tutorial is a great place to start your journey into the Cosmos ecosystem. Instead of wondering how to build a blockchain, follow these steps to build your first blockchain and your first Cosmos SDK module.
 
 ## Get started
 
-In the previous chapter you've learned how to install [Ignite CLI](https://github.com/ignite/cli), the tool that offers everything you need to build, test, and launch your blockchain with a decentralized worldwide community.
+In the previous chapter you've learned how to install [Spellshape CLI](https://github.com/spellshape/cli), the tool that offers everything you need to build, test, and launch your blockchain with a decentralized worldwide community.
 
-This series of tutorials is based on a specific version of Ignite CLI, so be sure to install the correct version. For example, to install Ignite CLI v0.22.2 use the following command:
+This series of tutorials is based on a specific version of Spellshape CLI, so be sure to install the correct version. For example, to install Spellshape CLI v0.22.2 use the following command:
 
 ```bash
-curl https://get.ignite.com/cli@v0.22.2! | bash
+curl https://get.spellshape.com/cli@v0.22.2! | bash
 ```
 
-Ignite CLI comes with a number of scaffolding commands that are designed to make development easier by creating everything that's required to start working on a particular task.
+Spellshape CLI comes with a number of scaffolding commands that are designed to make development easier by creating everything that's required to start working on a particular task.
 
-First, use Ignite CLI to build the foundation of a fresh Cosmos SDK blockchain. With Ignite CLI, you don't have to write the blockchain code yourself. 
+First, use Spellshape CLI to build the foundation of a fresh Cosmos SDK blockchain. With Spellshape CLI, you don't have to write the blockchain code yourself. 
 
 Are you ready? Open a terminal window and navigate to a directory where you have permissions to create files. 
 
 To create your blockchain with the default directory structure, run this command:
 
 ```bash
-ignite scaffold chain hello
+spellshape scaffold chain hello
 ```
 
 This command creates a Cosmos SDK blockchain called hello in a `hello` directory. The source code inside the `hello` directory contains a fully functional ready-to-use blockchain.
@@ -43,7 +43,7 @@ You can get help on any command. Now that you have run your first command, take 
 To learn about the command you just used, run:
 
 ```bash
-ignite scaffold --help
+spellshape scaffold --help
 ```
 
 ## Blockchain directory structure
@@ -75,7 +75,7 @@ Now you can get your blockchain up and running locally on a single node.
 You already have a fully-functional blockchain. To start your chain on your development machine, run the following command in the `hello` directory
 
 ```bash
-ignite chain serve
+spellshape chain serve
 ```
 
 This command downloads dependencies and compiles the source code into a binary called `hellod`. By default, the binary name is the name of the repo + `d`. From now on, use this `hellod` binary to run all of your chain commands. For example, to initialize a single validator node and start a node.
@@ -99,9 +99,9 @@ When you want to stop your blockchain, press Ctrl+C in the terminal window where
 
 In the development environment, you can experiment and instantly see updates. You don't have to restart the blockchain after you make changes. Hot reloading automatically detects all of the changes you make in the `hello` directory files.
 
-## Say "Hello, Ignite CLI"
+## Say "Hello, Spellshape CLI"
 
-To get your blockchain to say `Hello! Ignite CLI`, you need to make these changes:
+To get your blockchain to say `Hello! Spellshape CLI`, you need to make these changes:
 
 - Modify a protocol buffer file
 - Create a keeper query function that returns data
@@ -127,7 +127,7 @@ In a different terminal window, run the commands in your `hello` directory.
 Create a `hello` query:
 
 ```bash
-ignite scaffold query hello --response text
+spellshape scaffold query hello --response text
 ```
 
 `query` accepts a name of the query (in this case, `hello`), an optional list of request parameters (in this case, empty), and an optional comma-separated list of response fields with a `--response` flag (in this case, `text`).
@@ -141,13 +141,13 @@ create x/hello/client/cli/query_hello.go
 create x/hello/keeper/grpc_query_hello.go
 ```
 
-Let's examine some of these changes. For clarity, the following code blocks do not show the placeholder comments that Ignite CLI uses to scaffold code. Don't delete these placeholders since they are required to continue using Ignite CLI's scaffolding functionality.
+Let's examine some of these changes. For clarity, the following code blocks do not show the placeholder comments that Spellshape CLI uses to scaffold code. Don't delete these placeholders since they are required to continue using Spellshape CLI's scaffolding functionality.
 
-Note: it's recommended to commit changes to a version control system (for example, Git) after scaffolding. This allows others to easily distinguish between code generated by Ignite and the code writen by hand.
+Note: it's recommended to commit changes to a version control system (for example, Git) after scaffolding. This allows others to easily distinguish between code generated by Spellshape and the code writen by hand.
 
 ```
 git add .
-git commit -am "Scaffolded a hello query with Ignite CLI"
+git commit -am "Scaffolded a hello query with Spellshape CLI"
 ```
 
 ### Updates to the query service
@@ -213,7 +213,7 @@ Right now the response is empty.
 In the `query.proto` file, the response accepts `text`. 
 
 - Use a text editor to modify the `x/hello/keeper/grpc_query_hello.go` file that contains the keeper function. 
-- On the last line of the keeper function, change the line to return "Hello, Ignite CLI!":
+- On the last line of the keeper function, change the line to return "Hello, Spellshape CLI!":
 
 ```go
 func (k Keeper) Hello(c context.Context, req *types.QueryHelloRequest) (*types.QueryHelloResponse, error) {
@@ -222,7 +222,7 @@ func (k Keeper) Hello(c context.Context, req *types.QueryHelloRequest) (*types.Q
 	}
 	ctx := sdk.UnwrapSDKContext(goCtx)
 	_ = ctx
-	return &types.QueryHelloResponse{Text: "Hello, Ignite CLI!"}, nil // <--
+	return &types.QueryHelloResponse{Text: "Hello, Spellshape CLI!"}, nil // <--
 }
 ```
 
@@ -263,7 +263,7 @@ Make the required changes to the `x/hello/module.go` file.
 
     ```json
     {
-      "text": "Hello, Ignite CLI!",
+      "text": "Hello, Spellshape CLI!",
     }
     ```
 

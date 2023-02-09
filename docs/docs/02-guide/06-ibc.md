@@ -15,7 +15,7 @@ between blockchains with the Cosmos SDK.
 **You will learn how to**
 
 - Use IBC to create and send packets between blockchains.
-- Navigate between blockchains using the Cosmos SDK and the Ignite CLI Relayer.
+- Navigate between blockchains using the Cosmos SDK and the Spellshape CLI Relayer.
 - Create a basic blog post and save the post on another blockchain.
 
 ## What is IBC?
@@ -33,7 +33,7 @@ blockchain.
 
 The IBC relayer lets you connect between sets of IBC-enabled chains. This
 tutorial teaches you how to create two blockchains and then start and use the
-relayer with Ignite CLI to connect two blockchains.
+relayer with Spellshape CLI to connect two blockchains.
 
 This tutorial covers essentials like modules, IBC packets, relayer, and the
 lifecycle of packets routed through IBC.
@@ -68,14 +68,14 @@ post is saved on both blockchains.
 
 ## Build your blockchain app
 
-Use Ignite CLI to scaffold the blockchain app and the blog module.
+Use Spellshape CLI to scaffold the blockchain app and the blog module.
 
 ### Build a new blockchain
 
 To scaffold a new blockchain named `planet`:
 
 ```bash
-ignite scaffold chain planet --no-module
+spellshape scaffold chain planet --no-module
 cd planet
 ```
 
@@ -84,14 +84,14 @@ directory contains a working blockchain app.
 
 ### Scaffold the blog module inside your blockchain
 
-Next, use Ignite CLI to scaffold a blog module with IBC capabilities. The blog
+Next, use Spellshape CLI to scaffold a blog module with IBC capabilities. The blog
 module contains the logic for creating blog posts and routing them through IBC
 to the second blockchain.
 
 To scaffold a module named `blog`:
 
 ```bash
-ignite scaffold module blog --ibc
+spellshape scaffold module blog --ibc
 ```
 
 A new directory with the code for an IBC module is created in `planet/x/blog`.
@@ -102,40 +102,40 @@ scaffolded IBC module.
 
 Next, create the CRUD actions for the blog module types.
 
-Use the `ignite scaffold list` command to scaffold the boilerplate code for the
+Use the `spellshape scaffold list` command to scaffold the boilerplate code for the
 create, read, update, and delete (CRUD) actions.
 
-These `ignite scaffold list` commands create CRUD code for the following
+These `spellshape scaffold list` commands create CRUD code for the following
 transactions:
 
 - Creating blog posts
 
   ```bash
-  ignite scaffold list post title content creator --no-message --module blog
+  spellshape scaffold list post title content creator --no-message --module blog
   ```
 
 - Processing acknowledgments for sent posts
 
   ```bash
-  ignite scaffold list sentPost postID title chain creator --no-message --module blog
+  spellshape scaffold list sentPost postID title chain creator --no-message --module blog
   ```
 
 - Managing post timeouts
 
   ```bash
-  ignite scaffold list timedoutPost title chain creator --no-message --module blog
+  spellshape scaffold list timedoutPost title chain creator --no-message --module blog
   ```
 
 The scaffolded code includes proto files for defining data structures, messages,
 messages handlers, keepers for modifying the state, and CLI commands.
 
-### Ignite CLI Scaffold List Command Overview
+### Spellshape CLI Scaffold List Command Overview
 
 ```
-ignite scaffold list [typeName] [field1] [field2] ... [flags]
+spellshape scaffold list [typeName] [field1] [field2] ... [flags]
 ```
 
-The first argument of the `ignite scaffold list [typeName]` command specifies
+The first argument of the `spellshape scaffold list [typeName]` command specifies
 the name of the type being created. For the blog app, you created `post`,
 `sentPost`, and `timedoutPost` types.
 
@@ -143,7 +143,7 @@ The next arguments define the fields that are associated with the type. For the
 blog app, you created `title`, `content`, `postID`, and `chain` fields.
 
 The `--module` flag defines which module the new transaction type is added to.
-This optional flag lets you manage multiple modules within your Ignite CLI app.
+This optional flag lets you manage multiple modules within your Spellshape CLI app.
 When the flag is not present, the type is scaffolded in the module that matches
 the name of the repo.
 
@@ -158,7 +158,7 @@ messages.
 You must generate code for a packet that contains the title and the content of
 the blog post.
 
-The `ignite packet` command creates the logic for an IBC packet that can be sent
+The `spellshape packet` command creates the logic for an IBC packet that can be sent
 to another blockchain.
 
 - The `title` and `content` are stored on the target chain.
@@ -168,7 +168,7 @@ to another blockchain.
 To scaffold a sendable and interpretable IBC packet:
 
 ```bash
-ignite scaffold packet ibcPost title content --ack postID --module blog
+spellshape scaffold packet ibcPost title content --ack postID --module blog
 ```
 
 Notice the fields in the `ibcPost` packet match the fields in the `post` type
@@ -179,7 +179,7 @@ that you created earlier.
 
 - The `--module` flag specifies to create the packet in a particular IBC module.
 
-The `ignite packet` command also scaffolds the CLI command that is capable of
+The `spellshape packet` command also scaffolds the CLI command that is capable of
 sending an IBC packet:
 
 ```bash
@@ -284,7 +284,7 @@ created the message, use an identifier in the following format:
 
 `<portID>-<channelID>-<creatorAddress>`
 
-Finally, the Ignite CLI-generated AppendPost function returns the ID of the new
+Finally, the Spellshape CLI-generated AppendPost function returns the ID of the new
 appended post. You can return this value to the source chain through
 acknowledgment.
 
@@ -506,25 +506,25 @@ Open a terminal window and run the following command to start the `earth`
 blockchain:
 
 ```bash
-ignite chain serve -c earth.yml
+spellshape chain serve -c earth.yml
 ```
 
 Open a different terminal window and run the following command to start the
 `mars` blockchain:
 
 ```bash
-ignite chain serve -c mars.yml
+spellshape chain serve -c mars.yml
 ```
 
-### Remove Existing Relayer and Ignite CLI Configurations
+### Remove Existing Relayer and Spellshape CLI Configurations
 
 If you previously used the relayer, follow these steps to remove exiting relayer
-and Ignite CLI configurations:
+and Spellshape CLI configurations:
 
 - Stop your blockchains and delete previous configuration files:
 
   ```bash
-  rm -rf ~/.ignite/relayer
+  rm -rf ~/.spellshape/relayer
   ```
 
 If existing relayer configurations do not exist, the command returns `no matches
@@ -532,11 +532,11 @@ found` and no action is taken.
 
 ### Configure and start the relayer
 
-First, configure the relayer. Use the Ignite CLI `configure` command with the
+First, configure the relayer. Use the Spellshape CLI `configure` command with the
 `--advanced` option:
 
 ```bash
-ignite relayer configure -a \
+spellshape relayer configure -a \
   --source-rpc "http://0.0.0.0:26657" \
   --source-faucet "http://0.0.0.0:4500" \
   --source-port "blog" \
@@ -579,7 +579,7 @@ Setting up chains
 In a new terminal window, start the relayer process:
 
 ```bash
-ignite relayer connect
+spellshape relayer connect
 ```
 
 Results:
@@ -705,6 +705,6 @@ Here's what you accomplished in this tutorial:
 
 - Built two Hello blockchain apps as IBC modules
 - Modified the generated code to add CRUD action logic
-- Configured and used the Ignite CLI relayer to connect two blockchains with
+- Configured and used the Spellshape CLI relayer to connect two blockchains with
   each other
 - Transferred IBC packets from one blockchain to another

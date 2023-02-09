@@ -24,8 +24,8 @@ accounts:
     coins: ['10000token', '100000000stake']
 ```
 
-Ignite uses information from `accounts` when initializing the chain with `ignite
-chain init` and `ignite chain start`. In the example above Ignite will add two
+Spellshape uses information from `accounts` when initializing the chain with `spellshape
+chain init` and `spellshape chain start`. In the example above Spellshape will add two
 accounts to the `genesis.json` file of the chain.
 
 `name` is a local name of a key pair associated with an account. Once the chain
@@ -40,7 +40,7 @@ When initialized with the config file above, a chain will only have two accounts
 at genesis (Alice and Bob) and two native tokens (with denominations `token` and
 `stake`).
 
-By default, every time a chain is re-initialized, Ignite will create a new key
+By default, every time a chain is re-initialized, Spellshape will create a new key
 pair for each account. So even though the account name can remain the same
 (`bob`), every chain reinitialize it will have a different mnemonic and address.
 
@@ -51,7 +51,7 @@ pair will not be generated, because it's impossible to derive a key from an
 address. An account with a given address will be added to the genesis file (with
 an associated token balance), but because there is no key pair, you will not be
 able to broadcast transactions from that address. This is useful when you have
-generated a key pair outside of Ignite (for example, using your chain's CLI or
+generated a key pair outside of Spellshape (for example, using your chain's CLI or
 in an extension wallet) and want to have a token balance associated with the
 address of this key pair.
 
@@ -76,7 +76,7 @@ accounts:
 You cannot have both `address` and `mnemonic` defined for a single account.
 
 Some accounts are used as validator accounts (see `validators` section).
-Validator accounts cannot have an `address` field, because Ignite needs to be
+Validator accounts cannot have an `address` field, because Spellshape needs to be
 able to derive a private key (either from a random mnemonic or from a specific
 one provided in the `mnemonic` field). Validator accounts should have enough
 tokens of the staking denomination for self-delegation.
@@ -98,7 +98,7 @@ accounts:
 
 ## Validators
 
-Commands like `ignite chain init` and `ignite chain serve` initialize and launch
+Commands like `spellshape chain init` and `spellshape chain serve` initialize and launch
 a validator node for development purposes.
 
 ```yml
@@ -114,11 +114,11 @@ should not be lower than `1000000` nor higher than the account's
 balance in the `account` list.
 
 Validators store their node configuration files in the data directory. By
-default, Ignite uses the name of the project as the name of the data directory,
+default, Spellshape uses the name of the project as the name of the data directory,
 for example, `$HOME/.example/`. To use a different path for the data directory
 you can customize the `home` property.
 
-Configuration in the data directory is reset frequently by Ignite. To persist
+Configuration in the data directory is reset frequently by Spellshape. To persist
 some changes to configuration files you can use `app`, `config` and `client`
 properties that correspond to `$HOME/.example/config/app.toml`,
 `$HOME/.example/config/config.toml` and `$HOME/.example/config/client.toml`.
@@ -137,18 +137,18 @@ validators:
 ```
 
 To see which properties are available for `config.toml`, `app.toml` and
-`client.toml`, initialize a chain with `ignite chain init` and open the file you
+`client.toml`, initialize a chain with `spellshape chain init` and open the file you
 want to know more about.
 
-Currently, Ignite starts only one validator node, so the first item in the
+Currently, Spellshape starts only one validator node, so the first item in the
 `validators` list is used (the rest is ignored). Support for multiple validators
 is in progress.
 
 ## Build
 
-The `build` property lets you customize how Ignite builds your chain's binary.
+The `build` property lets you customize how Spellshape builds your chain's binary.
 
-By default, Ignite builds the `main` package from `cmd/PROJECT_NAME/main.go`. If
+By default, Spellshape builds the `main` package from `cmd/PROJECT_NAME/main.go`. If
 you more than one `main` package in your project, or you have renamed the
 directory, use the `main` property to provide the path to the `main` Go package:
 
@@ -157,7 +157,7 @@ build:
   main: cmd/hello/cmd
 ```
 
-Ignite compiles your project into a binary and uses the project's name with a
+Spellshape compiles your project into a binary and uses the project's name with a
 `d` suffix as name for the binary. To customize the binary name use the `binary`
 property:
 
@@ -175,7 +175,7 @@ build:
 
 By default, custom protocol buffer (proto) files are located in the `proto`
 directory. If your project keeps proto files in a different directory, you
-should tell Ignite about this:
+should tell Spellshape about this:
 
 ```yml
 build:
@@ -183,10 +183,10 @@ build:
     path: "myproto"
 ```
 
-Ignite comes with required third-party proto out of the box. Ignite also looks
+Spellshape comes with required third-party proto out of the box. Spellshape also looks
 into `third_party/proto` and `proto_vendor` directories for extra proto files.
 If your project keeps third-party proto files in a different directory, you
-should tell Ignite about this:
+should tell Spellshape about this:
 
 ```yml
 build:
@@ -246,8 +246,8 @@ the genesis file in the data directory.
 
 ## Client code generation
 
-Ignite can generate client-side code for interacting with your chain with the
-`ignite generate` set of commands. Use the following properties to customize the
+Spellshape can generate client-side code for interacting with your chain with the
+`spellshape generate` set of commands. Use the following properties to customize the
 paths where the client-side code is generated.
 
 ```yml

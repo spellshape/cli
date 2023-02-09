@@ -1,18 +1,18 @@
 ---
-description: Run Ignite CLI using a Docker container.
+description: Run Spellshape CLI using a Docker container.
 ---
 
 # Running inside a Docker container
 
-You can run Ignite CLI inside a Docker container without installing the Ignite
+You can run Spellshape CLI inside a Docker container without installing the Spellshape
 CLI binary directly on your machine.
 
-Running Ignite CLI in Docker can be useful for various reasons; isolating your
-test environment, running Ignite CLI on an unsupported operating system, or
-experimenting with a different version of Ignite CLI without installing it.
+Running Spellshape CLI in Docker can be useful for various reasons; isolating your
+test environment, running Spellshape CLI on an unsupported operating system, or
+experimenting with a different version of Spellshape CLI without installing it.
 
 Docker containers are like virtual machines because they provide an isolated
-environment to programs that runs inside them. In this case, you can run Ignite
+environment to programs that runs inside them. In this case, you can run Spellshape
 CLI in an isolated environment.
 
 Experimentation and file system impact is limited to the Docker instance. The
@@ -23,24 +23,24 @@ host machine is not impacted by changes to the container.
 Docker must be installed. See [Get Started with
 Docker](https://www.docker.com/get-started).
 
-## Ignite CLI Commands in Docker
+## Spellshape CLI Commands in Docker
 
-After you scaffold and start a chain in your Docker container, all Ignite CLI
+After you scaffold and start a chain in your Docker container, all Spellshape CLI
 commands are available. Just type the commands after `docker run -ti
-ignite/cli`. For example:
+spellshape/cli`. For example:
 
 ```bash
-docker run -ti ignitehq/cli -h
-docker run -ti ignitehq/cli scaffold chain planet
-docker run -ti ignitehq/cli chain serve
+docker run -ti spellshapehq/cli -h
+docker run -ti spellshapehq/cli scaffold chain planet
+docker run -ti spellshapehq/cli chain serve
 ```
 
 ## Scaffolding a chain
 
 When Docker is installed, you can build a blockchain with a single command.
 
-Ignite CLI, and the chains you serve with Ignite CLI, persist some files. When
-using the CLI binary directly, those files are located in `$HOME/.ignite` and
+Spellshape CLI, and the chains you serve with Spellshape CLI, persist some files. When
+using the CLI binary directly, those files are located in `$HOME/.spellshape` and
 `$HOME/.cache`, but in the context of Docker it's better to use a directory
 different from `$HOME`, so we use `$HOME/sdh`. This folder should be created
 manually prior to the docker commands below, or else Docker creates it with the
@@ -54,14 +54,14 @@ To scaffold a blockchain `planet` in the `/apps` directory in the container, run
 this command in a terminal window:
 
 ```bash
-docker run -ti -v $HOME/sdh:/home/tendermint -v $PWD:/apps ignitehq/cli:0.25.2 scaffold chain planet
+docker run -ti -v $HOME/sdh:/home/tendermint -v $PWD:/apps spellshapehq/cli:0.25.2 scaffold chain planet
 ```
 
 Be patient, this command takes a minute or two to run because it does everything
 for you:
 
-- Creates a container that runs from the `ignitehq/cli:0.25.2` image.
-- Executes the Ignite CLI binary inside the image.
+- Creates a container that runs from the `spellshapehq/cli:0.25.2` image.
+- Executes the Spellshape CLI binary inside the image.
 - `-v $HOME/sdh:/home/tendermint` maps the `$HOME/sdh` directory in your local
   computer (the host machine) to the home directory `/home/tendermint` inside
   the container.
@@ -84,7 +84,7 @@ To start the blockchain node in the Docker container you just created, run this
 command:
 
 ```bash
-docker run -ti -v $HOME/sdh:/home/tendermint -v $PWD:/apps -p 1317:1317 -p 26657:26657 ignitehq/cli:0.25.2 chain serve -p planet
+docker run -ti -v $HOME/sdh:/home/tendermint -v $PWD:/apps -p 1317:1317 -p 26657:26657 spellshapehq/cli:0.25.2 chain serve -p planet
 ```
 
 This command does the following:
@@ -108,35 +108,35 @@ This command does the following:
 
 ## Versioning
 
-You can specify which version of Ignite CLI to install and run in your Docker
+You can specify which version of Spellshape CLI to install and run in your Docker
 container.
 
 ### Latest version
 
-- By default, `ignite/cli` resolves to `ignite/cli:latest`.
-- The `latest` image tag is always the latest stable [Ignite CLI
-  release](https://github.com/ignite/cli/releases).
+- By default, `spellshape/cli` resolves to `spellshape/cli:latest`.
+- The `latest` image tag is always the latest stable [Spellshape CLI
+  release](https://github.com/spellshape/cli/releases).
 
 For example, if latest release is
-[v0.25.2](https://github.com/ignite/cli/releases/tag/v0.25.2), the `latest` tag
+[v0.25.2](https://github.com/spellshape/cli/releases/tag/v0.25.2), the `latest` tag
 points to the `0.25.2` tag.
 
 ### Specific version
 
-You can specify to use a specific version of Ignite CLI. All available tags are
-in the [ignite/cli
-image](https://hub.docker.com/r/ignite/cli/tags?page=1&ordering=last_updated) on
+You can specify to use a specific version of Spellshape CLI. All available tags are
+in the [spellshape/cli
+image](https://hub.docker.com/r/spellshape/cli/tags?page=1&ordering=last_updated) on
 Docker Hub.
 
 For example:
 
-- Use `ignitehq/cli:0.25.2` (without the `v` prefix) to use version `0.25.2`.
-- Use `ignitehq/cli` to use the latest version.
-- Use `ignitehq/cli:main` to use the `main` branch, so you can experiment with
+- Use `spellshapehq/cli:0.25.2` (without the `v` prefix) to use version `0.25.2`.
+- Use `spellshapehq/cli` to use the latest version.
+- Use `spellshapehq/cli:main` to use the `main` branch, so you can experiment with
   the upcoming version.
 
 To get the latest image, run `docker pull`.
 
 ```bash
-docker pull ignitehq/cli:main
+docker pull spellshapehq/cli:main
 ```

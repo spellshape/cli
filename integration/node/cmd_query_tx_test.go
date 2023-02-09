@@ -8,11 +8,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	"github.com/ignite/cli/ignite/pkg/cosmosclient"
-	"github.com/ignite/cli/ignite/pkg/randstr"
-	"github.com/ignite/cli/ignite/pkg/xurl"
-	envtest "github.com/ignite/cli/integration"
+	envtest "github.com/spellshape/cli/integration"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
+	"github.com/spellshape/cli/spellshape/pkg/cosmosclient"
+	"github.com/spellshape/cli/spellshape/pkg/randstr"
+	"github.com/spellshape/cli/spellshape/pkg/xurl"
 )
 
 func TestNodeQueryTx(t *testing.T) {
@@ -54,7 +54,7 @@ func TestNodeQueryTx(t *testing.T) {
 		env.Exec("send 100token from alice to bob",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"tx",
 					"bank",
@@ -79,7 +79,7 @@ func TestNodeQueryTx(t *testing.T) {
 		env.Must(env.Exec("query tx",
 			step.NewSteps(step.New(
 				step.Exec(
-					envtest.IgniteApp,
+					envtest.SpellshapeApp,
 					"node",
 					"query",
 					"tx",

@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Technical setup
 
-To ensure you have a successful experience working with our Developer Tutorials content, Ignite recommends this technical setup.
+To ensure you have a successful experience working with our Developer Tutorials content, Spellshape recommends this technical setup.
 
 ## Setting up Visual Studio Code
 
@@ -25,9 +25,9 @@ Click the GitHub icon in the sidebar for GitHub integration and follow the promp
 
 ## Clone the repos that you work in
 
-- Fork or clone the <https://github.com/ignite/cli/> repository.
+- Fork or clone the <https://github.com/spellshape/cli/> repository.
 
-Internal Ignite users have different permissions. If you're not sure, fork the repo.
+Internal Spellshape users have different permissions. If you're not sure, fork the repo.
 
 ## Terminal tips
 
@@ -61,4 +61,4 @@ The Z shell, also known as zsh, is a UNIX shell that is built on top of the macO
 
 ## Install Go
 
-Follow the steps in [Install Ignite CLI](../guide/01-install.md) docs to install Ignite CLI and Go.
+Follow the steps in [Install Spellshape CLI](../guide/01-install.md) docs to install Spellshape CLI and Go.

@@ -3,7 +3,7 @@ name: Docs Deploy Preview
 on:
   pull_request:
     paths:
-      - "docs/**"
+      - 'docs/**'
 
 jobs:
   build_and_deploy:
@@ -38,9 +38,9 @@ jobs:
       - name: Deploy
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_IGNTSERVICES }}"
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_IGNTSERVICES }}'
           expires: 7d
-          target: docs.ignite.com
+          target: docs.spellshape.com
           projectId: igntservices
           firebaseToolsVersion: v11.12.0

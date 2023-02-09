@@ -6,9 +6,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Ignite Cli Docs",
-  tagline: "Ignite Cli Docs",
-  url: "https://docs.ignite.com",
+  title: "Spellshape Cli Docs",
+  tagline: "Spellshape Cli Docs",
+  url: "https://docs.spellshape.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -17,8 +17,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "ignite",
-  projectName: "ignite docs",
+  organizationName: "spellshape",
+  projectName: "spellshape docs",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -65,7 +65,7 @@ const config = {
       image: "img/og-image.jpg",
       announcementBar: {
         content:
-          '<a target="_blank" rel="noopener noreferrer" href="https://ignite.com">← Back to Ignite</a>',
+          '<a target="_blank" rel="noopener noreferrer" href="https://spellshape.com">← Back to Spellshape</a>',
         isCloseable: false,
       },
       docs: {
@@ -76,13 +76,13 @@ const config = {
       navbar: {
         hideOnScroll: true,
         logo: {
-          alt: "Ignite Logo",
+          alt: "Spellshape Logo",
           src: "img/header-logo-docs.svg",
           srcDark: "img/header-logo-docs-dark.svg",
         },
         items: [
           {
-            href: "https://github.com/ignite/cli",
+            href: "https://github.com/spellshape/cli",
             html: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="github-icon">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.300049C5.4 0.300049 0 5.70005 0 12.3001C0 17.6001 3.4 22.1001 8.2 23.7001C8.8 23.8001 9 23.4001 9 23.1001C9 22.8001 9 22.1001 9 21.1001C5.7 21.8001 5 19.5001 5 19.5001C4.5 18.1001 3.7 17.7001 3.7 17.7001C2.5 17.0001 3.7 17.0001 3.7 17.0001C4.9 17.1001 5.5 18.2001 5.5 18.2001C6.6 20.0001 8.3 19.5001 9 19.2001C9.1 18.4001 9.4 17.9001 9.8 17.6001C7.1 17.3001 4.3 16.3001 4.3 11.7001C4.3 10.4001 4.8 9.30005 5.5 8.50005C5.5 8.10005 5 6.90005 5.7 5.30005C5.7 5.30005 6.7 5.00005 9 6.50005C10 6.20005 11 6.10005 12 6.10005C13 6.10005 14 6.20005 15 6.50005C17.3 4.90005 18.3 5.30005 18.3 5.30005C19 7.00005 18.5 8.20005 18.4 8.50005C19.2 9.30005 19.6 10.4001 19.6 11.7001C19.6 16.3001 16.8 17.3001 14.1 17.6001C14.5 18.0001 14.9 18.7001 14.9 19.8001C14.9 21.4001 14.9 22.7001 14.9 23.1001C14.9 23.4001 15.1 23.8001 15.7 23.7001C20.5 22.1001 23.9 17.6001 23.9 12.3001C24 5.70005 18.6 0.300049 12 0.300049Z" fill="currentColor"/>
             </svg>
@@ -90,9 +90,9 @@ const config = {
             position: "right",
           },
           {
-            href: "https://ignite.com",
+            href: "https://spellshape.com",
             className: "ignt-backlink",
-            label: `Back to Ignite`,
+            label: `Back to Spellshape`,
             position: "right",
           },
           {
@@ -108,7 +108,7 @@ const config = {
             items: [
               {
                 html: `
-                <a href="https://ignite.com">
+                <a href="https://spellshape.com">
                 <svg width="83" height="25" viewBox="0 0 83 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <style>
                  path { fill: var(--ifm-font-color-base); }
@@ -134,11 +134,11 @@ const config = {
             items: [
               {
                 label: "CLI",
-                href: "https://ignite.com/cli",
+                href: "https://spellshape.com/cli",
               },
               {
                 label: "Accelerator",
-                href: "https://ignite.com/accelerator",
+                href: "https://spellshape.com/accelerator",
               },
             ],
           },
@@ -146,20 +146,20 @@ const config = {
             title: "Company",
             items: [
               {
-                label: "About Ignite",
-                href: "https://ignite.com/about",
+                label: "About Spellshape",
+                href: "https://spellshape.com/about",
               },
               {
                 label: "Careers",
-                href: "https://ignite.com/careers",
+                href: "https://spellshape.com/careers",
               },
               {
                 label: "Blog",
-                href: "https://ignite.com/blog",
+                href: "https://spellshape.com/blog",
               },
               {
                 label: "Press",
-                href: "https://ignite.com/press",
+                href: "https://spellshape.com/press",
               },
             ],
           },
@@ -168,7 +168,7 @@ const config = {
             items: [
               {
                 label: "Business Inquiries",
-                href: "mailto:business@ignite.com",
+                href: "mailto:business@spellshape.com",
               },
             ],
           },
@@ -177,11 +177,11 @@ const config = {
             items: [
               {
                 label: "Discord",
-                href: "https://discord.com/invite/ignite",
+                href: "https://discord.com/invite/spellshape",
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/ignite_com",
+                href: "https://twitter.com/spellshape_com",
               },
               {
                 label: "Linkedin",
@@ -189,12 +189,12 @@ const config = {
               },
               {
                 label: "YouTube",
-                href: "https://www.youtube.com/ignitehq",
+                href: "https://www.youtube.com/spellshapehq",
               },
             ],
           },
         ],
-        copyright: `<div>© Ignite ${new Date().getFullYear()}</div><div><a href="https://ignite.com/privacy">Privacy Policy</a><a href="https://ignite.com/terms-of-use">Terms of Use</a></div>`,
+        copyright: `<div>© Spellshape ${new Date().getFullYear()}</div><div><a href="https://spellshape.com/privacy">Privacy Policy</a><a href="https://spellshape.com/terms-of-use">Terms of Use</a></div>`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -217,7 +217,7 @@ const config = {
       algolia: {
         appId: "VVETP7QCVE",
         apiKey: "a9c466699c13052d35581030138f9fdc",
-        indexName: "ignite-cli",
+        indexName: "spellshape-cli",
         contextualSearch: false,
       },
       zoom: {

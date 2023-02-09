@@ -24,8 +24,8 @@ const sidebars = {
       items: [
         {
           type: "link",
-          label: "Ignite CLI on Github",
-          href: "https://github.com/ignite/cli",
+          label: "Spellshape CLI on Github",
+          href: "https://github.com/spellshape/cli",
         },
         {
           type: "link",

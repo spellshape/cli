@@ -19,7 +19,7 @@ the [interchange repo](https://github.com/tendermint/interchange).
 
 **You will learn how to:**
 
-- Create a blockchain with Ignite CLI
+- Create a blockchain with Spellshape CLI
 - Create a Cosmos SDK IBC module
 - Create an order book that hosts buy and sell orders with a module
 - Send IBC packets from one blockchain to another

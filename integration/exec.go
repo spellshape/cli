@@ -11,8 +11,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/ignite/cli/ignite/pkg/cmdrunner"
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner"
+	"github.com/spellshape/cli/spellshape/pkg/cmdrunner/step"
 )
 
 type execOptions struct {

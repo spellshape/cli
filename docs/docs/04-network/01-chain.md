@@ -1,41 +1,41 @@
 ---
 sidebar_position: 1
-description: Ignite Chain.
+description: Spellshape Chain.
 ---
 
-# Ignite Chain
+# Spellshape Chain
 
 ## Introduction
 
-_Ignite is a blockchain to help launch Cosmos SDK-based blockchains._
+_Spellshape is a blockchain to help launch Cosmos SDK-based blockchains._
 
-Using Cosmos SDK and Ignite CLI, developers can quickly create a crypto application that is decentralized, economical for usage, and scalable. The Cosmos SDK framework allows developers to create sovereign application-specific blockchains that become part of the wider [Cosmos ecosystem](https://v1.cosmos.network/ecosystem/apps). Blockchains created with Cosmos SDK use a Proof-of-Stake (PoS) consensus protocol that requires validators to secure the chain.
+Using Cosmos SDK and Spellshape CLI, developers can quickly create a crypto application that is decentralized, economical for usage, and scalable. The Cosmos SDK framework allows developers to create sovereign application-specific blockchains that become part of the wider [Cosmos ecosystem](https://v1.cosmos.network/ecosystem/apps). Blockchains created with Cosmos SDK use a Proof-of-Stake (PoS) consensus protocol that requires validators to secure the chain.
 
-Even though tools like Ignite CLI simplify the development of a Cosmos SDK blockchain, launching a new chain is a highly complex process. One of the major challenges of developing and launching your own sovereign blockchain is ensuring the security of the underlying consensus. Since Cosmos SDK chains are based on the PoS consensus, each blockchain requires initial coin allocations and validators before they can be launched, which presents developers with significant challenges, such as determining their chain's tokenomics or coordinating a robust validator set.
+Even though tools like Spellshape CLI simplify the development of a Cosmos SDK blockchain, launching a new chain is a highly complex process. One of the major challenges of developing and launching your own sovereign blockchain is ensuring the security of the underlying consensus. Since Cosmos SDK chains are based on the PoS consensus, each blockchain requires initial coin allocations and validators before they can be launched, which presents developers with significant challenges, such as determining their chain's tokenomics or coordinating a robust validator set.
 
 The initial coin allocations and validators are described in a JSON-formatted genesis file that is shared among all initial nodes in the network. This genesis file defines the initial state of the application. Based on PoS, secure chains require the initial allocation of coins to be well distributed so that no single validator holds more than 1/3 of all tokens and receives a disproportionate amount of voting power.
 
 Along with ensuring the security of the underlying consensus, another highly difficult task in launching a new blockchain is attracting a diverse set of validators for the genesis file. Many promising projects fail to capture the attention of a sufficient number of trustworthy validators to secure their chains due to a lack of resources or experience.
 
-The Ignite Chain has, therefore, been conceived to facilitate the launch of Cosmos SDK blockchains by helping developers to navigate the complexities of launching a blockchain and coordinate the genesis of a new chain. Using the decentralized nature of blockchain, Ignite's coordination features help blockchain builders connect with validators and investors, speeding up the time to market of their projects and chances of success.
+The Spellshape Chain has, therefore, been conceived to facilitate the launch of Cosmos SDK blockchains by helping developers to navigate the complexities of launching a blockchain and coordinate the genesis of a new chain. Using the decentralized nature of blockchain, Spellshape's coordination features help blockchain builders connect with validators and investors, speeding up the time to market of their projects and chances of success.
 
-Commands to interact with Ignite Chain are integrated into Ignite CLI and allow launching chains from it. Integration with Ignite Chain allows the CLI to support the developer in the entire lifecycle of realizing a Cosmos project, from the development and experimentation of the blockchain to the launch of its mainnet.
+Commands to interact with Spellshape Chain are integrated into Spellshape CLI and allow launching chains from it. Integration with Spellshape Chain allows the CLI to support the developer in the entire lifecycle of realizing a Cosmos project, from the development and experimentation of the blockchain to the launch of its mainnet.
 
-## What is Ignite Chain
+## What is Spellshape Chain
 
-Ignite Chain is a secure platform that simplifies the launch of Cosmos SDK-based chains, lending vital resources and support at the coordination, preparation, and launch stages. Ignite provides the tools that blockchain projects need to overcome the complexities of launching their chain, from validator coordination and token issuance to fundraising and community building.
+Spellshape Chain is a secure platform that simplifies the launch of Cosmos SDK-based chains, lending vital resources and support at the coordination, preparation, and launch stages. Spellshape provides the tools that blockchain projects need to overcome the complexities of launching their chain, from validator coordination and token issuance to fundraising and community building.
 
-Ignite facilitates the launch of new chains with an overall launch process during three phases:
+Spellshape facilitates the launch of new chains with an overall launch process during three phases:
 
 - Coordination
 - Preparation
 - Launch
 
-To reduce friction at each phase, Ignite provides an immutable and universal database for validator coordination.
+To reduce friction at each phase, Spellshape provides an immutable and universal database for validator coordination.
 
-In the future, Ignite will also offer:
+In the future, Spellshape will also offer:
 
-- Token issuance: Ignite allows the issuance of tokens (called vouchers) that represent a share
+- Token issuance: Spellshape allows the issuance of tokens (called vouchers) that represent a share
   allocation of a future mainnet network
 - A fundraising platform for selling vouchers
 - A permissionless framework to reward validator activities on a launched testnet network
@@ -50,17 +50,17 @@ The JSON-formatted genesis file contains information on the initial state of the
 
 ![launch](./assets/launch.png)
 
-### Ignite as a coordination source of truth
+### Spellshape as a coordination source of truth
 
-Ignite Chain acts as a source of truth for new chains to coordinate a validator set and for validators to generate the genesis for a chain launch. The blockchain doesn’t directly store the final genesis file in its own ledger but rather stores information that allows generating the genesis file in a deterministic manner.
+Spellshape Chain acts as a source of truth for new chains to coordinate a validator set and for validators to generate the genesis for a chain launch. The blockchain doesn’t directly store the final genesis file in its own ledger but rather stores information that allows generating the genesis file in a deterministic manner.
 
-The information stored on Ignite that supports deterministic generation of the genesis file for a specific chain launch is referred to as the _launch information_. When creating a new chain on Ignite, the coordinator provides the initial launch information. Then, through on-chain coordination, this launch information is updated by interacting with the blockchain by sending messages. When the chain is ready to be launched, the genesis file is generated by calling a genesis generation algorithm that uses the launch information.
+The information stored on Spellshape that supports deterministic generation of the genesis file for a specific chain launch is referred to as the _launch information_. When creating a new chain on Spellshape, the coordinator provides the initial launch information. Then, through on-chain coordination, this launch information is updated by interacting with the blockchain by sending messages. When the chain is ready to be launched, the genesis file is generated by calling a genesis generation algorithm that uses the launch information.
 
 **GenesisGenerate(LaunchInformation) => genesis.json**
 
-The genesis generation algorithm is officially and formally specified. The official implementation of the genesis generation algorithm is developed in Go using Ignite CLI. However, any project is free to develop its own implementation of the algorithm as long as it complies with the specification of the algorithm.
+The genesis generation algorithm is officially and formally specified. The official implementation of the genesis generation algorithm is developed in Go using Spellshape CLI. However, any project is free to develop its own implementation of the algorithm as long as it complies with the specification of the algorithm.
 
-The genesis generation algorithm is not part of the on-chain protocol. In order to successfully launch a new chain, all validators must use the algorithm to generate their genesis using the launch information. The algorithm deterministically generates the genesis from the launch information that is stored on the Ignite chain.
+The genesis generation algorithm is not part of the on-chain protocol. In order to successfully launch a new chain, all validators must use the algorithm to generate their genesis using the launch information. The algorithm deterministically generates the genesis from the launch information that is stored on the Spellshape chain.
 
 If any element of the launch information is censored, for example, removing an account balance, the launched chain reputation is negatively impacted and implies that the majority of validators agree on not using:
 
@@ -110,7 +110,7 @@ The initial genesis structure can be:
   fetched from a URL and then modified with the required algorithm - this initial genesis type should be used when the initial genesis state is extensive,
   containing a lot of accounts for token distribution, containing records for an
   airdrop
-- `GenesisConfig`: the initial genesis for a chain launch is generated from an Ignite CLI
+- `GenesisConfig`: the initial genesis for a chain launch is generated from an Spellshape CLI
   config that contains genesis accounts and module parameters - this initial genesis type should be used when the coordinator doesn’t have extensive state for the initial genesis but some module parameters must be customized. For example, the staking bond denom for the staking token
 
 ## Coordination process
@@ -148,7 +148,7 @@ Since the coordinator is the sole approver for requests, each request created by
 
 ## Available requests
 
-Six types of requests can be sent to the Ignite chain:
+Six types of requests can be sent to the Spellshape chain:
 
 - `AddGenesisAccount`
 - `AddVestingAccount`
@@ -205,19 +205,19 @@ Some checks are verified on-chain when applying a request. For example, a genesi
 
 ## Launch process
 
-The overall launch process of a chain through Ignite is composed of three phases:
+The overall launch process of a chain through Spellshape is composed of three phases:
 
 - Coordination phase
 - Preparation phase
 - Launch phase
 
-After the coordinator creates the chain on Ignite and provides the initial launch information, the launch process enters the coordination phase where users can send requests for the chain genesis. After the coordinator deems the chain as ready to be launched, they trigger the launch of the chain. During this operation, the coordinator provides the launch time, or genesis, time for the chain.
+After the coordinator creates the chain on Spellshape and provides the initial launch information, the launch process enters the coordination phase where users can send requests for the chain genesis. After the coordinator deems the chain as ready to be launched, they trigger the launch of the chain. During this operation, the coordinator provides the launch time, or genesis, time for the chain.
 
 Once the launch is triggered and before the launch time is reached, the chain launch process enters the preparation phase. During the preparation phase, requests can no longer be sent and the launch information of the chain is finalized. The validators run the genesis generation algorithm to get the final genesis of the chain and prepare their node. The remaining time must provide enough time for the validators to prepare their nodes. This launch time is set by the coordinator, although a specific range for the remaining time is imposed.
 
 Once the launch time is reached, the chain network is started and the chain launch process enters the launch phase. At this point, since the chain is live, no further action is required from the coordinator. However, under some circumstances, the chain might have failed to start. For example, a chain does not start if every validator in the genesis does not start their node.
 
-The coordinator has the ability to revert the chain launch. Reverting the chain launch sets the launch process back to the coordination phase where requests can be sent again to allow addressing the issue related to the launch failure. Reverting the launch has an effect only on Ignite. If the new chain is effectively launched, reverting the launch on Ignite has no effect on the chain liveness. Reverting the launch of the chain can be performed only by the coordinator after the launch time plus a delay called the revert delay.
+The coordinator has the ability to revert the chain launch. Reverting the chain launch sets the launch process back to the coordination phase where requests can be sent again to allow addressing the issue related to the launch failure. Reverting the launch has an effect only on Spellshape. If the new chain is effectively launched, reverting the launch on Spellshape has no effect on the chain liveness. Reverting the launch of the chain can be performed only by the coordinator after the launch time plus a delay called the revert delay.
 
 ![process](./assets/process.png)
 
