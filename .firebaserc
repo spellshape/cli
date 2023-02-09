@@ -5,7 +5,7 @@
   "targets": {
     "spellshapedev": {
       "hosting": {
-        "docs.spellshape.com": [
+        "spellshapedev.web.app": [
           "spellshapedev-docs"
         ]
       }
