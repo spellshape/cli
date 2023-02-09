@@ -41,6 +41,6 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SPELLSHAPEDEV }}'
           expires: 7d
-          target: docs.spellshape.com
+          target: spellshapedev.web.app
           projectId: spellshapedev
           firebaseToolsVersion: v11.12.0
