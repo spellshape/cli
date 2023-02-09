@@ -38,7 +38,7 @@
         "type": 301
       }
     ],
-    "target": "docs.spellshape.com",
+    "target": "spellshapedev.web.app",
     "public": "docs/build",
     "cleanUrls": true
   }
