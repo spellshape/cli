@@ -13,7 +13,7 @@ func TestWriter(t *testing.T) {
 	logs := `hello,
 this
 is
-Starport!`
+Spellshape!`
 	buf := bytes.Buffer{}
 	w := NewWriter(&buf, func() string { return "[TENDERMINT] " })
 	_, err := io.Copy(w, strings.NewReader(logs))
@@ -21,7 +21,7 @@ Starport!`
 	require.Equal(t, `[TENDERMINT] hello,
 [TENDERMINT] this
 [TENDERMINT] is
-[TENDERMINT] Starport!`,
+[TENDERMINT] Spellshape!`,
 		buf.String(),
 	)
 }

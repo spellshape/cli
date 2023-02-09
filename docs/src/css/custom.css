@@ -115,6 +115,9 @@ html {
     @media (min-width: 997px) {
       @apply mx-0;
     }
+    &__title {
+      @apply text-5 font-bold;
+    }
     &__toggle {
       @apply bg-card rounded-s h-8 w-8 flex justify-center items-center;
       @media (min-width: 997px) {

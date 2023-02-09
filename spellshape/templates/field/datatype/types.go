@@ -41,7 +41,7 @@ const (
 	CoinSliceAlias Name = "coins"
 
 	// TypeCustom represents the string type name id.
-	TypeCustom = "customstarporttype"
+	TypeCustom = "customspellshapetype"
 )
 
 // supportedTypes all support data types and definitions.

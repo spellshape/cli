@@ -35,12 +35,12 @@ if [[ $(basename "${setdir}") = "scripts" ]] ; then
     if [[ $(basename "$(dirname "${setdir}")") = "cli" ]] ; then
         [[ -d $(dirname "${setdir}/pkg/protoc/data") ]] || mkdir -p "$(dirname "${setdir}")/spellshape/pkg/protoc/data"
     else
-        echo "Attention: you are running the script out of the starport project please run it this script in: https://github.com/tendermint/starport"
+        echo "Attention: you are running the script out of the spellshape project please run it this script in: https://github.com/tendermint/spellshape"
         exit 1
     fi
 else
     echo "$setdir"
-    echo "Attention: you are running the script out of the starport project please run it this script in: https://github.com/tendermint/starport"
+    echo "Attention: you are running the script out of the spellshape project please run it this script in: https://github.com/tendermint/spellshape"
     exit 1
 fi
 

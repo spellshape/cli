@@ -35,7 +35,7 @@ func parseStringProto(s string) (*proto.Proto, error) {
 	return p, nil
 }
 
-// Test that the changes from adding a list with starport scaffold list <Type>
+// Test that the changes from adding a list with spellshape scaffold list <Type>
 // Relatively old files but still exercise some paths of the code.
 
 var (
@@ -88,7 +88,7 @@ service Msg {}
 `
 )
 
-// Test that the changes from adding a list with starport scaffold list <Type>
+// Test that the changes from adding a list with spellshape scaffold list <Type>
 // are applied correctly to tx.proto
 func TestAddEmptyList_tx(t *testing.T) {
 	typename, modname := "Kirby", "chainname"
@@ -159,7 +159,7 @@ func TestAddEmptyList_tx(t *testing.T) {
 	require.True(t, containsElement(f, delResp))
 }
 
-// Test that the changes from adding a list with starport scaffold list <Type>
+// Test that the changes from adding a list with spellshape scaffold list <Type>
 // are applied correctly to genesis.proto
 func TestAddEmptyList_genesis(t *testing.T) {
 	typename, modname := "Kirby", "mod"

@@ -38,15 +38,15 @@ setdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)" # this li
 
 # Check dir else create save dir
 if [[ $(basename ${setdir}) = "scripts" ]] ; then
-    if [[ $(basename $(dirname "${setdir}")) = "starport" ]] ; then
-        [[ -d $(dirname "${setdir}/pkg/protoc/data") ]] || mkdir -p "$(dirname "${setdir}")/starport/pkg/protoc/data"
+    if [[ $(basename $(dirname "${setdir}")) = "spellshape" ]] ; then
+        [[ -d $(dirname "${setdir}/pkg/protoc/data") ]] || mkdir -p "$(dirname "${setdir}")/spellshape/pkg/protoc/data"
     else
-        echo "Attention: you are running the script out of the startport project please run it this script in: https://github.com/tendermint/starport"
+        echo "Attention: you are running the script out of the startport project please run it this script in: https://github.com/tendermint/spellshape"
         exit 1
     fi
 else
     echo "$setdir"
-    echo "Attention: you are running the script out of the startport project please run it this script in: https://github.com/tendermint/starport"
+    echo "Attention: you are running the script out of the startport project please run it this script in: https://github.com/tendermint/spellshape"
     exit 1
 fi
 
@@ -80,7 +80,7 @@ for f in *.zip; do
     ;;
   esac
 
-  mv "${f%.zip}/bin/protoc" "$(dirname ${setdir})/starport/pkg/protoc/data/${fname}"
+  mv "${f%.zip}/bin/protoc" "$(dirname ${setdir})/spellshape/pkg/protoc/data/${fname}"
 done
 
 echo "/tmp/${0}"

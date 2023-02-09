@@ -56,8 +56,8 @@ var (
 	// ignoredExts holds a list of ignored files from watching.
 	ignoredExts = []string{"pb.go", "pb.gw.go"}
 
-	// starportSavePath is the place where chain exported genesis are saved.
-	starportSavePath = xfilepath.Join(
+	// spellshapeSavePath is the place where chain exported genesis are saved.
+	spellshapeSavePath = xfilepath.Join(
 		config.DirPath,
 		xfilepath.Path("local-chains"),
 	)
@@ -580,7 +580,7 @@ func (c *Chain) importChainState() error {
 // chainSavePath returns the path where the chain state is saved.
 // Creates the path if it doesn't exist.
 func (c *Chain) chainSavePath() (string, error) {
-	savePath, err := starportSavePath()
+	savePath, err := spellshapeSavePath()
 	if err != nil {
 		return "", err
 	}

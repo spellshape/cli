@@ -22,7 +22,7 @@ import (
 
 const (
 	// KeyringServiceName used for the name of keyring in OS backend.
-	KeyringServiceName = "starport"
+	KeyringServiceName = "spellshape"
 
 	// DefaultAccount is the name of the default account.
 	DefaultAccount = "default"
