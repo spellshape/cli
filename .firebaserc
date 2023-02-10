@@ -1,14 +1,5 @@
 {
   "projects": {
-    "default": "spellshapedev"
-  },
-  "targets": {
-    "spellshapedev": {
-      "hosting": {
-        "docs.spellshape.com": [
-          "spellshapedev-docs"
-        ]
-      }
-    }
+    "default": "spellshape"
   }
 }
