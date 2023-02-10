@@ -1,45 +1,10 @@
 {
-  "emulators": {
-    "hosting": {
-      "host": "localhost",
-      "port": "3000"
-    }
-  },
   "hosting": {
-    "redirects": [
-      {
-        "source": "/kb/types",
-        "destination": "/cli#spellshape-scaffold-list",
-        "type": 301
-      },
-      {
-        "source": "/kb/scaffold-chain",
-        "destination": "/cli#spellshape-scaffold-chain",
-        "type": 301
-      },
-      {
-        "source": "/kb/serve",
-        "destination": "/cli#spellshape-chain-serve",
-        "type": 301
-      },
-      {
-        "source": "/kb/genesis",
-        "destination": "/kb/config",
-        "type": 301
-      },
-      {
-        "source": "/kb/params",
-        "destination": "/cli#spellshape-scaffold-module",
-        "type": 301
-      },
-      {
-        "source": "/kb/proto",
-        "destination": "/kb/config",
-        "type": 301
-      }
-    ],
-    "target": "spellshape",
     "public": "docs/build",
-    "cleanUrls": true
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
   }
 }

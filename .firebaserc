@@ -1,13 +1,5 @@
 {
-  "projects": {},
-  "targets": {
-    "spellshapedev": {
-      "hosting": {
-        "spellshape-docs": [
-          "spellshape"
-        ]
-      }
-    }
-  },
-  "etags": {}
+  "projects": {
+    "default": "spellshape"
+  }
 }
