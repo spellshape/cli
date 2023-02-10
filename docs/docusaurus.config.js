@@ -99,76 +99,7 @@ const config = {
         ],
       },
       footer: {
-        links: [
-          {
-            items: [],
-          },
-          {
-            title: "Products",
-            items: [
-              {
-                label: "CLI",
-                href: "https://spellshape.com/cli",
-              },
-              {
-                label: "Accelerator",
-                href: "https://spellshape.com/accelerator",
-              },
-            ],
-          },
-          {
-            title: "Company",
-            items: [
-              {
-                label: "About Spellshape",
-                href: "https://spellshape.com/about",
-              },
-              {
-                label: "Careers",
-                href: "https://spellshape.com/careers",
-              },
-              {
-                label: "Blog",
-                href: "https://spellshape.com/blog",
-              },
-              {
-                label: "Press",
-                href: "https://spellshape.com/press",
-              },
-            ],
-          },
-          {
-            title: "Contact",
-            items: [
-              {
-                label: "Business Inquiries",
-                href: "mailto:business@spellshape.com",
-              },
-            ],
-          },
-          {
-            title: "Social",
-            items: [
-              {
-                label: "Discord",
-                href: "https://discord.com/invite/spellshape",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/spellshape_com",
-              },
-              {
-                label: "Linkedin",
-                href: "https://www.linkedin.com/company/spellshape/",
-              },
-              {
-                label: "YouTube",
-                href: "https://www.youtube.com/spellshapehq",
-              },
-            ],
-          },
-        ],
-        copyright: `<div>© Spellshape ${new Date().getFullYear()}</div><div><a href="https://spellshape.com/privacy">Privacy Policy</a><a href="https://spellshape.com/terms-of-use">Terms of Use</a></div>`,
+        copyright: `<div>© Spellshape ${new Date().getFullYear()}</div>`,
       },
       prism: {
         theme: lightCodeTheme,
