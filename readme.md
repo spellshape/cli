@@ -150,7 +150,5 @@ everyone who has contributed to Spellshape CLI!
 Spellshape CLI is a free and open source product maintained by
 [Spellshape](https://spellshape.com). Here's where you can find us. Stay in touch.
 
-* [spellshape.com website](https://spellshape.com)
-* [@spellshape on Twitter](https://twitter.com/spellshape)
-* [Spellshape Discord](https://discord.com/invite/spellshape)
 * [Spellshape docs](https://docs.spellshape.com)
+* [Spellshape on Twitter](https://twitter.com/spellshape)
