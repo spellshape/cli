@@ -17,9 +17,9 @@ browser](https://gitpod.io/#https://github.com/spellshape/cli/tree/v0.25.2) (or 
 To create and start a blockchain:
 
 ```bash
-spellshape scaffold chain mars
+spellshape scaffold chain example
 
-cd mars
+cd example
 
 spellshape chain serve
 ```
