@@ -39,7 +39,7 @@ spellshape version
 To install the latest version of the `spellshape` binary use the following command.
 
 ```bash
-curl https://get.spellshape.com/cli! | bash
+curl https://get.spellshape.com/spellshape/cli@nightly! | bash
 ```
 
 This command invokes `curl` to download the install script and pipes the output to `bash` to perform the installation. The `spellshape` binary is installed in `/usr/local/bin`.
@@ -51,7 +51,7 @@ To learn more or customize the installation process, see the [installer docs](ht
 Spellshape CLI installation requires write permission to the `/usr/local/bin/` directory. If the installation fails because you do not have write permission to `/usr/local/bin/`, run the following command:
 
 ```bash
-curl https://get.spellshape.com/cli | bash
+curl https://get.spellshape.com/spellshape/cli@nightly | bash
 ```
 
 Then run this command to move the `spellshape` executable to `/usr/local/bin/`:
@@ -71,7 +71,7 @@ Error: mv failed
 In this case, use sudo before `curl` and before `bash`:
 
 ```bash
-sudo curl https://get.spellshape.com/cli! | sudo bash
+sudo curl https://get.spellshape.com/spellshape/cli@nightly! | bash
 ```
 
 ## Upgrading your Spellshape CLI installation

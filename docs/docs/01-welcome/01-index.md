@@ -32,7 +32,7 @@ With just a few commands, you can use Spellshape CLI to:
 To install the `spellshape` binary in `/usr/local/bin` run the following command:
 
 ```
-curl https://get.spellshape.com/cli | bash
+curl https://get.spellshape.com/spellshape/cli@nightly! | bash
 ```
 
 ## Projects using Tendermint and Cosmos SDK

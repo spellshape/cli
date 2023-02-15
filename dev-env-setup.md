@@ -40,7 +40,7 @@ Before you install a new version of Spellshape CLI, remove all existing installa
 2. Repeat this step until all Spellshape CLI installations are removed from your system.
 
 ```bash
-curl https://get.spellshape.com! | bash`
+curl https://get.spellshape.com/spellshape/cli@nightly! | bash
 ```
 
 See [Install Spellshape CLI](./docs/docs/01-welcome/02-install.md).

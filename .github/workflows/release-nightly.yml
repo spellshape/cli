@@ -42,7 +42,7 @@ jobs:
         with:
           tag: nightly
           name: nightly
-          body: 'Install and move the CLI to your bin directory: `curl https://get.spellshape.com/cli@nightly! | bash`'
+          body: 'Install and move the CLI to your bin directory: `curl https://get.spellshape.com/spellshape/cli@nightly! | bash`'
           prerelease: true
 
   releases-binaries:
