@@ -41,9 +41,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: spellshapehq/cli
-          # push to spellshapehq/cli:latest on every push to master
-          # push to spellshapehq/cli:vx.x.x on every release published
+          images: spellshape/cli
+          # push to spellshape/cli:latest on every push to master
+          # push to spellshape/cli:vx.x.x on every release published
           tags: |
             type=raw,value=latest
             type=semver,pattern=v{{version}}
