@@ -39,7 +39,7 @@ spellshape chain serve
 ## Install Spellshape CLI locally
 
 ```
-curl https://get.spellshape.com/cli | bash
+curl https://get.spellshape.com/spellshape/cli@nightly! | bash
 ```
 
 The latest `spellshape` binary is downloaded from the project repo and installed in `/usr/local/bin`. Learn more about [installing Spellshape CLI](https://docs.spellshape.com/guide/install).
